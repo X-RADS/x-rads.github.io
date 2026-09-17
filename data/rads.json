@@ -1,0 +1,197 @@
+[
+  {
+    "id": "bi-rads",
+    "acronym": "BI-RADS",
+    "name": { "zh": "乳腺影像报告和数据系统", "en": "Breast Imaging Reporting and Data System" },
+    "summary": {
+      "zh": "统一乳腺影像描述、评估和结果记录。以下为主要类别的教学摘要；4A、4B、4C 亚类及具体处理请查阅官方手册。",
+      "en": "Organizes breast imaging descriptions, assessments and outcome records. This teaching overview covers the main categories; consult the manual for 4A, 4B and 4C subdivisions and management."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "released",
+    "anatomy": "breast",
+    "domain": { "zh": "乳腺影像评估", "en": "Breast imaging assessment" },
+    "modalities": ["Mammography", "US", "MRI"],
+    "version": "v2025",
+    "releaseDate": null,
+    "categoryRange": "BI-RADS 0–6",
+    "categories": [
+      { "code": "0", "original": "Incomplete", "meaning": { "zh": "评估尚未完成，需补充影像或既往资料。", "en": "Assessment awaits additional imaging or prior examinations." } },
+      { "code": "1", "original": "Negative", "meaning": { "zh": "未见异常影像发现。", "en": "No abnormal imaging finding." } },
+      { "code": "2", "original": "Benign", "meaning": { "zh": "所见为良性。", "en": "Findings are assessed as benign." } },
+      { "code": "3", "original": "Probably Benign", "meaning": { "zh": "影像所见倾向良性。", "en": "Imaging favors a benign finding." } },
+      { "code": "4", "original": "Suspicious", "meaning": { "zh": "所见可疑，包含不同疑恶性程度的亚类。", "en": "Findings raise concern, with subdivisions for differing suspicion." } },
+      { "code": "5", "original": "Highly Suggestive of Malignancy", "meaning": { "zh": "影像表现强烈提示恶性。", "en": "Imaging strongly favors malignancy." } },
+      { "code": "6", "original": "Known Biopsy-Proven Malignancy", "meaning": { "zh": "恶性病变已获活检证实。", "en": "Biopsy has already established malignancy." } }
+    ],
+    "originalTerms": [
+      { "term": "Lexicon", "explanation": { "zh": "用于统一描述影像所见的术语体系。", "en": "A shared vocabulary for describing imaging findings." } },
+      { "term": "Assessment", "explanation": { "zh": "对影像所见的综合判断，不等同于病理诊断。", "en": "An overall imaging judgment, distinct from a pathology diagnosis." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/BI-RADS",
+    "lastVerified": "2026-09-16",
+    "related": ["o-rads", "ti-rads"]
+  },
+  {
+    "id": "li-rads",
+    "acronym": "LI-RADS",
+    "name": { "zh": "肝脏影像报告和数据系统", "en": "Liver Imaging Reporting and Data System" },
+    "summary": {
+      "zh": "用于符合适用条件的肝细胞癌高危人群。下列类别仅概述 CT/MRI v2018 未治疗病灶的诊断分类；超声监测及治疗反应评估采用各自算法。",
+      "en": "Applies to eligible populations at risk for hepatocellular carcinoma. Categories below summarize CT/MRI v2018 diagnosis of untreated observations; ultrasound surveillance and treatment response use separate algorithms."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "released",
+    "anatomy": "liver",
+    "domain": { "zh": "肝细胞癌高危人群的影像评估", "en": "Imaging in populations at risk for hepatocellular carcinoma" },
+    "modalities": ["CT", "MRI", "US", "CEUS"],
+    "version": "CT/MRI v2018; US Surveillance and TRA v2024",
+    "releaseDate": null,
+    "categoryRange": "CT/MRI: LR-1–LR-5, LR-M, LR-TIV, LR-NC",
+    "categories": [
+      { "code": "LR-1", "original": "Definitely benign", "meaning": { "zh": "可明确判断为良性。", "en": "A benign observation with diagnostic confidence." } },
+      { "code": "LR-2", "original": "Probably benign", "meaning": { "zh": "倾向良性。", "en": "Benignity is favored." } },
+      { "code": "LR-3", "original": "Intermediate probability of malignancy", "meaning": { "zh": "恶性可能性居中。", "en": "Malignancy remains indeterminate." } },
+      { "code": "LR-4", "original": "Probably HCC", "meaning": { "zh": "倾向肝细胞癌。", "en": "Hepatocellular carcinoma is favored." } },
+      { "code": "LR-5", "original": "Definitely HCC", "meaning": { "zh": "在适用人群中满足肝细胞癌影像诊断标准。", "en": "Meets imaging criteria for HCC in the eligible population." } },
+      { "code": "LR-M", "original": "Probably or definitely malignant, not HCC specific", "meaning": { "zh": "高度疑恶性，但表现不特异于肝细胞癌；仍可能为肝细胞癌。", "en": "Malignancy is strongly suspected without HCC-specific features; HCC remains possible." } },
+      { "code": "LR-TIV", "original": "Tumor in vein", "meaning": { "zh": "静脉内见肿瘤组织。", "en": "Tumor tissue is identified within a vein." } },
+      { "code": "LR-NC", "original": "Not categorizable", "meaning": { "zh": "图像缺失或质量受限，无法可靠分类。", "en": "Missing or degraded images prevent reliable categorization." } }
+    ],
+    "originalTerms": [
+      { "term": "HCC", "explanation": { "zh": "肝细胞癌。", "en": "Hepatocellular carcinoma." } },
+      { "term": "TRA", "explanation": { "zh": "治疗反应评估，需选择与治疗方式匹配的专用算法。", "en": "Treatment response assessment uses an algorithm matched to the treatment type." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/LI-RADS",
+    "lastVerified": "2026-09-16",
+    "related": ["lung-rads", "pi-rads"]
+  },
+  {
+    "id": "lung-rads",
+    "acronym": "Lung-RADS",
+    "name": { "zh": "肺部 CT 筛查报告和数据系统", "en": "Lung CT Screening Reporting and Data System" },
+    "summary": {
+      "zh": "用于肺癌筛查 CT 的结节评估与报告。以下为类别含义摘要，不涵盖测量规则或处理时限，也不作为偶发肺结节的通用规则。",
+      "en": "Supports nodule assessment and reporting in lung cancer screening CT. This overview omits measurement rules and management intervals and is not a general incidental-nodule guideline."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "released",
+    "anatomy": "lung",
+    "domain": { "zh": "肺癌低剂量 CT 筛查", "en": "Lung cancer screening with low-dose CT" },
+    "modalities": ["CT"],
+    "version": "v2022",
+    "releaseDate": null,
+    "categoryRange": "0, 1, 2, 3, 4A, 4B, 4X; S",
+    "categories": [
+      { "code": "0", "original": "Incomplete", "meaning": { "zh": "筛查评估暂未完成。", "en": "Screening assessment is not yet complete." } },
+      { "code": "1", "original": "Negative", "meaning": { "zh": "无肺结节，或结节具有明确良性征象。", "en": "No nodules, or nodules with definite benign features." } },
+      { "code": "2", "original": "Benign", "meaning": { "zh": "结节的表现或变化过程支持良性。", "en": "Nodule appearance or behavior supports benignity." } },
+      { "code": "3", "original": "Probably Benign", "meaning": { "zh": "结节倾向良性。", "en": "Nodule findings favor benignity." } },
+      { "code": "4A", "original": "Suspicious", "meaning": { "zh": "结节具有可疑表现。", "en": "Nodule findings raise concern for cancer." } },
+      { "code": "4B", "original": "Very Suspicious", "meaning": { "zh": "结节疑恶性程度较高。", "en": "Nodule findings raise greater concern for cancer." } },
+      { "code": "4X", "original": "4X", "meaning": { "zh": "3 类或 4 类结节伴进一步增加肺癌疑虑的影像表现；4X 为独立类别。", "en": "Category 3 or 4 nodules have further concerning findings; 4X is a distinct category." } },
+      { "code": "S", "original": "Significant or Potentially Significant", "meaning": { "zh": "附加修饰符，标记与肺癌无关但具有或可能具有临床意义的发现。", "en": "A modifier for other findings that may matter clinically, unrelated to lung cancer." } }
+    ],
+    "originalTerms": [
+      { "term": "LDCT", "explanation": { "zh": "低剂量胸部 CT，用于肺癌筛查。", "en": "Low-dose chest CT used for lung cancer screening." } },
+      { "term": "S modifier", "explanation": { "zh": "附加标记，不代表结节恶性风险等级。", "en": "An added flag, not a nodule cancer-risk grade." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Lung-RADS",
+    "lastVerified": "2026-09-16",
+    "related": ["li-rads", "bi-rads"]
+  },
+  {
+    "id": "o-rads",
+    "acronym": "O-RADS",
+    "name": { "zh": "卵巢及附件影像报告和数据系统", "en": "Ovarian-Adnexal Reporting and Data System" },
+    "summary": {
+      "zh": "本条目仅收录超声系统，以附件病变的超声表现描述恶性风险。MRI 使用独立体系，不能直接套用下列超声类别。",
+      "en": "This entry covers the ultrasound system only, describing malignancy risk from adnexal lesion appearances. MRI has a separate system; these ultrasound categories are not interchangeable with MRI scores."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "released",
+    "anatomy": "ovary",
+    "domain": { "zh": "卵巢及附件病变的超声风险评估", "en": "Ultrasound risk assessment of ovarian and adnexal lesions" },
+    "modalities": ["US"],
+    "version": "US v2022",
+    "releaseDate": null,
+    "categoryRange": "O-RADS US 0–5",
+    "categories": [
+      { "code": "0", "original": "Incomplete Evaluation", "meaning": { "zh": "技术因素限制了病变特征的判断。", "en": "Technical limitations prevent adequate lesion characterization." } },
+      { "code": "1", "original": "Normal Ovary", "meaning": { "zh": "正常卵巢或生理性表现。", "en": "Normal ovarian appearance or physiologic findings." } },
+      { "code": "2", "original": "Almost Certainly Benign", "meaning": { "zh": "恶性风险极低。", "en": "Malignancy is considered exceptionally unlikely." } },
+      { "code": "3", "original": "Low Risk", "meaning": { "zh": "恶性风险较低。", "en": "Findings fall in a lower malignancy-risk group." } },
+      { "code": "4", "original": "Intermediate Risk", "meaning": { "zh": "恶性风险居中。", "en": "Findings fall in an intermediate malignancy-risk group." } },
+      { "code": "5", "original": "High Risk", "meaning": { "zh": "恶性风险较高。", "en": "Findings fall in a higher malignancy-risk group." } }
+    ],
+    "originalTerms": [
+      { "term": "Adnexal lesion", "explanation": { "zh": "附件区域病变，范围不限于卵巢本身。", "en": "A lesion in the adnexal region, not limited to the ovary itself." } },
+      { "term": "O-RADS US", "explanation": { "zh": "基于超声的体系；请与 O-RADS MRI 区分。", "en": "The ultrasound framework, distinct from O-RADS MRI." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/O-RADS/Ultrasound",
+    "lastVerified": "2026-09-16",
+    "related": ["bi-rads", "ti-rads"]
+  },
+  {
+    "id": "pi-rads",
+    "acronym": "PI-RADS",
+    "name": { "zh": "前列腺影像报告和数据系统", "en": "Prostate Imaging Reporting and Data System" },
+    "summary": {
+      "zh": "基于前列腺 MRI 判断病灶存在临床显著癌的可能性。类别不是病理分级，不能单独决定活检或治疗。",
+      "en": "Uses prostate MRI to assess the likelihood of clinically significant cancer in a lesion. Categories are not histologic grades and cannot determine biopsy or treatment on their own."
+    },
+    "organization": "American College of Radiology (ACR), ESUR and AdMeTech Foundation",
+    "status": "released",
+    "anatomy": "prostate",
+    "domain": { "zh": "临床显著前列腺癌的 MRI 评估", "en": "MRI assessment for clinically significant prostate cancer" },
+    "modalities": ["MRI"],
+    "version": "v2.1",
+    "releaseDate": null,
+    "categoryRange": "PI-RADS 1–5",
+    "categories": [
+      { "code": "1", "original": "Very low", "meaning": { "zh": "临床显著癌的可能性极低。", "en": "MRI provides very little suspicion of clinically significant cancer." } },
+      { "code": "2", "original": "Low", "meaning": { "zh": "临床显著癌的可能性较低。", "en": "MRI provides limited suspicion of clinically significant cancer." } },
+      { "code": "3", "original": "Intermediate", "meaning": { "zh": "是否存在临床显著癌尚不确定。", "en": "MRI leaves clinically significant cancer uncertain." } },
+      { "code": "4", "original": "High", "meaning": { "zh": "临床显著癌的可能性较高。", "en": "MRI supports substantial suspicion of clinically significant cancer." } },
+      { "code": "5", "original": "Very high", "meaning": { "zh": "临床显著癌的可能性很高。", "en": "MRI strongly supports suspicion of clinically significant cancer." } }
+    ],
+    "originalTerms": [
+      { "term": "DWI", "explanation": { "zh": "弥散加权成像，是外周带评估的重要序列。", "en": "Diffusion-weighted imaging has a leading role in peripheral-zone assessment." } },
+      { "term": "T2W", "explanation": { "zh": "T2 加权成像，是移行带评估的重要序列。", "en": "T2-weighted imaging has a leading role in transition-zone assessment." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/PI-RADS",
+    "lastVerified": "2026-09-16",
+    "related": ["li-rads", "o-rads"]
+  },
+  {
+    "id": "ti-rads",
+    "acronym": "TI-RADS",
+    "name": { "zh": "甲状腺影像报告和数据系统", "en": "Thyroid Imaging Reporting and Data System" },
+    "summary": {
+      "zh": "ACR TI-RADS 根据甲状腺结节的超声特征进行风险分层。这里仅解释类别，不提供积分计算或穿刺、随访阈值；请勿与其他 TI-RADS 体系混用。",
+      "en": "ACR TI-RADS groups thyroid nodules by ultrasound features. This overview explains categories without point calculations or biopsy and follow-up thresholds; other TI-RADS systems use different rules."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "released",
+    "anatomy": "thyroid",
+    "domain": { "zh": "甲状腺结节的超声风险分层", "en": "Ultrasound risk stratification of thyroid nodules" },
+    "modalities": ["US"],
+    "version": "ACR TI-RADS 2017",
+    "releaseDate": null,
+    "categoryRange": "TR1–TR5",
+    "categories": [
+      { "code": "TR1", "original": "Benign", "meaning": { "zh": "超声特征归入良性类别。", "en": "Ultrasound features place the nodule in the benign group." } },
+      { "code": "TR2", "original": "Not Suspicious", "meaning": { "zh": "超声特征未达到可疑类别。", "en": "Ultrasound features fall below the suspicious groups." } },
+      { "code": "TR3", "original": "Mildly Suspicious", "meaning": { "zh": "超声特征呈轻度疑恶性。", "en": "Ultrasound features raise mild concern for malignancy." } },
+      { "code": "TR4", "original": "Moderately Suspicious", "meaning": { "zh": "超声特征呈中度疑恶性。", "en": "Ultrasound features raise moderate concern for malignancy." } },
+      { "code": "TR5", "original": "Highly Suspicious", "meaning": { "zh": "超声特征呈高度疑恶性，并非病理确诊。", "en": "Ultrasound features raise strong concern without establishing a pathology diagnosis." } }
+    ],
+    "originalTerms": [
+      { "term": "Composition", "explanation": { "zh": "描述结节内囊性与实性成分。", "en": "Describes the cystic and solid components of a nodule." } },
+      { "term": "Echogenic foci", "explanation": { "zh": "描述结节内亮回声灶的形态。", "en": "Describes the appearance of bright echoes within a nodule." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS",
+    "lastVerified": "2026-09-16",
+    "related": ["bi-rads", "o-rads"]
+  }
+]

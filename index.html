@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="X-RADS 临床影像参考目录">
+    <title>X-RADS 临床影像参考</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skipLink">跳至主要内容</a>
+    <header class="site-header"><div class="content header-content">
+      <a class="wordmark" href="./" aria-label="X-RADS 首页" data-i18n-aria-label="wordmarkLabel">X-RADS</a>
+      <nav aria-label="主要导航" data-i18n-aria-label="primaryNavigationLabel"><a href="#catalog-results" data-i18n="nav.catalog">查阅</a><a id="detail-nav" href="#detail-heading" data-i18n="nav.detail" hidden>详情</a></nav>
+      <button id="language-switcher" type="button" aria-label="切换语言" aria-pressed="false">EN</button>
+    </div></header>
+    <main id="main-content">
+      <section class="hero"><div class="content hero-grid"><div>
+        <p class="eyebrow">CLINICAL IMAGING REFERENCE</p><h1 data-i18n="heroTitle">快速找到需要的报告与数据系统</h1>
+        <p class="lede" data-i18n="heroLede">按简称、器官、疾病、模态或分级查阅 RADS。</p>
+        <div class="hero-search"><label class="sr-only" for="search-input" data-i18n="searchLabel">搜索条目</label><input id="search-input" name="search" type="search" placeholder="搜索简称、器官、疾病、模态或分级" autocomplete="off" data-i18n-placeholder="searchPlaceholder"></div>
+      </div><aside class="hero-note" aria-label="参考说明" data-i18n-aria-label="heroNoteLabel"><strong data-i18n="heroNoteTitle">专业查阅</strong><p data-i18n="heroNote">先按部位定位，再用筛选缩小范围；详情保留原始英文术语和官方来源。</p></aside></div></section>
+      <section class="content catalog" aria-labelledby="catalog-heading">
+        <div class="section-heading"><div><p class="eyebrow">RADS CATALOG</p><h2 id="catalog-heading" tabindex="-1" data-i18n="catalogTitle">RADS 临床查阅</h2></div><p id="page-status" aria-live="polite" class="page-status"></p></div>
+        <div class="anatomy-nav" id="anatomy-filter" aria-label="按人体部位筛选" data-i18n-aria-label="anatomyLabel"><div class="anatomy-heading"><span data-i18n="anatomyLabel">人体部位导航</span><button type="button" class="text-button" data-anatomy="" data-i18n="allAnatomy">全部</button></div><div class="anatomy-buttons" role="group" data-i18n-aria-label="anatomyLabel"><button type="button" data-anatomy="head-neck" data-i18n="anatomy.head-neck">头颈部</button><button type="button" data-anatomy="chest" data-i18n="anatomy.chest">胸部</button><button type="button" data-anatomy="abdomen-pelvis" data-i18n="anatomy.abdomen-pelvis">腹部与盆腔</button><button type="button" data-anatomy="musculoskeletal-whole-body" data-i18n="anatomy.musculoskeletal-whole-body">骨肌与全身</button></div></div>
+        <form class="filters" role="search"><div class="field"><label for="modality-filter" data-i18n="modalityLabel">影像模态</label><select id="modality-filter" name="modality"></select></div><div class="field"><label for="status-filter" data-i18n="statusLabel">条目状态</label><select id="status-filter" name="status"></select></div><div class="frequent-rads" aria-label="常用 RADS" data-i18n-aria-label="frequentLabel"><span data-i18n="frequentLabel">常用 RADS</span><button type="button" data-rads-query="BI-RADS">BI-RADS</button><button type="button" data-rads-query="LI-RADS">LI-RADS</button><button type="button" data-rads-query="PI-RADS">PI-RADS</button></div></form>
+        <div id="catalog-results" class="catalog-results" aria-live="polite" aria-label="目录结果" data-i18n-aria-label="resultsRegionLabel"></div>
+      </section>
+      <section id="detail-view" class="content detail-view" tabindex="-1" hidden aria-live="polite"></section>
+    </main>
+    <footer class="site-footer"><div class="content"><p data-i18n="professionalNotice">本站内容仅供专业查阅和教学参考；临床使用应以当前官方版本和所在机构规范为准。</p></div></footer>
+    <script type="module" src="./js/app.mjs"></script>
+  </body>
+</html>
