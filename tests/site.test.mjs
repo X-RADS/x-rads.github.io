@@ -10,6 +10,8 @@ test("README documents preview, testing, source policy, and Pages deployment", a
   for (const heading of ["Local preview", "Tests", "Content maintenance", "Source and copyright policy", "GitHub Pages"]) {
     assert.match(readme, new RegExp(`^## ${escapeRegExp(heading)}$`, "m"));
   }
+  assert.match(readme, /contains 56 records/);
+  assert.match(readme, /3 ACR systems in development/);
 });
 
 test("index exposes every required application landmark", async () => {
@@ -36,9 +38,11 @@ test("GitHub Pages publishes without Jekyll processing", async () => {
 test("site shell includes the professional-use notice and anatomy navigator", async () => {
   const html = await readFile(new URL("index.html", root), "utf8");
   assert.match(html, /data-i18n=["']professionalNotice["']/);
-  for (const region of ["head-neck", "chest", "abdomen-pelvis", "musculoskeletal-whole-body"]) {
+  for (const region of ["head-neck", "chest", "abdomen-pelvis", "musculoskeletal-whole-body", "workflow-quality"]) {
     assert.match(html, new RegExp(`data-anatomy=["']${region}["']`));
   }
+  const app = await readFile(new URL("js/app.mjs", root), "utf8");
+  assert.match(app, /"anatomy\.workflow-quality"/);
 });
 
 test("site shell presents Jingyu Zhong in a team section before the footer", async () => {
@@ -59,7 +63,7 @@ test("regional anatomy filtering combines with search, modality, and status", as
   const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
   assert.deepEqual(
     app.filterCatalog(records, { anatomy: "chest", modality: "CT", status: "non-acr" }).map(r => r.id),
-    ["cac-drs", "cad-rads", "co-rads", "covid-rads", "ild-rads", "ilf-rads", "lu-rads", "vp-rads"],
+    ["cac-drs", "cad-rads", "co-rads", "covid-rads", "ild-rads", "ilf-rads", "lu-rads", "c-lung-rads", "vp-rads"],
   );
   assert.deepEqual(
     app.filterCatalog(records, { anatomy: "abdomen-pelvis", modality: "US", status: "non-acr" }).map(r => r.id),
@@ -69,7 +73,8 @@ test("regional anatomy filtering combines with search, modality, and status", as
   assert.match(app.renderCatalog(records, new URL("https://example.test/?lang=en&status=non-acr")), /Non-ACR/);
   assert.deepEqual(app.filterCatalog(records, { anatomy: "abdomen-pelvis", modality: "MRI", query: "prostate", status: "released" }).map(r => r.id), ["pi-rads"]);
   assert.deepEqual(app.filterCatalog(records, { anatomy: "musculoskeletal-whole-body", modality: "MRI", status: "non-acr" }).map(r => r.id), ["bti-rads", "met-rads", "mski-rads", "my-rads", "node-rads", "ns-rads", "onco-rads", "or-rads", "ot-rads"]);
-  assert.deepEqual(app.filterCatalog(records, { anatomy: "thyroid" }).map(r => r.id), ["ti-rads", "eu-ti-rads", "k-ti-rads", "kwak-ti-rads"]);
+  assert.deepEqual(app.filterCatalog(records, { anatomy: "thyroid" }).map(r => r.id), ["ti-rads", "eu-ti-rads", "k-ti-rads", "kwak-ti-rads", "c-ti-rads"]);
+  assert.deepEqual(app.filterCatalog(records, { anatomy: "workflow-quality", status: "non-acr" }).map(r => r.id), ["ae-rads", "info-rads", "ri-rads"]);
 });
 
 test("works-in-progress catalog entries have localized status labels", async () => {

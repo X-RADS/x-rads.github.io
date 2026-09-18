@@ -7,17 +7,20 @@ substitute for current official guidance and local institutional policy.
 
 ## Catalog scope
 
-The catalog currently contains 44 records:
+The catalog currently contains 56 records:
 
-- 8 released ACR RADS records.
-- 1 ACR works-in-progress record: Bone-RADS.
-- 35 published non-ACR systems drawn from table 2 of the locally retained
-  source article.
+- 10 released ACR RADS records.
+- 2 ACR works-in-progress records: Bone-RADS and Soft Tissue-RADS.
+- 3 ACR systems in development: BT-RADS, KI-RADS, and TBI-RADS.
+- 41 published non-ACR systems, including records selected from tables 2–4 of
+  the locally retained source article.
 
 The status label describes release state or publisher/oversight context:
 
 - `released` — a released ACR record.
 - `works-in-progress` — an ACR project still identified as in progress.
+- `in-development` — an ACR system being developed without a released clinical
+  catalog record.
 - `non-acr` — a non-ACR system linked to its issuing society, publisher page,
   or original publication DOI. This does not imply clinical validation or
   endorsement.

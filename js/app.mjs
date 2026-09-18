@@ -9,6 +9,11 @@ const strings = {
   },
 };
 
+const anatomyCopy = {
+  zh: { "anatomy.workflow-quality": "流程与质量" },
+  en: { "anatomy.workflow-quality": "Workflow & quality" },
+};
+
 const teamCopy = {
   zh: {
     teamMemberName: "钟京渝，医学博士",
@@ -33,7 +38,7 @@ const anatomyGroups = {
   "musculoskeletal-whole-body": ["bone", "extremity", "peripheral-nerve", "lymph-node", "whole-body"],
 };
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[character]));
-const text = (lang, key, ...args) => { const value = teamCopy[lang]?.[key] ?? strings[lang][key] ?? key; return typeof value === "function" ? value(...args) : value; };
+const text = (lang, key, ...args) => { const value = teamCopy[lang]?.[key] ?? strings[lang][key] ?? anatomyCopy[lang]?.[key] ?? key; return typeof value === "function" ? value(...args) : value; };
 const safeHttpUrl = (value) => { try { const url = new URL(String(value)); return /^https?:$/.test(url.protocol) ? url.href : ""; } catch { return ""; } };
 const isPresent = (value) => !(value == null || value === "" || (Array.isArray(value) && value.length === 0));
 const withFallback = (lang, value) => isPresent(value) ? value : text(lang, "noSource");

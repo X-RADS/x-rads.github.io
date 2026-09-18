@@ -12,11 +12,14 @@ const expectedIds = [
   "apendic-rads",
   "ax-rads",
   "bi-rads",
+  "bt-rads",
   "bone-rads",
   "bti-rads",
   "cac-drs",
   "cad-rads",
   "c-rads",
+  "c-lung-rads",
+  "c-ti-rads",
   "cln-rads",
   "co-rads",
   "co-x-rads",
@@ -28,6 +31,7 @@ const expectedIds = [
   "ild-rads",
   "ilf-rads",
   "k-ti-rads",
+  "ki-rads",
   "kwak-ti-rads",
   "li-rads",
   "ln-rads",
@@ -35,6 +39,7 @@ const expectedIds = [
   "lung-rads",
   "met-rads",
   "mi-rads",
+  "moi-rads",
   "mski-rads",
   "my-rads",
   "ni-rads",
@@ -47,11 +52,33 @@ const expectedIds = [
   "pi-rads",
   "plaque-rads",
   "psma-rads",
+  "pe-rads",
+  "ri-rads",
+  "st-rads",
   "sstr-rads",
   "su-rads",
   "ti-rads",
+  "tbi-rads",
+  "vi-rads",
   "vp-rads",
+  "ae-rads",
+  "info-rads",
 ];
+
+const expectedNewRecords = {
+  "ae-rads": { status: "non-acr", officialUrl: "https://doi.org/10.1186/s12880-025-01670-9" },
+  "bt-rads": { status: "in-development", officialUrl: "https://btrads.com/publications/" },
+  "c-lung-rads": { status: "non-acr", officialUrl: "https://doi.org/10.1038/s41591-024-03211-3" },
+  "c-ti-rads": { status: "non-acr", officialUrl: "https://doi.org/10.3760/cma.j.cn131148-20210205-00092" },
+  "info-rads": { status: "non-acr", officialUrl: "https://doi.org/10.1016/j.jacr.2020.09.049" },
+  "ki-rads": { status: "in-development", officialUrl: "https://doi.org/10.1148/radiol.240308" },
+  "moi-rads": { status: "non-acr", officialUrl: "https://doi.org/10.1007/s00256-020-03601-x" },
+  "pe-rads": { status: "released", officialUrl: "https://doi.org/10.1016/j.chest.2026.06.006" },
+  "ri-rads": { status: "non-acr", officialUrl: "https://doi.org/10.1016/j.ejrad.2019.108661", categoryRange: "RI-RADS A–D, X" },
+  "st-rads": { status: "works-in-progress", officialUrl: "https://doi.org/10.1007/s00256-026-05134-1" },
+  "tbi-rads": { status: "in-development", officialUrl: "https://doi.org/10.18885/CI.0000000841" },
+  "vi-rads": { status: "released", officialUrl: "https://doi.org/10.1016/j.eururo.2018.04.029" },
+};
 
 const nonAcrIds = new Set([
   "a-rads", "aem-rads", "apendic-rads", "ax-rads", "bti-rads", "cac-drs", "cad-rads", "cln-rads", "co-rads", "co-x-rads", "covid-rads", "eu-ti-rads", "fap-rads", "gb-rads", "gi-rads", "ild-rads", "ilf-rads", "k-ti-rads", "kwak-ti-rads", "ln-rads", "lu-rads", "met-rads", "mi-rads", "mski-rads", "my-rads", "node-rads", "ns-rads", "onco-rads", "or-rads", "ot-rads", "plaque-rads", "psma-rads", "sstr-rads", "su-rads", "vp-rads",
@@ -79,6 +106,12 @@ const expectedStatuses = {
   "o-rads": "released",
   "pi-rads": "released",
   "ti-rads": "released",
+  "bt-rads": "in-development",
+  "ki-rads": "in-development",
+  "pe-rads": "released",
+  "st-rads": "works-in-progress",
+  "tbi-rads": "in-development",
+  "vi-rads": "released",
 };
 
 const expectedVerificationDates = {
@@ -96,9 +129,19 @@ const expectedVerificationDates = {
 test("catalog includes the published table-2 systems without duplicating Bone-RADS", () => {
   assert.deepEqual(records.map(({ id }) => id).sort(), [...expectedIds].sort());
   assert.equal(records.filter(({ id }) => id === "bone-rads").length, 1);
-  assert.deepEqual(Object.fromEntries(records.filter(({ id }) => !nonAcrIds.has(id)).map(({ id, status }) => [id, status])), expectedStatuses);
+  assert.deepEqual(Object.fromEntries(records.filter(({ status }) => status !== "non-acr").map(({ id, status }) => [id, status])), expectedStatuses);
   assert.deepEqual(records.filter(({ id }) => nonAcrIds.has(id)).map(({ id }) => id).sort(), [...nonAcrIds].sort());
   assert.ok(records.filter(({ id }) => nonAcrIds.has(id)).every(({ status }) => status === "non-acr"));
+});
+
+test("catalog records the source-verified status and primary source for the newly added systems", () => {
+  for (const [id, expected] of Object.entries(expectedNewRecords)) {
+    const record = records.find((item) => item.id === id);
+    assert.ok(record, `${id} is missing`);
+    assert.equal(record.status, expected.status, `${id} status`);
+    assert.equal(record.officialUrl, expected.officialUrl, `${id} primary source`);
+    if (expected.categoryRange) assert.equal(record.categoryRange, expected.categoryRange, `${id} category range`);
+  }
 });
 
 test("every record has complete bilingual and source metadata", () => {
@@ -114,7 +157,10 @@ test("every record has complete bilingual and source metadata", () => {
     assert.ok(Array.isArray(record.categories));
     assert.ok(record.categories.every((item) => item.code && item.original && item.meaning?.zh && item.meaning?.en));
     assert.ok(record.originalTerms.every((item) => item.term && item.explanation?.zh && item.explanation?.en));
-    if (nonAcrIds.has(record.id)) {
+    if (expectedNewRecords[record.id]) {
+      assert.equal(record.status, expectedNewRecords[record.id].status);
+      assert.equal(record.officialUrl, expectedNewRecords[record.id].officialUrl);
+    } else if (nonAcrIds.has(record.id)) {
       assert.match(record.version, /^Published \d{4}$/);
       assert.match(record.officialUrl, /^https:\/\/doi\.org\//);
       assert.equal(record.lastVerified, "2026-09-18");
