@@ -44,10 +44,19 @@ test("site shell includes the professional-use notice and anatomy navigator", as
 test("regional anatomy filtering combines with search, modality, and status", async () => {
   const app = await import("../js/app.mjs");
   const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
-  assert.deepEqual(app.filterCatalog(records, { anatomy: "chest" }).map(r => r.id), ["bi-rads", "lung-rads"]);
+  assert.deepEqual(
+    app.filterCatalog(records, { anatomy: "chest", modality: "CT", status: "non-acr" }).map(r => r.id),
+    ["cac-drs", "cad-rads", "co-rads", "covid-rads", "ild-rads", "ilf-rads", "lu-rads", "vp-rads"],
+  );
+  assert.deepEqual(
+    app.filterCatalog(records, { anatomy: "abdomen-pelvis", modality: "US", status: "non-acr" }).map(r => r.id),
+    ["apendic-rads", "gb-rads", "gi-rads", "su-rads"],
+  );
+  assert.match(app.renderCatalog(records, new URL("https://example.test/?lang=zh&status=non-acr")), /非 ACR/);
+  assert.match(app.renderCatalog(records, new URL("https://example.test/?lang=en&status=non-acr")), /Non-ACR/);
   assert.deepEqual(app.filterCatalog(records, { anatomy: "abdomen-pelvis", modality: "MRI", query: "prostate", status: "released" }).map(r => r.id), ["pi-rads"]);
-  assert.deepEqual(app.filterCatalog(records, { anatomy: "musculoskeletal-whole-body" }).map(r => r.id), ["bone-rads"]);
-  assert.deepEqual(app.filterCatalog(records, { anatomy: "thyroid" }).map(r => r.id), ["ti-rads"]);
+  assert.deepEqual(app.filterCatalog(records, { anatomy: "musculoskeletal-whole-body", modality: "MRI", status: "non-acr" }).map(r => r.id), ["bti-rads", "met-rads", "mski-rads", "my-rads", "node-rads", "ns-rads", "onco-rads", "or-rads", "ot-rads"]);
+  assert.deepEqual(app.filterCatalog(records, { anatomy: "thyroid" }).map(r => r.id), ["ti-rads", "eu-ti-rads", "k-ti-rads", "kwak-ti-rads"]);
 });
 
 test("works-in-progress catalog entries have localized status labels", async () => {
@@ -108,6 +117,16 @@ test("clinical detail preserves categories, terms, source metadata and filtered 
   assert.match(renderDetail(records, url), /Release date:<\/strong> Not verified/);
   url.searchParams.set("rads", "unknown");
   assert.match(renderDetail(records, url), /Entry not found/);
+});
+
+test("published non-ACR entries point readers to the primary paper for untranscribed category definitions", async () => {
+  const { renderDetail } = await import("../js/app.mjs");
+  const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
+  const zh = renderDetail(records, new URL("https://example.test/?rads=co-rads"));
+  assert.match(zh, /分类定义请查阅原始发表文献。/);
+  assert.match(zh, /https:\/\/doi\.org\/10\.1148\/radiol\.2020201473/);
+  const en = renderDetail(records, new URL("https://example.test/?lang=en&rads=co-rads"));
+  assert.match(en, /See the original publication for category definitions\./);
 });
 
 test("partial bilingual detail fields use the requested-language sentinel", async () => {

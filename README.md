@@ -38,8 +38,11 @@ the existing JSON schema and use valid JSON when adding or updating records.
 
 For each change, confirm the official source, retain original English clinical
 terms where provided, update `lastVerified`, check related IDs, preview the
-filtered catalog and detail page, and run the test command above. Do not
-invent, infer, or present unverified clinical guidance as authoritative.
+filtered catalog and detail page, and run the test command above. ACR records
+must link to the ACR source; non-ACR records must link to the issuing society,
+publisher landing page, or DOI of the original publication. `non-acr` describes
+publisher or oversight, not clinical validation or endorsement. Do not invent,
+infer, or present unverified clinical guidance as authoritative.
 
 ## Source and copyright policy
 

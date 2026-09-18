@@ -7,16 +7,55 @@ const records = JSON.parse(
 );
 
 const expectedIds = [
+  "a-rads",
+  "aem-rads",
+  "apendic-rads",
+  "ax-rads",
   "bi-rads",
   "bone-rads",
+  "bti-rads",
+  "cac-drs",
+  "cad-rads",
   "c-rads",
+  "cln-rads",
+  "co-rads",
+  "co-x-rads",
+  "covid-rads",
+  "eu-ti-rads",
+  "fap-rads",
+  "gb-rads",
+  "gi-rads",
+  "ild-rads",
+  "ilf-rads",
+  "k-ti-rads",
+  "kwak-ti-rads",
   "li-rads",
+  "ln-rads",
+  "lu-rads",
   "lung-rads",
+  "met-rads",
+  "mi-rads",
+  "mski-rads",
+  "my-rads",
   "ni-rads",
+  "node-rads",
+  "ns-rads",
+  "onco-rads",
   "o-rads",
+  "or-rads",
+  "ot-rads",
   "pi-rads",
+  "plaque-rads",
+  "psma-rads",
+  "sstr-rads",
+  "su-rads",
   "ti-rads",
+  "vp-rads",
 ];
+
+const nonAcrIds = new Set([
+  "a-rads", "aem-rads", "apendic-rads", "ax-rads", "bti-rads", "cac-drs", "cad-rads", "cln-rads", "co-rads", "co-x-rads", "covid-rads", "eu-ti-rads", "fap-rads", "gb-rads", "gi-rads", "ild-rads", "ilf-rads", "k-ti-rads", "kwak-ti-rads", "ln-rads", "lu-rads", "met-rads", "mi-rads", "mski-rads", "my-rads", "node-rads", "ns-rads", "onco-rads", "or-rads", "ot-rads", "plaque-rads", "psma-rads", "sstr-rads", "su-rads", "vp-rads",
+]);
 
 const expectedVersions = {
   "bi-rads": "v2025",
@@ -54,9 +93,12 @@ const expectedVerificationDates = {
   "ti-rads": "2026-09-16",
 };
 
-test("Demo contains eight released ACR RADS entries and Bone-RADS as works in progress", () => {
-  assert.deepEqual(records.map(({ id }) => id).sort(), expectedIds);
-  assert.deepEqual(Object.fromEntries(records.map(({ id, status }) => [id, status])), expectedStatuses);
+test("catalog includes the published table-2 systems without duplicating Bone-RADS", () => {
+  assert.deepEqual(records.map(({ id }) => id).sort(), [...expectedIds].sort());
+  assert.equal(records.filter(({ id }) => id === "bone-rads").length, 1);
+  assert.deepEqual(Object.fromEntries(records.filter(({ id }) => !nonAcrIds.has(id)).map(({ id, status }) => [id, status])), expectedStatuses);
+  assert.deepEqual(records.filter(({ id }) => nonAcrIds.has(id)).map(({ id }) => id).sort(), [...nonAcrIds].sort());
+  assert.ok(records.filter(({ id }) => nonAcrIds.has(id)).every(({ status }) => status === "non-acr"));
 });
 
 test("every record has complete bilingual and source metadata", () => {
@@ -69,12 +111,18 @@ test("every record has complete bilingual and source metadata", () => {
     assert.ok(record.modalities.length > 0);
     assert.ok(record.version);
     assert.ok(record.categoryRange);
-    assert.ok(record.categories.length > 0);
+    assert.ok(Array.isArray(record.categories));
     assert.ok(record.categories.every((item) => item.code && item.original && item.meaning?.zh && item.meaning?.en));
     assert.ok(record.originalTerms.every((item) => item.term && item.explanation?.zh && item.explanation?.en));
-    assert.equal(record.version, expectedVersions[record.id]);
-    assert.match(record.officialUrl, /^https:\/\/www\.acr\.org\//);
-    assert.equal(record.lastVerified, expectedVerificationDates[record.id]);
+    if (nonAcrIds.has(record.id)) {
+      assert.match(record.version, /^Published \d{4}$/);
+      assert.match(record.officialUrl, /^https:\/\/doi\.org\//);
+      assert.equal(record.lastVerified, "2026-09-18");
+    } else {
+      assert.equal(record.version, expectedVersions[record.id]);
+      assert.match(record.officialUrl, /^https:\/\/www\.acr\.org\//);
+      assert.equal(record.lastVerified, expectedVerificationDates[record.id]);
+    }
   }
 });
 
