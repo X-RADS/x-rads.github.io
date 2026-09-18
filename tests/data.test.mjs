@@ -8,8 +8,11 @@ const records = JSON.parse(
 
 const expectedIds = [
   "bi-rads",
+  "bone-rads",
+  "c-rads",
   "li-rads",
   "lung-rads",
+  "ni-rads",
   "o-rads",
   "pi-rads",
   "ti-rads",
@@ -17,15 +20,43 @@ const expectedIds = [
 
 const expectedVersions = {
   "bi-rads": "v2025",
+  "bone-rads": "Bone-RADS v2023",
+  "c-rads": "C-RADS v2023",
   "li-rads": "CT/MRI v2018; US Surveillance and TRA v2024",
   "lung-rads": "v2022",
+  "ni-rads": "NI-RADS MRI v2025; PET/CT 2018",
   "o-rads": "US v2022",
   "pi-rads": "v2.1",
   "ti-rads": "ACR TI-RADS 2017",
 };
 
-test("Demo contains the six approved RADS entries", () => {
+const expectedStatuses = {
+  "bone-rads": "works-in-progress",
+  "bi-rads": "released",
+  "c-rads": "released",
+  "li-rads": "released",
+  "lung-rads": "released",
+  "ni-rads": "released",
+  "o-rads": "released",
+  "pi-rads": "released",
+  "ti-rads": "released",
+};
+
+const expectedVerificationDates = {
+  "bi-rads": "2026-09-16",
+  "bone-rads": "2026-09-18",
+  "c-rads": "2026-09-18",
+  "li-rads": "2026-09-16",
+  "lung-rads": "2026-09-16",
+  "ni-rads": "2026-09-18",
+  "o-rads": "2026-09-16",
+  "pi-rads": "2026-09-16",
+  "ti-rads": "2026-09-16",
+};
+
+test("Demo contains eight released ACR RADS entries and Bone-RADS as works in progress", () => {
   assert.deepEqual(records.map(({ id }) => id).sort(), expectedIds);
+  assert.deepEqual(Object.fromEntries(records.map(({ id, status }) => [id, status])), expectedStatuses);
 });
 
 test("every record has complete bilingual and source metadata", () => {
@@ -43,7 +74,7 @@ test("every record has complete bilingual and source metadata", () => {
     assert.ok(record.originalTerms.every((item) => item.term && item.explanation?.zh && item.explanation?.en));
     assert.equal(record.version, expectedVersions[record.id]);
     assert.match(record.officialUrl, /^https:\/\/www\.acr\.org\//);
-    assert.equal(record.lastVerified, "2026-09-16");
+    assert.equal(record.lastVerified, expectedVerificationDates[record.id]);
   }
 });
 

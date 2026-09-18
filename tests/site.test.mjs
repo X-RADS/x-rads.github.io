@@ -46,8 +46,16 @@ test("regional anatomy filtering combines with search, modality, and status", as
   const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
   assert.deepEqual(app.filterCatalog(records, { anatomy: "chest" }).map(r => r.id), ["bi-rads", "lung-rads"]);
   assert.deepEqual(app.filterCatalog(records, { anatomy: "abdomen-pelvis", modality: "MRI", query: "prostate", status: "released" }).map(r => r.id), ["pi-rads"]);
-  assert.equal(app.filterCatalog(records, { anatomy: "musculoskeletal-whole-body" }).length, 0);
+  assert.deepEqual(app.filterCatalog(records, { anatomy: "musculoskeletal-whole-body" }).map(r => r.id), ["bone-rads"]);
   assert.deepEqual(app.filterCatalog(records, { anatomy: "thyroid" }).map(r => r.id), ["ti-rads"]);
+});
+
+test("works-in-progress catalog entries have localized status labels", async () => {
+  const { renderCatalog } = await import("../js/app.mjs");
+  const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
+  const entry = { ...records.find(({ id }) => id === "pi-rads"), id: "bone-rads", acronym: "Bone-RADS", status: "works-in-progress" };
+  assert.match(renderCatalog([entry], new URL("https://example.test/?lang=zh")), /进行中/);
+  assert.match(renderCatalog([entry], new URL("https://example.test/?lang=en")), /Works in progress/);
 });
 
 test("loading rejects non-OK responses, broken JSON, and empty or malformed catalogs", async () => {

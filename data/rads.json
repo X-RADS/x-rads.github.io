@@ -193,5 +193,102 @@
     "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS",
     "lastVerified": "2026-09-16",
     "related": ["bi-rads", "o-rads"]
+  },
+  {
+    "id": "bone-rads",
+    "acronym": "Bone-RADS",
+    "name": { "zh": "骨病变影像报告和数据系统", "en": "Bone Reporting and Data System" },
+    "summary": {
+      "zh": "ACR 将 Bone-RADS 列为进行中的项目，用于可能为肿瘤性的骨病变之评估、报告与处理建议标准化。以下为教学性类别概览，不替代正式评分规则或临床决策。",
+      "en": "ACR lists Bone-RADS as a works-in-progress program for standardizing assessment, reporting and management recommendations for potentially neoplastic bone lesions. This is a teaching overview, not the formal scoring rules or clinical decision-making."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "works-in-progress",
+    "anatomy": "bone",
+    "domain": { "zh": "可能为肿瘤性的骨病变评估", "en": "Assessment of potentially neoplastic bone lesions" },
+    "modalities": ["Radiography", "CT", "MRI"],
+    "version": "Bone-RADS v2023",
+    "releaseDate": null,
+    "categoryRange": "Bone-RADS 0–4",
+    "categories": [
+      { "code": "0", "original": "Incompletely characterized", "meaning": { "zh": "现有资料不足以可靠预测风险，需进一步评估。", "en": "Available information cannot reliably predict risk and requires further evaluation." } },
+      { "code": "1", "original": "Benign", "meaning": { "zh": "表现符合良性骨病变类别。", "en": "Findings fall in the benign bone-lesion category." } },
+      { "code": "2", "original": "Likely benign", "meaning": { "zh": "表现倾向良性。", "en": "Findings favor a benign lesion." } },
+      { "code": "3", "original": "Indeterminate", "meaning": { "zh": "风险未定，需要进一步表征或随访。", "en": "Risk remains indeterminate and needs further characterization or follow-up." } },
+      { "code": "4", "original": "Suspicious", "meaning": { "zh": "存在提示恶性或需专科处理的可疑特征。", "en": "Suspicious features may indicate malignancy or need specialist management." } }
+    ],
+    "originalTerms": [
+      { "term": "Potentially neoplastic bone lesion", "explanation": { "zh": "可能为肿瘤性的骨病变；需结合病史、影像表现及必要的进一步检查判断。", "en": "A bone lesion that may be neoplastic and requires assessment in clinical and imaging context." } },
+      { "term": "Works in Progress", "explanation": { "zh": "ACR 对该项目的当前分类，表示尚不足以支持常规临床使用。", "en": "ACR's current program classification, indicating insufficient evidence for routine clinical use." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Bone-RADS",
+    "lastVerified": "2026-09-18",
+    "related": ["ti-rads", "ni-rads"]
+  },
+  {
+    "id": "c-rads",
+    "acronym": "C-RADS",
+    "name": { "zh": "CT 结肠成像报告和数据系统", "en": "CT Colonography Reporting and Data System" },
+    "summary": {
+      "zh": "用于 CT 结肠成像的结直肠与结肠外发现报告。下列为类别教学摘要；检查质量、病灶测量及后续处理应查阅 ACR 当前原文。",
+      "en": "Supports reporting of colorectal and extracolonic findings at CT colonography. The categories below are a teaching summary; consult the current ACR source for examination quality, lesion measurements and follow-up."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "released",
+    "anatomy": "colon",
+    "domain": { "zh": "CT 结肠成像筛查与报告", "en": "CT colonography screening and reporting" },
+    "modalities": ["CT"],
+    "version": "C-RADS v2023",
+    "releaseDate": null,
+    "categoryRange": "Colonic: C0–C4; extracolonic: E0 (optional), E1/E2, E3, E4",
+    "categories": [
+      { "code": "C0", "original": "Inadequate Study/Awaiting Prior Comparisons", "meaning": { "zh": "检查不足或等待既往检查比较，尚不能完成结直肠评估。", "en": "The study is inadequate or prior examinations are awaited before colorectal assessment is complete." } },
+      { "code": "C1", "original": "Normal Colon or Benign Lesion", "meaning": { "zh": "结肠正常或见良性病变。", "en": "The colon is normal or has a benign lesion." } },
+      { "code": "C2a", "original": "Intermediate Polyp or Indeterminate Finding", "meaning": { "zh": "中等大小息肉或未定性发现。", "en": "An intermediate polyp or indeterminate finding is present." } },
+      { "code": "C2b", "original": "Likely Benign Diverticular Finding", "meaning": { "zh": "表现倾向良性的憩室相关发现。", "en": "A diverticular finding is likely benign." } },
+      { "code": "C3", "original": "Polyp, Possibly Advanced Adenoma", "meaning": { "zh": "息肉表现可能对应进展期腺瘤。", "en": "A polyp may represent an advanced adenoma." } },
+      { "code": "C4", "original": "Colonic Mass, Likely Malignant", "meaning": { "zh": "结肠肿块表现提示恶性可能。", "en": "A colonic mass is likely malignant." } },
+      { "code": "E1/E2", "original": "Normal anatomic variant or benign finding", "meaning": { "zh": "结肠外正常解剖变异或良性发现。", "en": "An extracolonic normal anatomic variant or benign finding." } },
+      { "code": "E3", "original": "Likely unimportant finding, incompletely characterized", "meaning": { "zh": "结肠外发现可能不重要，但尚未完全定性。", "en": "An extracolonic finding is likely unimportant but incompletely characterized." } },
+      { "code": "E4", "original": "Potentially important finding", "meaning": { "zh": "可能具有临床重要性的结肠外发现。", "en": "A potentially important extracolonic finding." } }
+    ],
+    "originalTerms": [
+      { "term": "CT colonography", "explanation": { "zh": "以 CT 进行结肠与直肠评估的检查。", "en": "A CT examination used to assess the colon and rectum." } },
+      { "term": "Extracolonic finding", "explanation": { "zh": "结肠以外解剖区域的发现，使用 E 类别描述。", "en": "A finding outside the colon, described with E categories." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/C-RADS",
+    "lastVerified": "2026-09-18",
+    "related": ["li-rads", "lung-rads"]
+  },
+  {
+    "id": "ni-rads",
+    "acronym": "NI-RADS",
+    "name": { "zh": "颈部影像报告和数据系统", "en": "Neck Imaging Reporting and Data System" },
+    "summary": {
+      "zh": "用于头颈部肿瘤根治性治疗后的影像监测与复发风险分层，可用于 CT、MRI 或 PET 影像。类别用于治疗后监测，不用于治疗期间。",
+      "en": "Supports post-treatment surveillance and recurrence risk stratification after curative treatment for head and neck cancer, using CT, MRI or PET imaging. The categories are for post-treatment surveillance, not imaging during treatment."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "released",
+    "anatomy": "head-neck",
+    "domain": { "zh": "头颈部肿瘤治疗后监测", "en": "Post-treatment surveillance of head and neck cancer" },
+    "modalities": ["CT", "MRI", "PET/CT"],
+    "version": "NI-RADS MRI v2025; PET/CT 2018",
+    "releaseDate": null,
+    "categoryRange": "NI-RADS 0–4",
+    "categories": [
+      { "code": "0", "original": "Incomplete", "meaning": { "zh": "缺少必要比较资料或评估不完整。", "en": "Necessary comparison studies are unavailable or the assessment is incomplete." } },
+      { "code": "1", "original": "No evidence of recurrence", "meaning": { "zh": "未见复发证据。", "en": "No evidence of recurrence is identified." } },
+      { "code": "2", "original": "Low suspicion", "meaning": { "zh": "复发可能性较低。", "en": "Findings raise low suspicion for recurrence." } },
+      { "code": "3", "original": "High suspicion", "meaning": { "zh": "复发可能性较高。", "en": "Findings raise high suspicion for recurrence." } },
+      { "code": "4", "original": "Definitive recurrence", "meaning": { "zh": "已证实或影像及临床进展明确支持复发。", "en": "Recurrence is pathologically proven or definitively supported by radiologic and clinical progression." } }
+    ],
+    "originalTerms": [
+      { "term": "Post-treatment surveillance", "explanation": { "zh": "根治性治疗结束后的随访影像监测。", "en": "Imaging surveillance after definitive or curative treatment." } },
+      { "term": "Primary site", "explanation": { "zh": "原发肿瘤所在区域，与颈部淋巴结评估并列。", "en": "The original tumor location, assessed alongside cervical lymph nodes." } }
+    ],
+    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/NI-RADS",
+    "lastVerified": "2026-09-18",
+    "related": ["bone-rads", "ti-rads"]
   }
 ]
