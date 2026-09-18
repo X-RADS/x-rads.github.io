@@ -83,6 +83,19 @@ h1 { max-width: 15ch; margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); }
 .catalog-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .catalog-card { padding: 1.25rem; border: 1px solid var(--line); border-radius: 0.5rem; background: var(--surface); }
 .detail-view { margin-bottom: 3.5rem; padding: 1.5rem; border: 1px solid var(--line); background: var(--surface-soft); }
+.team { padding-block: 3.5rem; border-top: 1px solid var(--line); background: linear-gradient(120deg, var(--surface-soft), #ebf7f8); }
+.team-heading { margin-bottom: 2rem; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr)); gap: 1.25rem; }
+.team-card { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 1.5rem; padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: .5rem; background: var(--surface); box-shadow: 0 2px 7px rgb(23 32 51 / 4%); }
+.team-avatar { width: 9rem; height: 9rem; border: 3px solid var(--accent); border-radius: 50%; object-fit: cover; object-position: center; }
+.team-copy h3 { margin: 0; font-size: 1.35rem; line-height: 1.25; }
+.team-name-line { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; }
+.team-affiliation, .team-role { margin: .35rem 0 0; color: var(--muted); }
+.team-role { color: var(--brand-dark); font-weight: 700; }
+.team-bio { margin: 1rem 0; }
+.team-contact { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border: 1px solid var(--line); border-radius: 50%; color: var(--brand-dark); }
+.team-contact:hover { border-color: var(--brand); background: var(--accent); }
+.team-contact svg { width: 1.05rem; height: 1.05rem; }
 .site-footer { padding-block: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9375rem; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -122,4 +135,6 @@ h1 { max-width: 15ch; margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); }
   .section-heading, .detail-title-row { align-items: start; flex-direction: column; }
   .page-status { text-align: left; }
   .detail-status { justify-content: start; }.category-table { display: block; overflow-x: auto; }.anatomy-buttons button { text-align: center; }
+  .team-card { grid-template-columns: 1fr; gap: 1rem; }
+  .team-avatar { width: 8rem; height: 8rem; }
 }
