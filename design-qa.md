@@ -1,4 +1,10 @@
-# Design QA — X-RADS static Demo
+# Design QA — X-RADS static Demo (historical UI baseline)
+
+> **Scope note:** This report records the initial six-card interface comparison
+> and its associated interaction checks. It is not a current catalog inventory.
+> The later 56-record content expansion requires the maintenance checks in
+> `README.md`; its source and filtered-detail verification does not retroactively
+> turn this baseline report into a new pixel-comparison study.
 
 **Findings**
 
@@ -36,7 +42,7 @@ No actionable P0, P1, or P2 implementation findings remain.
 
 ## States compared
 
-1. Desktop homepage in Chinese, initial state: all six cards, search, anatomy
+1. Desktop homepage in Chinese, initial six-card seed state: search, anatomy
    navigator, modality/status filters, and frequent-RADS controls. The source
    option-C structure and the implementation capture were emitted together in
    one in-app-browser comparison input.
@@ -87,7 +93,7 @@ horizontal viewport movement.
 ## Interaction and console checks
 
 - Chinese default: passed.
-- Six cards: passed.
+- Six-card seed catalog: passed.
 - `前列腺`, `Prostate`, and `PI-RADS` search: each returned the single PI-RADS card.
 - Abdomen/pelvis plus MRI: passed; the expected LI-RADS and PI-RADS records remained.
 - PI-RADS clinical detail and `Very low`: passed.
@@ -117,6 +123,11 @@ horizontal viewport movement.
    focus, conditional Detail navigation, English detail persistence, and an
    empty error console all passed. Evidence remains ephemeral in the in-app
    browser session; no durable screenshots are claimed.
+4. Content-expansion maintenance check (2026-09-18): the 56-record catalog
+   passed the full static test suite, and the `workflow-quality` filter plus
+   Chinese/English AE-RADS and RI-RADS detail views were inspected. This was a
+   source-and-content check, not a replacement for the historical visual
+   baseline above.
 
 **Open Questions**
 

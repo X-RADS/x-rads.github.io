@@ -5,6 +5,14 @@ clinical imaging reporting and data systems. It supports professional education
 and reference only; it is not diagnostic software, medical advice, or a
 substitute for current official guidance and local institutional policy.
 
+## Repository boundary
+
+This repository is the sole public X-RADS website. The parent local workspace
+is not a Git repository and holds original articles, Word documents, drafts,
+and restricted assets outside this repository. Do not add those materials to
+this public project; publish concise, independently maintained metadata and
+official-source links only.
+
 ## Catalog scope
 
 The catalog currently contains 56 records:
@@ -72,6 +80,12 @@ of inventing unverified definitions. `non-acr` describes publisher or
 oversight, not clinical validation or endorsement. Do not invent, infer, or
 present unverified clinical guidance as authoritative.
 
+For a new record, also confirm that its anatomy value is exposed through the
+catalog navigator or has a deliberate fallback, and verify the affected list
+and detail views in Chinese and English. The `workflow-quality` navigator
+group is used for workflow and quality systems such as AE-RADS, Info-RADS, and
+RI-RADS.
+
 ## Source and copyright policy
 
 Only commit concise, independently maintained catalog metadata and content
@@ -86,4 +100,6 @@ appropriate publication right or permission.
 The public repository is `X-RADS/x-rads.github.io`. After review, push the
 local `main` branch only when explicitly authorized. GitHub Pages serves the
 `main` branch and `/ (root)` folder; `.nojekyll` ensures the static files are
-served without Jekyll processing. Local merging does not publish changes.
+served without Jekyll processing. Local merging does not publish changes; check
+the remote and deployment state separately before telling readers that the
+online site has changed.

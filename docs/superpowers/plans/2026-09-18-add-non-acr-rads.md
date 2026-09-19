@@ -1,5 +1,11 @@
 # Non-ACR RADS Catalog Implementation Plan
 
+> **Historical execution record:** The table-2 catalog work in this plan landed
+> in `c8e81ef` on 2026-09-18. A later source-verified expansion from tables
+> 1–4 landed in `751f7c3`. This document preserves the table-2 plan and should
+> not be used as the current 56-record catalog inventory; use `README.md` and
+> `data/rads.json` for current operations.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Add the 35 unique, published non-ACR RADS frameworks in Word table 2 to the X-RADS catalog, without duplicating the existing Bone-RADS record.
@@ -116,6 +122,7 @@ State that non-ACR entries are sourced from the original publication or issuing 
 
 Run the existing local preview and inspect a non-ACR list card and detail page in Chinese and English.
 
-- [ ] **Step 3: Commit only scoped files**
+- [x] **Step 3: Commit only scoped files**
 
-Commit the catalog, tests, app mapping, README, and this plan after all checks pass.
+Completed in `c8e81ef`: catalog, tests, app mapping, README, and this plan
+were committed together after checks passed.
