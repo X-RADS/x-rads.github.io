@@ -1,41 +1,11 @@
 [
   {
-    "id": "bi-rads",
-    "acronym": "BI-RADS",
-    "name": { "zh": "乳腺影像报告和数据系统", "en": "Breast Imaging Reporting and Data System" },
-    "summary": {
-      "zh": "统一乳腺影像描述、评估和结果记录。以下为主要类别的教学摘要；4A、4B、4C 亚类及具体处理请查阅官方手册。",
-      "en": "Organizes breast imaging descriptions, assessments and outcome records. This teaching overview covers the main categories; consult the manual for 4A, 4B and 4C subdivisions and management."
-    },
-    "organization": "American College of Radiology (ACR)",
-    "status": "released",
-    "anatomy": "breast",
-    "domain": { "zh": "乳腺影像评估", "en": "Breast imaging assessment" },
-    "modalities": ["Mammography", "US", "MRI"],
-    "version": "v2025",
-    "releaseDate": null,
-    "categoryRange": "BI-RADS 0–6",
-    "categories": [
-      { "code": "0", "original": "Incomplete", "meaning": { "zh": "评估尚未完成，需补充影像或既往资料。", "en": "Assessment awaits additional imaging or prior examinations." } },
-      { "code": "1", "original": "Negative", "meaning": { "zh": "未见异常影像发现。", "en": "No abnormal imaging finding." } },
-      { "code": "2", "original": "Benign", "meaning": { "zh": "所见为良性。", "en": "Findings are assessed as benign." } },
-      { "code": "3", "original": "Probably Benign", "meaning": { "zh": "影像所见倾向良性。", "en": "Imaging favors a benign finding." } },
-      { "code": "4", "original": "Suspicious", "meaning": { "zh": "所见可疑，包含不同疑恶性程度的亚类。", "en": "Findings raise concern, with subdivisions for differing suspicion." } },
-      { "code": "5", "original": "Highly Suggestive of Malignancy", "meaning": { "zh": "影像表现强烈提示恶性。", "en": "Imaging strongly favors malignancy." } },
-      { "code": "6", "original": "Known Biopsy-Proven Malignancy", "meaning": { "zh": "恶性病变已获活检证实。", "en": "Biopsy has already established malignancy." } }
-    ],
-    "originalTerms": [
-      { "term": "Lexicon", "explanation": { "zh": "用于统一描述影像所见的术语体系。", "en": "A shared vocabulary for describing imaging findings." } },
-      { "term": "Assessment", "explanation": { "zh": "对影像所见的综合判断，不等同于病理诊断。", "en": "An overall imaging judgment, distinct from a pathology diagnosis." } }
-    ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/BI-RADS",
-    "lastVerified": "2026-09-16",
-    "related": ["o-rads", "ti-rads"]
-  },
-  {
     "id": "li-rads",
     "acronym": "LI-RADS",
-    "name": { "zh": "肝脏影像报告和数据系统", "en": "Liver Imaging Reporting and Data System" },
+    "name": {
+      "zh": "肝脏影像报告和数据系统",
+      "en": "Liver Imaging Reporting and Data System"
+    },
     "summary": {
       "zh": "用于符合适用条件的肝细胞癌高危人群。下列类别仅概述 CT/MRI v2018 未治疗病灶的诊断分类；超声监测及治疗反应评估采用各自算法。",
       "en": "Applies to eligible populations at risk for hepatocellular carcinoma. Categories below summarize CT/MRI v2018 diagnosis of untreated observations; ultrasound surveillance and treatment response use separate algorithms."
@@ -43,33 +13,126 @@
     "organization": "American College of Radiology (ACR)",
     "status": "released",
     "anatomy": "liver",
-    "domain": { "zh": "肝细胞癌高危人群的影像评估", "en": "Imaging in populations at risk for hepatocellular carcinoma" },
-    "modalities": ["CT", "MRI", "US", "CEUS"],
-    "version": "CT/MRI v2018; US Surveillance and TRA v2024",
+    "domain": {
+      "zh": "肝细胞癌高危人群的影像评估",
+      "en": "Imaging in populations at risk for hepatocellular carcinoma"
+    },
+    "modalities": [
+      "CT",
+      "MRI"
+    ],
+    "version": "CT/MRI v2018",
     "releaseDate": null,
     "categoryRange": "CT/MRI: LR-1–LR-5, LR-M, LR-TIV, LR-NC",
     "categories": [
-      { "code": "LR-1", "original": "Definitely benign", "meaning": { "zh": "可明确判断为良性。", "en": "A benign observation with diagnostic confidence." } },
-      { "code": "LR-2", "original": "Probably benign", "meaning": { "zh": "倾向良性。", "en": "Benignity is favored." } },
-      { "code": "LR-3", "original": "Intermediate probability of malignancy", "meaning": { "zh": "恶性可能性居中。", "en": "Malignancy remains indeterminate." } },
-      { "code": "LR-4", "original": "Probably HCC", "meaning": { "zh": "倾向肝细胞癌。", "en": "Hepatocellular carcinoma is favored." } },
-      { "code": "LR-5", "original": "Definitely HCC", "meaning": { "zh": "在适用人群中满足肝细胞癌影像诊断标准。", "en": "Meets imaging criteria for HCC in the eligible population." } },
-      { "code": "LR-M", "original": "Probably or definitely malignant, not HCC specific", "meaning": { "zh": "高度疑恶性，但表现不特异于肝细胞癌；仍可能为肝细胞癌。", "en": "Malignancy is strongly suspected without HCC-specific features; HCC remains possible." } },
-      { "code": "LR-TIV", "original": "Tumor in vein", "meaning": { "zh": "静脉内见肿瘤组织。", "en": "Tumor tissue is identified within a vein." } },
-      { "code": "LR-NC", "original": "Not categorizable", "meaning": { "zh": "图像缺失或质量受限，无法可靠分类。", "en": "Missing or degraded images prevent reliable categorization." } }
+      {
+        "code": "LR-1",
+        "original": "Definitely benign",
+        "meaning": {
+          "zh": "可明确判断为良性。",
+          "en": "A benign observation with diagnostic confidence."
+        }
+      },
+      {
+        "code": "LR-2",
+        "original": "Probably benign",
+        "meaning": {
+          "zh": "倾向良性。",
+          "en": "Benignity is favored."
+        }
+      },
+      {
+        "code": "LR-3",
+        "original": "Intermediate probability of malignancy",
+        "meaning": {
+          "zh": "恶性可能性居中。",
+          "en": "Malignancy remains indeterminate."
+        }
+      },
+      {
+        "code": "LR-4",
+        "original": "Probably HCC",
+        "meaning": {
+          "zh": "倾向肝细胞癌。",
+          "en": "Hepatocellular carcinoma is favored."
+        }
+      },
+      {
+        "code": "LR-5",
+        "original": "Definitely HCC",
+        "meaning": {
+          "zh": "在适用人群中满足肝细胞癌影像诊断标准。",
+          "en": "Meets imaging criteria for HCC in the eligible population."
+        }
+      },
+      {
+        "code": "LR-M",
+        "original": "Probably or definitely malignant, not HCC specific",
+        "meaning": {
+          "zh": "高度疑恶性，但表现不特异于肝细胞癌；仍可能为肝细胞癌。",
+          "en": "Malignancy is strongly suspected without HCC-specific features; HCC remains possible."
+        }
+      },
+      {
+        "code": "LR-TIV",
+        "original": "Tumor in vein",
+        "meaning": {
+          "zh": "静脉内见肿瘤组织。",
+          "en": "Tumor tissue is identified within a vein."
+        }
+      },
+      {
+        "code": "LR-NC",
+        "original": "Not categorizable",
+        "meaning": {
+          "zh": "图像缺失或质量受限，无法可靠分类。",
+          "en": "Missing or degraded images prevent reliable categorization."
+        }
+      }
     ],
     "originalTerms": [
-      { "term": "HCC", "explanation": { "zh": "肝细胞癌。", "en": "Hepatocellular carcinoma." } },
-      { "term": "TRA", "explanation": { "zh": "治疗反应评估，需选择与治疗方式匹配的专用算法。", "en": "Treatment response assessment uses an algorithm matched to the treatment type." } }
+      {
+        "term": "HCC",
+        "explanation": {
+          "zh": "肝细胞癌。",
+          "en": "Hepatocellular carcinoma."
+        }
+      },
+      {
+        "term": "TRA",
+        "explanation": {
+          "zh": "治疗反应评估，需选择与治疗方式匹配的专用算法。",
+          "en": "Treatment response assessment uses an algorithm matched to the treatment type."
+        }
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/LI-RADS",
     "lastVerified": "2026-09-16",
-    "related": ["lung-rads", "pi-rads"]
+    "related": [
+      "lung-rads",
+      "pi-rads"
+    ],
+    "sources": [
+      {
+        "id": "ct-mri-v2018",
+        "modalities": [
+          "CT",
+          "MRI"
+        ],
+        "title": "LI-RADS CT/MRI v2018 Core",
+        "version": "CT/MRI v2018",
+        "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/LI-RADS"
+      }
+    ],
+    "primarySourceId": "ct-mri-v2018",
+    "detailSourceId": "ct-mri-v2018"
   },
   {
     "id": "lung-rads",
     "acronym": "Lung-RADS",
-    "name": { "zh": "肺部 CT 筛查报告和数据系统", "en": "Lung CT Screening Reporting and Data System" },
+    "name": {
+      "zh": "肺部 CT 筛查报告和数据系统",
+      "en": "Lung CT Screening Reporting and Data System"
+    },
     "summary": {
       "zh": "用于肺癌筛查 CT 的结节评估与报告。以下为类别含义摘要，不涵盖测量规则或处理时限，也不作为偶发肺结节的通用规则。",
       "en": "Supports nodule assessment and reporting in lung cancer screening CT. This overview omits measurement rules and management intervals and is not a general incidental-nodule guideline."
@@ -77,33 +140,123 @@
     "organization": "American College of Radiology (ACR)",
     "status": "released",
     "anatomy": "lung",
-    "domain": { "zh": "肺癌低剂量 CT 筛查", "en": "Lung cancer screening with low-dose CT" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "肺癌低剂量 CT 筛查",
+      "en": "Lung cancer screening with low-dose CT"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "v2022",
     "releaseDate": null,
     "categoryRange": "0, 1, 2, 3, 4A, 4B, 4X; S",
     "categories": [
-      { "code": "0", "original": "Incomplete", "meaning": { "zh": "筛查评估暂未完成。", "en": "Screening assessment is not yet complete." } },
-      { "code": "1", "original": "Negative", "meaning": { "zh": "无肺结节，或结节具有明确良性征象。", "en": "No nodules, or nodules with definite benign features." } },
-      { "code": "2", "original": "Benign", "meaning": { "zh": "结节的表现或变化过程支持良性。", "en": "Nodule appearance or behavior supports benignity." } },
-      { "code": "3", "original": "Probably Benign", "meaning": { "zh": "结节倾向良性。", "en": "Nodule findings favor benignity." } },
-      { "code": "4A", "original": "Suspicious", "meaning": { "zh": "结节具有可疑表现。", "en": "Nodule findings raise concern for cancer." } },
-      { "code": "4B", "original": "Very Suspicious", "meaning": { "zh": "结节疑恶性程度较高。", "en": "Nodule findings raise greater concern for cancer." } },
-      { "code": "4X", "original": "4X", "meaning": { "zh": "3 类或 4 类结节伴进一步增加肺癌疑虑的影像表现；4X 为独立类别。", "en": "Category 3 or 4 nodules have further concerning findings; 4X is a distinct category." } },
-      { "code": "S", "original": "Significant or Potentially Significant", "meaning": { "zh": "附加修饰符，标记与肺癌无关但具有或可能具有临床意义的发现。", "en": "A modifier for other findings that may matter clinically, unrelated to lung cancer." } }
+      {
+        "code": "0",
+        "original": "Incomplete",
+        "meaning": {
+          "zh": "筛查评估暂未完成。",
+          "en": "Screening assessment is not yet complete."
+        }
+      },
+      {
+        "code": "1",
+        "original": "Negative",
+        "meaning": {
+          "zh": "无肺结节，或结节具有明确良性征象。",
+          "en": "No nodules, or nodules with definite benign features."
+        }
+      },
+      {
+        "code": "2",
+        "original": "Benign",
+        "meaning": {
+          "zh": "结节的表现或变化过程支持良性。",
+          "en": "Nodule appearance or behavior supports benignity."
+        }
+      },
+      {
+        "code": "3",
+        "original": "Probably Benign",
+        "meaning": {
+          "zh": "结节倾向良性。",
+          "en": "Nodule findings favor benignity."
+        }
+      },
+      {
+        "code": "4A",
+        "original": "Suspicious",
+        "meaning": {
+          "zh": "结节具有可疑表现。",
+          "en": "Nodule findings raise concern for cancer."
+        }
+      },
+      {
+        "code": "4B",
+        "original": "Very Suspicious",
+        "meaning": {
+          "zh": "结节疑恶性程度较高。",
+          "en": "Nodule findings raise greater concern for cancer."
+        }
+      },
+      {
+        "code": "4X",
+        "original": "4X",
+        "meaning": {
+          "zh": "3 类或 4 类结节伴进一步增加肺癌疑虑的影像表现；4X 为独立类别。",
+          "en": "Category 3 or 4 nodules have further concerning findings; 4X is a distinct category."
+        }
+      },
+      {
+        "code": "S",
+        "original": "Significant or Potentially Significant",
+        "meaning": {
+          "zh": "附加修饰符，标记与肺癌无关但具有或可能具有临床意义的发现。",
+          "en": "A modifier for other findings that may matter clinically, unrelated to lung cancer."
+        }
+      }
     ],
     "originalTerms": [
-      { "term": "LDCT", "explanation": { "zh": "低剂量胸部 CT，用于肺癌筛查。", "en": "Low-dose chest CT used for lung cancer screening." } },
-      { "term": "S modifier", "explanation": { "zh": "附加标记，不代表结节恶性风险等级。", "en": "An added flag, not a nodule cancer-risk grade." } }
+      {
+        "term": "LDCT",
+        "explanation": {
+          "zh": "低剂量胸部 CT，用于肺癌筛查。",
+          "en": "Low-dose chest CT used for lung cancer screening."
+        }
+      },
+      {
+        "term": "S modifier",
+        "explanation": {
+          "zh": "附加标记，不代表结节恶性风险等级。",
+          "en": "An added flag, not a nodule cancer-risk grade."
+        }
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Lung-RADS",
     "lastVerified": "2026-09-16",
-    "related": ["li-rads", "bi-rads"]
+    "related": [
+      "li-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Lung CT Screening Reporting and Data System",
+        "version": "v2022",
+        "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Lung-RADS"
+      }
+    ],
+    "primarySourceId": "primary",
+    "detailSourceId": "primary"
   },
   {
     "id": "o-rads",
     "acronym": "O-RADS",
-    "name": { "zh": "卵巢及附件影像报告和数据系统", "en": "Ovarian-Adnexal Reporting and Data System" },
+    "name": {
+      "zh": "卵巢及附件影像报告和数据系统",
+      "en": "Ovarian-Adnexal Reporting and Data System"
+    },
     "summary": {
       "zh": "本条目仅收录超声系统，以附件病变的超声表现描述恶性风险。MRI 使用独立体系，不能直接套用下列超声类别。",
       "en": "This entry covers the ultrasound system only, describing malignancy risk from adnexal lesion appearances. MRI has a separate system; these ultrasound categories are not interchangeable with MRI scores."
@@ -111,31 +264,117 @@
     "organization": "American College of Radiology (ACR)",
     "status": "released",
     "anatomy": "ovary",
-    "domain": { "zh": "卵巢及附件病变的超声风险评估", "en": "Ultrasound risk assessment of ovarian and adnexal lesions" },
-    "modalities": ["US"],
-    "version": "US v2022",
+    "domain": {
+      "zh": "卵巢及附件病变的超声风险评估",
+      "en": "Ultrasound risk assessment of ovarian and adnexal lesions"
+    },
+    "modalities": [
+      "US",
+      "MRI"
+    ],
+    "version": "US v2022; MRI 2022",
     "releaseDate": null,
     "categoryRange": "O-RADS US 0–5",
     "categories": [
-      { "code": "0", "original": "Incomplete Evaluation", "meaning": { "zh": "技术因素限制了病变特征的判断。", "en": "Technical limitations prevent adequate lesion characterization." } },
-      { "code": "1", "original": "Normal Ovary", "meaning": { "zh": "正常卵巢或生理性表现。", "en": "Normal ovarian appearance or physiologic findings." } },
-      { "code": "2", "original": "Almost Certainly Benign", "meaning": { "zh": "恶性风险极低。", "en": "Malignancy is considered exceptionally unlikely." } },
-      { "code": "3", "original": "Low Risk", "meaning": { "zh": "恶性风险较低。", "en": "Findings fall in a lower malignancy-risk group." } },
-      { "code": "4", "original": "Intermediate Risk", "meaning": { "zh": "恶性风险居中。", "en": "Findings fall in an intermediate malignancy-risk group." } },
-      { "code": "5", "original": "High Risk", "meaning": { "zh": "恶性风险较高。", "en": "Findings fall in a higher malignancy-risk group." } }
+      {
+        "code": "0",
+        "original": "Incomplete Evaluation",
+        "meaning": {
+          "zh": "技术因素限制了病变特征的判断。",
+          "en": "Technical limitations prevent adequate lesion characterization."
+        }
+      },
+      {
+        "code": "1",
+        "original": "Normal Ovary",
+        "meaning": {
+          "zh": "正常卵巢或生理性表现。",
+          "en": "Normal ovarian appearance or physiologic findings."
+        }
+      },
+      {
+        "code": "2",
+        "original": "Almost Certainly Benign",
+        "meaning": {
+          "zh": "恶性风险极低。",
+          "en": "Malignancy is considered exceptionally unlikely."
+        }
+      },
+      {
+        "code": "3",
+        "original": "Low Risk",
+        "meaning": {
+          "zh": "恶性风险较低。",
+          "en": "Findings fall in a lower malignancy-risk group."
+        }
+      },
+      {
+        "code": "4",
+        "original": "Intermediate Risk",
+        "meaning": {
+          "zh": "恶性风险居中。",
+          "en": "Findings fall in an intermediate malignancy-risk group."
+        }
+      },
+      {
+        "code": "5",
+        "original": "High Risk",
+        "meaning": {
+          "zh": "恶性风险较高。",
+          "en": "Findings fall in a higher malignancy-risk group."
+        }
+      }
     ],
     "originalTerms": [
-      { "term": "Adnexal lesion", "explanation": { "zh": "附件区域病变，范围不限于卵巢本身。", "en": "A lesion in the adnexal region, not limited to the ovary itself." } },
-      { "term": "O-RADS US", "explanation": { "zh": "基于超声的体系；请与 O-RADS MRI 区分。", "en": "The ultrasound framework, distinct from O-RADS MRI." } }
+      {
+        "term": "Adnexal lesion",
+        "explanation": {
+          "zh": "附件区域病变，范围不限于卵巢本身。",
+          "en": "A lesion in the adnexal region, not limited to the ovary itself."
+        }
+      },
+      {
+        "term": "O-RADS US",
+        "explanation": {
+          "zh": "基于超声的体系；请与 O-RADS MRI 区分。",
+          "en": "The ultrasound framework, distinct from O-RADS MRI."
+        }
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/O-RADS/Ultrasound",
     "lastVerified": "2026-09-16",
-    "related": ["bi-rads", "ti-rads"]
+    "related": [
+      "ti-rads"
+    ],
+    "sources": [
+      {
+        "id": "us-2022",
+        "modalities": [
+          "US"
+        ],
+        "title": "O-RADS US v2022",
+        "version": "US v2022",
+        "officialUrl": "https://doi.org/10.1148/radiol.230685"
+      },
+      {
+        "id": "mri-2022",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "O-RADS MRI Risk Stratification System",
+        "version": "MRI 2022",
+        "officialUrl": "https://doi.org/10.1148/radiol.204371"
+      }
+    ],
+    "primarySourceId": "us-2022",
+    "detailSourceId": "us-2022"
   },
   {
     "id": "pi-rads",
     "acronym": "PI-RADS",
-    "name": { "zh": "前列腺影像报告和数据系统", "en": "Prostate Imaging Reporting and Data System" },
+    "name": {
+      "zh": "前列腺影像报告和数据系统",
+      "en": "Prostate Imaging Reporting and Data System"
+    },
     "summary": {
       "zh": "基于前列腺 MRI 判断病灶存在临床显著癌的可能性。类别不是病理分级，不能单独决定活检或治疗。",
       "en": "Uses prostate MRI to assess the likelihood of clinically significant cancer in a lesion. Categories are not histologic grades and cannot determine biopsy or treatment on their own."
@@ -143,30 +382,100 @@
     "organization": "American College of Radiology (ACR), ESUR and AdMeTech Foundation",
     "status": "released",
     "anatomy": "prostate",
-    "domain": { "zh": "临床显著前列腺癌的 MRI 评估", "en": "MRI assessment for clinically significant prostate cancer" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "临床显著前列腺癌的 MRI 评估",
+      "en": "MRI assessment for clinically significant prostate cancer"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "v2.1",
     "releaseDate": null,
     "categoryRange": "PI-RADS 1–5",
     "categories": [
-      { "code": "1", "original": "Very low", "meaning": { "zh": "临床显著癌的可能性极低。", "en": "MRI provides very little suspicion of clinically significant cancer." } },
-      { "code": "2", "original": "Low", "meaning": { "zh": "临床显著癌的可能性较低。", "en": "MRI provides limited suspicion of clinically significant cancer." } },
-      { "code": "3", "original": "Intermediate", "meaning": { "zh": "是否存在临床显著癌尚不确定。", "en": "MRI leaves clinically significant cancer uncertain." } },
-      { "code": "4", "original": "High", "meaning": { "zh": "临床显著癌的可能性较高。", "en": "MRI supports substantial suspicion of clinically significant cancer." } },
-      { "code": "5", "original": "Very high", "meaning": { "zh": "临床显著癌的可能性很高。", "en": "MRI strongly supports suspicion of clinically significant cancer." } }
+      {
+        "code": "1",
+        "original": "Very low",
+        "meaning": {
+          "zh": "临床显著癌的可能性极低。",
+          "en": "MRI provides very little suspicion of clinically significant cancer."
+        }
+      },
+      {
+        "code": "2",
+        "original": "Low",
+        "meaning": {
+          "zh": "临床显著癌的可能性较低。",
+          "en": "MRI provides limited suspicion of clinically significant cancer."
+        }
+      },
+      {
+        "code": "3",
+        "original": "Intermediate",
+        "meaning": {
+          "zh": "是否存在临床显著癌尚不确定。",
+          "en": "MRI leaves clinically significant cancer uncertain."
+        }
+      },
+      {
+        "code": "4",
+        "original": "High",
+        "meaning": {
+          "zh": "临床显著癌的可能性较高。",
+          "en": "MRI supports substantial suspicion of clinically significant cancer."
+        }
+      },
+      {
+        "code": "5",
+        "original": "Very high",
+        "meaning": {
+          "zh": "临床显著癌的可能性很高。",
+          "en": "MRI strongly supports suspicion of clinically significant cancer."
+        }
+      }
     ],
     "originalTerms": [
-      { "term": "DWI", "explanation": { "zh": "弥散加权成像，是外周带评估的重要序列。", "en": "Diffusion-weighted imaging has a leading role in peripheral-zone assessment." } },
-      { "term": "T2W", "explanation": { "zh": "T2 加权成像，是移行带评估的重要序列。", "en": "T2-weighted imaging has a leading role in transition-zone assessment." } }
+      {
+        "term": "DWI",
+        "explanation": {
+          "zh": "弥散加权成像，是外周带评估的重要序列。",
+          "en": "Diffusion-weighted imaging has a leading role in peripheral-zone assessment."
+        }
+      },
+      {
+        "term": "T2W",
+        "explanation": {
+          "zh": "T2 加权成像，是移行带评估的重要序列。",
+          "en": "T2-weighted imaging has a leading role in transition-zone assessment."
+        }
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/PI-RADS",
     "lastVerified": "2026-09-16",
-    "related": ["li-rads", "o-rads"]
+    "related": [
+      "li-rads",
+      "o-rads"
+    ],
+    "sources": [
+      {
+        "id": "v2-1",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "PI-RADS v2.1",
+        "version": "v2.1",
+        "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/PI-RADS"
+      }
+    ],
+    "primarySourceId": "v2-1",
+    "detailSourceId": "v2-1"
   },
   {
     "id": "ti-rads",
     "acronym": "TI-RADS",
-    "name": { "zh": "甲状腺影像报告和数据系统", "en": "Thyroid Imaging Reporting and Data System" },
+    "name": {
+      "zh": "甲状腺影像报告和数据系统",
+      "en": "Thyroid Imaging Reporting and Data System"
+    },
     "summary": {
       "zh": "ACR TI-RADS 根据甲状腺结节的超声特征进行风险分层。这里仅解释类别，不提供积分计算或穿刺、随访阈值；请勿与其他 TI-RADS 体系混用。",
       "en": "ACR TI-RADS groups thyroid nodules by ultrasound features. This overview explains categories without point calculations or biopsy and follow-up thresholds; other TI-RADS systems use different rules."
@@ -174,61 +483,99 @@
     "organization": "American College of Radiology (ACR)",
     "status": "released",
     "anatomy": "thyroid",
-    "domain": { "zh": "甲状腺结节的超声风险分层", "en": "Ultrasound risk stratification of thyroid nodules" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "甲状腺结节的超声风险分层",
+      "en": "Ultrasound risk stratification of thyroid nodules"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "ACR TI-RADS 2017",
     "releaseDate": null,
     "categoryRange": "TR1–TR5",
     "categories": [
-      { "code": "TR1", "original": "Benign", "meaning": { "zh": "超声特征归入良性类别。", "en": "Ultrasound features place the nodule in the benign group." } },
-      { "code": "TR2", "original": "Not Suspicious", "meaning": { "zh": "超声特征未达到可疑类别。", "en": "Ultrasound features fall below the suspicious groups." } },
-      { "code": "TR3", "original": "Mildly Suspicious", "meaning": { "zh": "超声特征呈轻度疑恶性。", "en": "Ultrasound features raise mild concern for malignancy." } },
-      { "code": "TR4", "original": "Moderately Suspicious", "meaning": { "zh": "超声特征呈中度疑恶性。", "en": "Ultrasound features raise moderate concern for malignancy." } },
-      { "code": "TR5", "original": "Highly Suspicious", "meaning": { "zh": "超声特征呈高度疑恶性，并非病理确诊。", "en": "Ultrasound features raise strong concern without establishing a pathology diagnosis." } }
+      {
+        "code": "TR1",
+        "original": "Benign",
+        "meaning": {
+          "zh": "超声特征归入良性类别。",
+          "en": "Ultrasound features place the nodule in the benign group."
+        }
+      },
+      {
+        "code": "TR2",
+        "original": "Not Suspicious",
+        "meaning": {
+          "zh": "超声特征未达到可疑类别。",
+          "en": "Ultrasound features fall below the suspicious groups."
+        }
+      },
+      {
+        "code": "TR3",
+        "original": "Mildly Suspicious",
+        "meaning": {
+          "zh": "超声特征呈轻度疑恶性。",
+          "en": "Ultrasound features raise mild concern for malignancy."
+        }
+      },
+      {
+        "code": "TR4",
+        "original": "Moderately Suspicious",
+        "meaning": {
+          "zh": "超声特征呈中度疑恶性。",
+          "en": "Ultrasound features raise moderate concern for malignancy."
+        }
+      },
+      {
+        "code": "TR5",
+        "original": "Highly Suspicious",
+        "meaning": {
+          "zh": "超声特征呈高度疑恶性，并非病理确诊。",
+          "en": "Ultrasound features raise strong concern without establishing a pathology diagnosis."
+        }
+      }
     ],
     "originalTerms": [
-      { "term": "Composition", "explanation": { "zh": "描述结节内囊性与实性成分。", "en": "Describes the cystic and solid components of a nodule." } },
-      { "term": "Echogenic foci", "explanation": { "zh": "描述结节内亮回声灶的形态。", "en": "Describes the appearance of bright echoes within a nodule." } }
+      {
+        "term": "Composition",
+        "explanation": {
+          "zh": "描述结节内囊性与实性成分。",
+          "en": "Describes the cystic and solid components of a nodule."
+        }
+      },
+      {
+        "term": "Echogenic foci",
+        "explanation": {
+          "zh": "描述结节内亮回声灶的形态。",
+          "en": "Describes the appearance of bright echoes within a nodule."
+        }
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS",
     "lastVerified": "2026-09-16",
-    "related": ["bi-rads", "o-rads"]
-  },
-  {
-    "id": "bone-rads",
-    "acronym": "Bone-RADS",
-    "name": { "zh": "骨病变影像报告和数据系统", "en": "Bone Reporting and Data System" },
-    "summary": {
-      "zh": "ACR 将 Bone-RADS 列为进行中的项目，用于可能为肿瘤性的骨病变之评估、报告与处理建议标准化。以下为教学性类别概览，不替代正式评分规则或临床决策。",
-      "en": "ACR lists Bone-RADS as a works-in-progress program for standardizing assessment, reporting and management recommendations for potentially neoplastic bone lesions. This is a teaching overview, not the formal scoring rules or clinical decision-making."
-    },
-    "organization": "American College of Radiology (ACR)",
-    "status": "works-in-progress",
-    "anatomy": "bone",
-    "domain": { "zh": "可能为肿瘤性的骨病变评估", "en": "Assessment of potentially neoplastic bone lesions" },
-    "modalities": ["Radiography", "CT", "MRI"],
-    "version": "Bone-RADS v2023",
-    "releaseDate": null,
-    "categoryRange": "Bone-RADS 0–4",
-    "categories": [
-      { "code": "0", "original": "Incompletely characterized", "meaning": { "zh": "现有资料不足以可靠预测风险，需进一步评估。", "en": "Available information cannot reliably predict risk and requires further evaluation." } },
-      { "code": "1", "original": "Benign", "meaning": { "zh": "表现符合良性骨病变类别。", "en": "Findings fall in the benign bone-lesion category." } },
-      { "code": "2", "original": "Likely benign", "meaning": { "zh": "表现倾向良性。", "en": "Findings favor a benign lesion." } },
-      { "code": "3", "original": "Indeterminate", "meaning": { "zh": "风险未定，需要进一步表征或随访。", "en": "Risk remains indeterminate and needs further characterization or follow-up." } },
-      { "code": "4", "original": "Suspicious", "meaning": { "zh": "存在提示恶性或需专科处理的可疑特征。", "en": "Suspicious features may indicate malignancy or need specialist management." } }
+    "related": [
+      "o-rads"
     ],
-    "originalTerms": [
-      { "term": "Potentially neoplastic bone lesion", "explanation": { "zh": "可能为肿瘤性的骨病变；需结合病史、影像表现及必要的进一步检查判断。", "en": "A bone lesion that may be neoplastic and requires assessment in clinical and imaging context." } },
-      { "term": "Works in Progress", "explanation": { "zh": "ACR 对该项目的当前分类，表示尚不足以支持常规临床使用。", "en": "ACR's current program classification, indicating insufficient evidence for routine clinical use." } }
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Thyroid Imaging Reporting and Data System",
+        "version": "ACR TI-RADS 2017",
+        "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/TI-RADS"
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/Bone-RADS",
-    "lastVerified": "2026-09-18",
-    "related": ["ti-rads", "ni-rads"]
+    "primarySourceId": "primary",
+    "detailSourceId": "primary"
   },
   {
     "id": "c-rads",
     "acronym": "C-RADS",
-    "name": { "zh": "CT 结肠成像报告和数据系统", "en": "CT Colonography Reporting and Data System" },
+    "name": {
+      "zh": "CT 结肠成像报告和数据系统",
+      "en": "CT Colonography Reporting and Data System"
+    },
     "summary": {
       "zh": "用于 CT 结肠成像的结直肠与结肠外发现报告。下列为类别教学摘要；检查质量、病灶测量及后续处理应查阅 ACR 当前原文。",
       "en": "Supports reporting of colorectal and extracolonic findings at CT colonography. The categories below are a teaching summary; consult the current ACR source for examination quality, lesion measurements and follow-up."
@@ -236,34 +583,132 @@
     "organization": "American College of Radiology (ACR)",
     "status": "released",
     "anatomy": "colon",
-    "domain": { "zh": "CT 结肠成像筛查与报告", "en": "CT colonography screening and reporting" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "CT 结肠成像筛查与报告",
+      "en": "CT colonography screening and reporting"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "C-RADS v2023",
     "releaseDate": null,
     "categoryRange": "Colonic: C0–C4; extracolonic: E0 (optional), E1/E2, E3, E4",
     "categories": [
-      { "code": "C0", "original": "Inadequate Study/Awaiting Prior Comparisons", "meaning": { "zh": "检查不足或等待既往检查比较，尚不能完成结直肠评估。", "en": "The study is inadequate or prior examinations are awaited before colorectal assessment is complete." } },
-      { "code": "C1", "original": "Normal Colon or Benign Lesion", "meaning": { "zh": "结肠正常或见良性病变。", "en": "The colon is normal or has a benign lesion." } },
-      { "code": "C2a", "original": "Intermediate Polyp or Indeterminate Finding", "meaning": { "zh": "中等大小息肉或未定性发现。", "en": "An intermediate polyp or indeterminate finding is present." } },
-      { "code": "C2b", "original": "Likely Benign Diverticular Finding", "meaning": { "zh": "表现倾向良性的憩室相关发现。", "en": "A diverticular finding is likely benign." } },
-      { "code": "C3", "original": "Polyp, Possibly Advanced Adenoma", "meaning": { "zh": "息肉表现可能对应进展期腺瘤。", "en": "A polyp may represent an advanced adenoma." } },
-      { "code": "C4", "original": "Colonic Mass, Likely Malignant", "meaning": { "zh": "结肠肿块表现提示恶性可能。", "en": "A colonic mass is likely malignant." } },
-      { "code": "E1/E2", "original": "Normal anatomic variant or benign finding", "meaning": { "zh": "结肠外正常解剖变异或良性发现。", "en": "An extracolonic normal anatomic variant or benign finding." } },
-      { "code": "E3", "original": "Likely unimportant finding, incompletely characterized", "meaning": { "zh": "结肠外发现可能不重要，但尚未完全定性。", "en": "An extracolonic finding is likely unimportant but incompletely characterized." } },
-      { "code": "E4", "original": "Potentially important finding", "meaning": { "zh": "可能具有临床重要性的结肠外发现。", "en": "A potentially important extracolonic finding." } }
+      {
+        "code": "C0",
+        "original": "Inadequate Study/Awaiting Prior Comparisons",
+        "meaning": {
+          "zh": "检查不足或等待既往检查比较，尚不能完成结直肠评估。",
+          "en": "The study is inadequate or prior examinations are awaited before colorectal assessment is complete."
+        }
+      },
+      {
+        "code": "C1",
+        "original": "Normal Colon or Benign Lesion",
+        "meaning": {
+          "zh": "结肠正常或见良性病变。",
+          "en": "The colon is normal or has a benign lesion."
+        }
+      },
+      {
+        "code": "C2a",
+        "original": "Intermediate Polyp or Indeterminate Finding",
+        "meaning": {
+          "zh": "中等大小息肉或未定性发现。",
+          "en": "An intermediate polyp or indeterminate finding is present."
+        }
+      },
+      {
+        "code": "C2b",
+        "original": "Likely Benign Diverticular Finding",
+        "meaning": {
+          "zh": "表现倾向良性的憩室相关发现。",
+          "en": "A diverticular finding is likely benign."
+        }
+      },
+      {
+        "code": "C3",
+        "original": "Polyp, Possibly Advanced Adenoma",
+        "meaning": {
+          "zh": "息肉表现可能对应进展期腺瘤。",
+          "en": "A polyp may represent an advanced adenoma."
+        }
+      },
+      {
+        "code": "C4",
+        "original": "Colonic Mass, Likely Malignant",
+        "meaning": {
+          "zh": "结肠肿块表现提示恶性可能。",
+          "en": "A colonic mass is likely malignant."
+        }
+      },
+      {
+        "code": "E1/E2",
+        "original": "Normal anatomic variant or benign finding",
+        "meaning": {
+          "zh": "结肠外正常解剖变异或良性发现。",
+          "en": "An extracolonic normal anatomic variant or benign finding."
+        }
+      },
+      {
+        "code": "E3",
+        "original": "Likely unimportant finding, incompletely characterized",
+        "meaning": {
+          "zh": "结肠外发现可能不重要，但尚未完全定性。",
+          "en": "An extracolonic finding is likely unimportant but incompletely characterized."
+        }
+      },
+      {
+        "code": "E4",
+        "original": "Potentially important finding",
+        "meaning": {
+          "zh": "可能具有临床重要性的结肠外发现。",
+          "en": "A potentially important extracolonic finding."
+        }
+      }
     ],
     "originalTerms": [
-      { "term": "CT colonography", "explanation": { "zh": "以 CT 进行结肠与直肠评估的检查。", "en": "A CT examination used to assess the colon and rectum." } },
-      { "term": "Extracolonic finding", "explanation": { "zh": "结肠以外解剖区域的发现，使用 E 类别描述。", "en": "A finding outside the colon, described with E categories." } }
+      {
+        "term": "CT colonography",
+        "explanation": {
+          "zh": "以 CT 进行结肠与直肠评估的检查。",
+          "en": "A CT examination used to assess the colon and rectum."
+        }
+      },
+      {
+        "term": "Extracolonic finding",
+        "explanation": {
+          "zh": "结肠以外解剖区域的发现，使用 E 类别描述。",
+          "en": "A finding outside the colon, described with E categories."
+        }
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/C-RADS",
     "lastVerified": "2026-09-18",
-    "related": ["li-rads", "lung-rads"]
+    "related": [
+      "li-rads",
+      "lung-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "CT Colonography Reporting and Data System",
+        "version": "C-RADS v2023",
+        "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/C-RADS"
+      }
+    ],
+    "primarySourceId": "primary",
+    "detailSourceId": "primary"
   },
   {
     "id": "ni-rads",
     "acronym": "NI-RADS",
-    "name": { "zh": "颈部影像报告和数据系统", "en": "Neck Imaging Reporting and Data System" },
+    "name": {
+      "zh": "颈部影像报告和数据系统",
+      "en": "Neck Imaging Reporting and Data System"
+    },
     "summary": {
       "zh": "用于头颈部肿瘤根治性治疗后的影像监测与复发风险分层，可用于 CT、MRI 或 PET 影像。类别用于治疗后监测，不用于治疗期间。",
       "en": "Supports post-treatment surveillance and recurrence risk stratification after curative treatment for head and neck cancer, using CT, MRI or PET imaging. The categories are for post-treatment surveillance, not imaging during treatment."
@@ -271,917 +716,2177 @@
     "organization": "American College of Radiology (ACR)",
     "status": "released",
     "anatomy": "head-neck",
-    "domain": { "zh": "头颈部肿瘤治疗后监测", "en": "Post-treatment surveillance of head and neck cancer" },
-    "modalities": ["CT", "MRI", "PET/CT"],
-    "version": "NI-RADS MRI v2025; PET/CT 2018",
+    "domain": {
+      "zh": "头颈部肿瘤治疗后监测",
+      "en": "Post-treatment surveillance of head and neck cancer"
+    },
+    "modalities": [
+      "MRI",
+      "PET/CT"
+    ],
+    "version": "MRI 2025; PET/CT 2018",
     "releaseDate": null,
     "categoryRange": "NI-RADS 0–4",
     "categories": [
-      { "code": "0", "original": "Incomplete", "meaning": { "zh": "缺少必要比较资料或评估不完整。", "en": "Necessary comparison studies are unavailable or the assessment is incomplete." } },
-      { "code": "1", "original": "No evidence of recurrence", "meaning": { "zh": "未见复发证据。", "en": "No evidence of recurrence is identified." } },
-      { "code": "2", "original": "Low suspicion", "meaning": { "zh": "复发可能性较低。", "en": "Findings raise low suspicion for recurrence." } },
-      { "code": "3", "original": "High suspicion", "meaning": { "zh": "复发可能性较高。", "en": "Findings raise high suspicion for recurrence." } },
-      { "code": "4", "original": "Definitive recurrence", "meaning": { "zh": "已证实或影像及临床进展明确支持复发。", "en": "Recurrence is pathologically proven or definitively supported by radiologic and clinical progression." } }
+      {
+        "code": "0",
+        "original": "Incomplete",
+        "meaning": {
+          "zh": "缺少必要比较资料或评估不完整。",
+          "en": "Necessary comparison studies are unavailable or the assessment is incomplete."
+        }
+      },
+      {
+        "code": "1",
+        "original": "No evidence of recurrence",
+        "meaning": {
+          "zh": "未见复发证据。",
+          "en": "No evidence of recurrence is identified."
+        }
+      },
+      {
+        "code": "2",
+        "original": "Low suspicion",
+        "meaning": {
+          "zh": "复发可能性较低。",
+          "en": "Findings raise low suspicion for recurrence."
+        }
+      },
+      {
+        "code": "3",
+        "original": "High suspicion",
+        "meaning": {
+          "zh": "复发可能性较高。",
+          "en": "Findings raise high suspicion for recurrence."
+        }
+      },
+      {
+        "code": "4",
+        "original": "Definitive recurrence",
+        "meaning": {
+          "zh": "已证实或影像及临床进展明确支持复发。",
+          "en": "Recurrence is pathologically proven or definitively supported by radiologic and clinical progression."
+        }
+      }
     ],
     "originalTerms": [
-      { "term": "Post-treatment surveillance", "explanation": { "zh": "根治性治疗结束后的随访影像监测。", "en": "Imaging surveillance after definitive or curative treatment." } },
-      { "term": "Primary site", "explanation": { "zh": "原发肿瘤所在区域，与颈部淋巴结评估并列。", "en": "The original tumor location, assessed alongside cervical lymph nodes." } }
+      {
+        "term": "Post-treatment surveillance",
+        "explanation": {
+          "zh": "根治性治疗结束后的随访影像监测。",
+          "en": "Imaging surveillance after definitive or curative treatment."
+        }
+      },
+      {
+        "term": "Primary site",
+        "explanation": {
+          "zh": "原发肿瘤所在区域，与颈部淋巴结评估并列。",
+          "en": "The original tumor location, assessed alongside cervical lymph nodes."
+        }
+      }
     ],
-    "officialUrl": "https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/NI-RADS",
     "lastVerified": "2026-09-18",
-    "related": ["bone-rads", "ti-rads"]
+    "related": [
+      "ti-rads"
+    ],
+    "sources": [
+      {
+        "id": "mri-2025",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "ACR Neck Imaging Reporting and Data System for MRI Version 2025",
+        "version": "MRI v2025",
+        "officialUrl": "https://doi.org/10.1016/j.jacr.2025.07.023"
+      },
+      {
+        "id": "pet-ct-2018",
+        "modalities": [
+          "PET/CT"
+        ],
+        "title": "ACR Neck Imaging Reporting and Data Systems (NI-RADS)",
+        "version": "PET/CT 2018",
+        "officialUrl": "https://doi.org/10.1016/j.jacr.2018.05.006"
+      }
+    ],
+    "primarySourceId": "mri-2025",
+    "detailSourceId": "mri-2025"
   },
   {
     "id": "a-rads",
     "acronym": "A-RADS",
-    "name": { "zh": "颈部腺病影像报告和数据系统", "en": "Adenopathy Reporting and Data System" },
-    "summary": { "zh": "发表于颈部淋巴结超声分类研究的框架，按声像图表现分层恶性风险。", "en": "A published ultrasound framework that stratifies malignancy risk in cervical lymphadenopathy by sonographic appearance." },
+    "name": {
+      "zh": "颈部腺病影像报告和数据系统",
+      "en": "Adenopathy Reporting and Data System"
+    },
+    "summary": {
+      "zh": "发表于颈部淋巴结超声分类研究的框架，按声像图表现分层恶性风险。",
+      "en": "A published ultrasound framework that stratifies malignancy risk in cervical lymphadenopathy by sonographic appearance."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "neck-node",
-    "domain": { "zh": "颈部淋巴结超声评估", "en": "Ultrasound assessment of cervical lymph nodes" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "颈部淋巴结超声评估",
+      "en": "Ultrasound assessment of cervical lymph nodes"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2023",
     "releaseDate": null,
     "categoryRange": "A-RADS 1–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.22038/IJORL.2022.67255.3299",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Adenopathy Reporting and Data System",
+        "version": "Published 2023",
+        "officialUrl": "https://doi.org/10.22038/IJORL.2022.67255.3299"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "aem-rads",
     "acronym": "AEM-RADS",
-    "name": { "zh": "急腹症影像报告和数据系统", "en": "Abdominal Emergency Medicine Reporting and Data System" },
-    "summary": { "zh": "用于急腹症 CT 所见的结构化分级和严重程度表达。", "en": "A published framework for structured grading and severity communication of acute-abdomen CT findings." },
+    "name": {
+      "zh": "急腹症影像报告和数据系统",
+      "en": "Abdominal Emergency Medicine Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于急腹症 CT 所见的结构化分级和严重程度表达。",
+      "en": "A published framework for structured grading and severity communication of acute-abdomen CT findings."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "acute-abdomen",
-    "domain": { "zh": "急腹症 CT 评估", "en": "CT assessment of abdominal emergencies" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "急腹症 CT 评估",
+      "en": "CT assessment of abdominal emergencies"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2024",
     "releaseDate": null,
     "categoryRange": "AEM-RADS 0–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00261-024-04453-y",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Abdominal Emergency Medicine Reporting and Data System",
+        "version": "Published 2024",
+        "officialUrl": "https://doi.org/10.1007/s00261-024-04453-y"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "apendic-rads",
     "acronym": "APENDIC-RADS",
-    "name": { "zh": "阑尾影像报告和数据系统", "en": "Appendix Imaging Reporting and Data System" },
-    "summary": { "zh": "用于急性阑尾炎超声所见的标准化报告和可能性分级。", "en": "A published system for standardized ultrasound reporting and likelihood grading in suspected acute appendicitis." },
+    "name": {
+      "zh": "阑尾影像报告和数据系统",
+      "en": "Appendix Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于急性阑尾炎超声所见的标准化报告和可能性分级。",
+      "en": "A published system for standardized ultrasound reporting and likelihood grading in suspected acute appendicitis."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "appendix",
-    "domain": { "zh": "急性阑尾炎超声评估", "en": "Ultrasound assessment of acute appendicitis" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "急性阑尾炎超声评估",
+      "en": "Ultrasound assessment of acute appendicitis"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2024",
     "releaseDate": null,
     "categoryRange": "APENDIC-RADS 0–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.31744/einstein_journal/2024AO1164",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Appendix Imaging Reporting and Data System",
+        "version": "Published 2024",
+        "officialUrl": "https://doi.org/10.31744/einstein_journal/2024AO1164"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ax-rads",
     "acronym": "AX-RADS",
-    "name": { "zh": "腋窝影像报告和数据系统", "en": "Axillary Imaging Reporting and Data System" },
-    "summary": { "zh": "用于乳腺癌腋窝淋巴结超声的转移风险分层。", "en": "A published ultrasound score for stratifying axillary-metastasis risk in breast cancer." },
+    "name": {
+      "zh": "腋窝影像报告和数据系统",
+      "en": "Axillary Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于乳腺癌腋窝淋巴结超声的转移风险分层。",
+      "en": "A published ultrasound score for stratifying axillary-metastasis risk in breast cancer."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "breast",
-    "domain": { "zh": "乳腺癌腋窝淋巴结超声评估", "en": "Ultrasound assessment of axillary nodes in breast cancer" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "乳腺癌腋窝淋巴结超声评估",
+      "en": "Ultrasound assessment of axillary nodes in breast cancer"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2025",
     "releaseDate": null,
     "categoryRange": "Low, medium, high",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1002/jso.28159",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Axillary Imaging Reporting and Data System",
+        "version": "Published 2025",
+        "officialUrl": "https://doi.org/10.1002/jso.28159"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "bti-rads",
     "acronym": "BTI-RADS",
-    "name": { "zh": "骨肿瘤影像报告和数据系统", "en": "Bone Tumor Imaging Reporting and Data System" },
-    "summary": { "zh": "用于局灶性骨肿瘤 CT 和 MRI 所见的分层。", "en": "A published stratification framework for focal bone-tumor findings on CT and MRI." },
+    "name": {
+      "zh": "骨肿瘤影像报告和数据系统",
+      "en": "Bone Tumor Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于局灶性骨肿瘤 CT 和 MRI 所见的分层。",
+      "en": "A published stratification framework for focal bone-tumor findings on CT and MRI."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "bone",
-    "domain": { "zh": "骨肿瘤影像评估", "en": "Bone tumor imaging assessment" },
-    "modalities": ["CT", "MRI"],
+    "domain": {
+      "zh": "骨肿瘤影像评估",
+      "en": "Bone tumor imaging assessment"
+    },
+    "modalities": [
+      "CT",
+      "MRI"
+    ],
     "version": "Published 2025",
     "releaseDate": null,
     "categoryRange": "BTI-RADS 0–6",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/radiol.232834",
     "lastVerified": "2026-09-18",
-    "related": ["bone-rads"]
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT",
+          "MRI"
+        ],
+        "title": "Bone Tumor Imaging Reporting and Data System",
+        "version": "Published 2025",
+        "officialUrl": "https://doi.org/10.1148/radiol.232834"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "cac-drs",
     "acronym": "CAC-DRS",
-    "name": { "zh": "冠状动脉钙化数据和报告系统", "en": "Coronary Artery Calcium Data and Reporting System" },
-    "summary": { "zh": "用于 CT 冠状动脉钙化的标准化分级和报告。", "en": "A published consensus system for standardized CT coronary-artery calcium grading and reporting." },
+    "name": {
+      "zh": "冠状动脉钙化数据和报告系统",
+      "en": "Coronary Artery Calcium Data and Reporting System"
+    },
+    "summary": {
+      "zh": "用于 CT 冠状动脉钙化的标准化分级和报告。",
+      "en": "A published consensus system for standardized CT coronary-artery calcium grading and reporting."
+    },
     "organization": "Society of Cardiovascular Computed Tomography (SCCT)",
     "status": "non-acr",
     "anatomy": "heart",
-    "domain": { "zh": "冠状动脉钙化 CT 评估", "en": "CT assessment of coronary-artery calcium" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "冠状动脉钙化 CT 评估",
+      "en": "CT assessment of coronary-artery calcium"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2018",
     "releaseDate": null,
     "categoryRange": "CAC-DRS 0–3",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.jcct.2018.03.008",
     "lastVerified": "2026-09-18",
-    "related": ["cad-rads"]
+    "related": [
+      "cad-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Coronary Artery Calcium Data and Reporting System",
+        "version": "Published 2018",
+        "officialUrl": "https://doi.org/10.1016/j.jcct.2018.03.008"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "cad-rads",
     "acronym": "CAD-RADS",
-    "name": { "zh": "冠状动脉疾病报告和数据系统", "en": "Coronary Artery Disease Reporting and Data System" },
-    "summary": { "zh": "用于冠状动脉 CT 血管成像中冠状动脉粥样硬化性疾病的标准化分级。", "en": "A multi-society system for standardized grading of coronary atherosclerotic disease on CT angiography." },
+    "name": {
+      "zh": "冠状动脉疾病报告和数据系统",
+      "en": "Coronary Artery Disease Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于冠状动脉 CT 血管成像中冠状动脉粥样硬化性疾病的标准化分级。",
+      "en": "A multi-society system for standardized grading of coronary atherosclerotic disease on CT angiography."
+    },
     "organization": "SCCT, ACC, ACR and NASCI",
     "status": "non-acr",
     "anatomy": "heart",
-    "domain": { "zh": "冠状动脉 CT 血管成像", "en": "Coronary CT angiography" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "冠状动脉 CT 血管成像",
+      "en": "Coronary CT angiography"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2022",
     "releaseDate": null,
     "categoryRange": "CAD-RADS 0–5; N, HRP, I, S, G, E",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.jcmg.2022.07.002",
     "lastVerified": "2026-09-18",
-    "related": ["cac-drs"]
+    "related": [
+      "cac-drs"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Coronary Artery Disease Reporting and Data System",
+        "version": "Published 2022",
+        "officialUrl": "https://doi.org/10.1016/j.jcmg.2022.07.002"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "cln-rads",
     "acronym": "CLN-RADS",
-    "name": { "zh": "颈部淋巴结影像报告和数据系统", "en": "Cervical Lymph Node Imaging Reporting and Data System" },
-    "summary": { "zh": "颈部淋巴结超声的探索性标准化分级框架。", "en": "A pilot standardized classification framework for cervical-lymphadenopathy ultrasound." },
+    "name": {
+      "zh": "颈部淋巴结影像报告和数据系统",
+      "en": "Cervical Lymph Node Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "颈部淋巴结超声的探索性标准化分级框架。",
+      "en": "A pilot standardized classification framework for cervical-lymphadenopathy ultrasound."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "neck-node",
-    "domain": { "zh": "颈部淋巴结超声评估", "en": "Ultrasound assessment of cervical lymphadenopathy" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "颈部淋巴结超声评估",
+      "en": "Ultrasound assessment of cervical lymphadenopathy"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2016",
     "releaseDate": null,
     "categoryRange": "CLN-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.2214/AJR.15.15381",
     "lastVerified": "2026-09-18",
-    "related": ["a-rads", "node-rads"]
+    "related": [
+      "a-rads",
+      "node-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Cervical Lymph Node Imaging Reporting and Data System",
+        "version": "Published 2016",
+        "officialUrl": "https://doi.org/10.2214/AJR.15.15381"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "co-x-rads",
     "acronym": "CO X-RADS",
-    "name": { "zh": "新冠肺炎胸部 X 线报告和数据系统", "en": "COVID-19 Chest X-ray Reporting and Data System" },
-    "summary": { "zh": "用于 COVID-19 相关胸部 X 线改变的临床影像严重程度分级建议。", "en": "A published proposal for clinico-radiological severity grading of COVID-19 chest-radiograph changes." },
+    "name": {
+      "zh": "新冠肺炎胸部 X 线报告和数据系统",
+      "en": "COVID-19 Chest X-ray Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于 COVID-19 相关胸部 X 线改变的临床影像严重程度分级建议。",
+      "en": "A published proposal for clinico-radiological severity grading of COVID-19 chest-radiograph changes."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "COVID-19 肺炎胸部 X 线评估", "en": "Chest-radiograph assessment of COVID-19 pneumonia" },
-    "modalities": ["Radiography"],
+    "domain": {
+      "zh": "COVID-19 肺炎胸部 X 线评估",
+      "en": "Chest-radiograph assessment of COVID-19 pneumonia"
+    },
+    "modalities": [
+      "Radiography"
+    ],
     "version": "Published 2020",
     "releaseDate": null,
     "categoryRange": "CO X-RADS 0–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.23750/abm.v91i4.10664",
     "lastVerified": "2026-09-18",
-    "related": ["co-rads", "covid-rads", "vp-rads"]
+    "related": [
+      "co-rads",
+      "covid-rads",
+      "vp-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "Radiography"
+        ],
+        "title": "COVID-19 Chest X-ray Reporting and Data System",
+        "version": "Published 2020",
+        "officialUrl": "https://doi.org/10.23750/abm.v91i4.10664"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "co-rads",
     "acronym": "CO-RADS",
-    "name": { "zh": "新冠肺炎 CT 报告和数据系统", "en": "COVID-19 Reporting and Data System" },
-    "summary": { "zh": "荷兰放射学会标准化报告工作组提出的 COVID-19 疑似患者 CT 可能性分级。", "en": "A Dutch Radiological Society working-group CT likelihood scheme for patients suspected of COVID-19." },
+    "name": {
+      "zh": "新冠肺炎 CT 报告和数据系统",
+      "en": "COVID-19 Reporting and Data System"
+    },
+    "summary": {
+      "zh": "荷兰放射学会标准化报告工作组提出的 COVID-19 疑似患者 CT 可能性分级。",
+      "en": "A Dutch Radiological Society working-group CT likelihood scheme for patients suspected of COVID-19."
+    },
     "organization": "COVID-19 Standardized Reporting Working Group of the Dutch Radiological Society",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "COVID-19 肺炎 CT 评估", "en": "CT assessment of COVID-19 pneumonia" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "COVID-19 肺炎 CT 评估",
+      "en": "CT assessment of COVID-19 pneumonia"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2020",
     "releaseDate": null,
     "categoryRange": "CO-RADS 0–6",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/radiol.2020201473",
     "lastVerified": "2026-09-18",
-    "related": ["co-x-rads", "covid-rads", "vp-rads"]
+    "related": [
+      "co-x-rads",
+      "covid-rads",
+      "vp-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "COVID-19 Reporting and Data System",
+        "version": "Published 2020",
+        "officialUrl": "https://doi.org/10.1148/radiol.2020201473"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "covid-rads",
     "acronym": "COVID-RADS",
-    "name": { "zh": "新冠肺炎影像报告和数据系统", "en": "COVID-19 Imaging Reporting and Data System" },
-    "summary": { "zh": "基于文献影像资料提出的 COVID-19 CT 报告分类和常用术语建议。", "en": "A published CT reporting classification and common lexicon proposal for COVID-19 imaging." },
+    "name": {
+      "zh": "新冠肺炎影像报告和数据系统",
+      "en": "COVID-19 Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "基于文献影像资料提出的 COVID-19 CT 报告分类和常用术语建议。",
+      "en": "A published CT reporting classification and common lexicon proposal for COVID-19 imaging."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "COVID-19 肺炎 CT 评估", "en": "CT assessment of COVID-19 pneumonia" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "COVID-19 肺炎 CT 评估",
+      "en": "CT assessment of COVID-19 pneumonia"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2020",
     "releaseDate": null,
     "categoryRange": "COVID-RADS 0–3",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00330-020-06863-0",
     "lastVerified": "2026-09-18",
-    "related": ["co-x-rads", "co-rads", "vp-rads"]
+    "related": [
+      "co-x-rads",
+      "co-rads",
+      "vp-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "COVID-19 Imaging Reporting and Data System",
+        "version": "Published 2020",
+        "officialUrl": "https://doi.org/10.1007/s00330-020-06863-0"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "eu-ti-rads",
     "acronym": "EU-TIRADS",
-    "name": { "zh": "欧洲甲状腺影像报告和数据系统", "en": "European Thyroid Imaging Reporting and Data System" },
-    "summary": { "zh": "欧洲甲状腺协会发布的成人甲状腺结节超声恶性风险分层指南。", "en": "European Thyroid Association guidance for ultrasound malignancy-risk stratification of adult thyroid nodules." },
+    "name": {
+      "zh": "欧洲甲状腺影像报告和数据系统",
+      "en": "European Thyroid Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "欧洲甲状腺协会发布的成人甲状腺结节超声恶性风险分层指南。",
+      "en": "European Thyroid Association guidance for ultrasound malignancy-risk stratification of adult thyroid nodules."
+    },
     "organization": "European Thyroid Association",
     "status": "non-acr",
     "anatomy": "thyroid",
-    "domain": { "zh": "甲状腺结节超声风险分层", "en": "Ultrasound risk stratification of thyroid nodules" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "甲状腺结节超声风险分层",
+      "en": "Ultrasound risk stratification of thyroid nodules"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2017",
     "releaseDate": null,
     "categoryRange": "EU-TIRADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1159/000478927",
     "lastVerified": "2026-09-18",
-    "related": ["k-ti-rads", "kwak-ti-rads", "ti-rads"]
+    "related": [
+      "k-ti-rads",
+      "ti-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "European Thyroid Imaging Reporting and Data System",
+        "version": "Published 2017",
+        "officialUrl": "https://doi.org/10.1159/000478927"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "fap-rads",
     "acronym": "FAP-RADS",
-    "name": { "zh": "成纤维细胞活化蛋白靶向影像报告和数据系统", "en": "Fibroblast Activation Protein Targeted Imaging Reporting and Data System" },
-    "summary": { "zh": "用于 FAP 靶向 PET 影像的结构化报告和病变可能性表达。", "en": "A published structured-reporting framework for fibroblast-activation-protein-targeted PET imaging." },
+    "name": {
+      "zh": "成纤维细胞活化蛋白靶向影像报告和数据系统",
+      "en": "Fibroblast Activation Protein Targeted Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于 FAP 靶向 PET 影像的结构化报告和病变可能性表达。",
+      "en": "A published structured-reporting framework for fibroblast-activation-protein-targeted PET imaging."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "whole-body",
-    "domain": { "zh": "FAP 靶向 PET 肿瘤影像", "en": "FAP-targeted PET oncologic imaging" },
-    "modalities": ["PET"],
+    "domain": {
+      "zh": "FAP 靶向 PET 肿瘤影像",
+      "en": "FAP-targeted PET oncologic imaging"
+    },
+    "modalities": [
+      "PET"
+    ],
     "version": "Published 2025",
     "releaseDate": null,
     "categoryRange": "FAP-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.2967/jnumed.125.269914",
     "lastVerified": "2026-09-18",
-    "related": ["mi-rads", "psma-rads", "sstr-rads"]
+    "related": [
+      "mi-rads",
+      "psma-rads",
+      "sstr-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "PET"
+        ],
+        "title": "Fibroblast Activation Protein Targeted Imaging Reporting and Data System",
+        "version": "Published 2025",
+        "officialUrl": "https://doi.org/10.2967/jnumed.125.269914"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "gb-rads",
     "acronym": "GB-RADS",
-    "name": { "zh": "胆囊影像报告和数据系统", "en": "Gallbladder Reporting and Data System" },
-    "summary": { "zh": "国际专家共识提出的胆囊壁增厚超声风险分层框架。", "en": "An international expert-consensus framework for ultrasound risk stratification of gallbladder-wall thickening." },
+    "name": {
+      "zh": "胆囊影像报告和数据系统",
+      "en": "Gallbladder Reporting and Data System"
+    },
+    "summary": {
+      "zh": "国际专家共识提出的胆囊壁增厚超声风险分层框架。",
+      "en": "An international expert-consensus framework for ultrasound risk stratification of gallbladder-wall thickening."
+    },
     "organization": "International expert consensus group",
     "status": "non-acr",
     "anatomy": "gallbladder",
-    "domain": { "zh": "胆囊壁增厚超声评估", "en": "Ultrasound assessment of gallbladder-wall thickening" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "胆囊壁增厚超声评估",
+      "en": "Ultrasound assessment of gallbladder-wall thickening"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2022",
     "releaseDate": null,
     "categoryRange": "GB-RADS 0–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00261-021-03360-w",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Gallbladder Reporting and Data System",
+        "version": "Published 2022",
+        "officialUrl": "https://doi.org/10.1007/s00261-021-03360-w"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "gi-rads",
     "acronym": "GI-RADS",
-    "name": { "zh": "妇科影像报告和数据系统", "en": "Gynecologic Imaging Reporting and Data System" },
-    "summary": { "zh": "用于附件肿块超声所见的分类建议。", "en": "A published proposal for classifying adnexal masses from ultrasound findings." },
+    "name": {
+      "zh": "妇科影像报告和数据系统",
+      "en": "Gynecologic Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于附件肿块超声所见的分类建议。",
+      "en": "A published proposal for classifying adnexal masses from ultrasound findings."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "ovary",
-    "domain": { "zh": "附件肿块超声评估", "en": "Ultrasound assessment of adnexal masses" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "附件肿块超声评估",
+      "en": "Ultrasound assessment of adnexal masses"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2009",
     "releaseDate": null,
     "categoryRange": "GI-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.7863/jum.2009.28.3.285",
     "lastVerified": "2026-09-18",
-    "related": ["o-rads"]
+    "related": [
+      "o-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Gynecologic Imaging Reporting and Data System",
+        "version": "Published 2009",
+        "officialUrl": "https://doi.org/10.7863/jum.2009.28.3.285"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ild-rads",
     "acronym": "ILD-RADS",
-    "name": { "zh": "间质性肺疾病报告和数据系统", "en": "Interstitial Lung Disease Reporting and Data System" },
-    "summary": { "zh": "间质性肺疾病 CT 标准化报告模板的先导研究。", "en": "A pilot published standardized reporting template for interstitial lung disease CT." },
+    "name": {
+      "zh": "间质性肺疾病报告和数据系统",
+      "en": "Interstitial Lung Disease Reporting and Data System"
+    },
+    "summary": {
+      "zh": "间质性肺疾病 CT 标准化报告模板的先导研究。",
+      "en": "A pilot published standardized reporting template for interstitial lung disease CT."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "间质性肺疾病 CT 报告", "en": "CT reporting of interstitial lung disease" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "间质性肺疾病 CT 报告",
+      "en": "CT reporting of interstitial lung disease"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2019",
     "releaseDate": null,
     "categoryRange": "ILD-RADS 0–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.jacr.2019.02.032",
     "lastVerified": "2026-09-18",
-    "related": ["ilf-rads"]
+    "related": [
+      "ilf-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Interstitial Lung Disease Reporting and Data System",
+        "version": "Published 2019",
+        "officialUrl": "https://doi.org/10.1016/j.jacr.2019.02.032"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ilf-rads",
     "acronym": "ILF-RADS",
-    "name": { "zh": "间质性肺纤维化影像报告和数据系统", "en": "Interstitial Lung Fibrosis Imaging Reporting and Data System" },
-    "summary": { "zh": "用于间质性肺纤维化 CT 所见的影像报告框架。", "en": "A published imaging-reporting framework for CT findings of interstitial lung fibrosis." },
+    "name": {
+      "zh": "间质性肺纤维化影像报告和数据系统",
+      "en": "Interstitial Lung Fibrosis Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于间质性肺纤维化 CT 所见的影像报告框架。",
+      "en": "A published imaging-reporting framework for CT findings of interstitial lung fibrosis."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "间质性肺纤维化 CT 评估", "en": "CT assessment of interstitial lung fibrosis" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "间质性肺纤维化 CT 评估",
+      "en": "CT assessment of interstitial lung fibrosis"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2020",
     "releaseDate": null,
     "categoryRange": "ILF-RADS 0–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1097/RCT.0000000000001075",
     "lastVerified": "2026-09-18",
-    "related": ["ild-rads"]
+    "related": [
+      "ild-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Interstitial Lung Fibrosis Imaging Reporting and Data System",
+        "version": "Published 2020",
+        "officialUrl": "https://doi.org/10.1097/RCT.0000000000001075"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "k-ti-rads",
     "acronym": "K-TI-RADS",
-    "name": { "zh": "韩国甲状腺影像报告和数据系统", "en": "Korean Thyroid Imaging Reporting and Data System" },
-    "summary": { "zh": "韩国甲状腺放射学会及韩国放射学会发布的甲状腺结节超声诊断与影像管理共识。", "en": "A Korean Society of Thyroid Radiology and Korean Society of Radiology consensus for ultrasound diagnosis and imaging-based management of thyroid nodules." },
+    "name": {
+      "zh": "韩国甲状腺影像报告和数据系统",
+      "en": "Korean Thyroid Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "韩国甲状腺放射学会及韩国放射学会发布的甲状腺结节超声诊断与影像管理共识。",
+      "en": "A Korean Society of Thyroid Radiology and Korean Society of Radiology consensus for ultrasound diagnosis and imaging-based management of thyroid nodules."
+    },
     "organization": "Korean Society of Thyroid Radiology and Korean Society of Radiology",
     "status": "non-acr",
     "anatomy": "thyroid",
-    "domain": { "zh": "甲状腺结节超声风险分层", "en": "Ultrasound risk stratification of thyroid nodules" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "甲状腺结节超声风险分层",
+      "en": "Ultrasound risk stratification of thyroid nodules"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2016",
     "releaseDate": null,
     "categoryRange": "K-TI-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.3348/kjr.2016.17.3.370",
     "lastVerified": "2026-09-18",
-    "related": ["eu-ti-rads", "kwak-ti-rads", "ti-rads"]
-  },
-  {
-    "id": "kwak-ti-rads",
-    "acronym": "Kwak-TI-RADS",
-    "name": { "zh": "Kwak 甲状腺影像报告和数据系统", "en": "Kwak Thyroid Imaging Reporting and Data System" },
-    "summary": { "zh": "基于甲状腺结节超声特征的癌症风险分层建议。", "en": "A published thyroid-nodule cancer-risk stratification proposal based on ultrasound features." },
-    "organization": "Original study authors",
-    "status": "non-acr",
-    "anatomy": "thyroid",
-    "domain": { "zh": "甲状腺结节超声风险分层", "en": "Ultrasound risk stratification of thyroid nodules" },
-    "modalities": ["US"],
-    "version": "Published 2011",
-    "releaseDate": null,
-    "categoryRange": "Kwak-TI-RADS 1–5",
-    "categories": [],
-    "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/radiol.11110206",
-    "lastVerified": "2026-09-18",
-    "related": ["eu-ti-rads", "k-ti-rads", "ti-rads"]
+    "related": [
+      "eu-ti-rads",
+      "ti-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Korean Thyroid Imaging Reporting and Data System",
+        "version": "Published 2016",
+        "officialUrl": "https://doi.org/10.3348/kjr.2016.17.3.370"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ln-rads",
     "acronym": "LN-RADS",
-    "name": { "zh": "淋巴结报告和数据系统", "en": "Lymph Node Reporting and Data System" },
-    "summary": { "zh": "用于浅表淋巴结超声分类的发表框架。", "en": "A published framework for ultrasound classification of superficial lymph nodes." },
+    "name": {
+      "zh": "淋巴结报告和数据系统",
+      "en": "Lymph Node Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于浅表淋巴结超声分类的发表框架。",
+      "en": "A published framework for ultrasound classification of superficial lymph nodes."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lymph-node",
-    "domain": { "zh": "浅表淋巴结超声评估", "en": "Ultrasound assessment of superficial lymph nodes" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "浅表淋巴结超声评估",
+      "en": "Ultrasound assessment of superficial lymph nodes"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2025",
     "releaseDate": null,
     "categoryRange": "LN-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.3390/cancers17122030",
     "lastVerified": "2026-09-18",
-    "related": ["a-rads", "cln-rads", "node-rads"]
+    "related": [
+      "a-rads",
+      "cln-rads",
+      "node-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Lymph Node Reporting and Data System",
+        "version": "Published 2025",
+        "officialUrl": "https://doi.org/10.3390/cancers17122030"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "lu-rads",
     "acronym": "LU-RADS",
-    "name": { "zh": "肺部报告和数据系统", "en": "Lung Reporting and Data System" },
-    "summary": { "zh": "用于肺癌 CT 筛查的发表分级建议。", "en": "A published proposal for CT lung-cancer screening classification." },
+    "name": {
+      "zh": "肺部报告和数据系统",
+      "en": "Lung Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于肺癌 CT 筛查的发表分级建议。",
+      "en": "A published proposal for CT lung-cancer screening classification."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "肺癌 CT 筛查", "en": "CT lung-cancer screening" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "肺癌 CT 筛查",
+      "en": "CT lung-cancer screening"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2014",
     "releaseDate": null,
     "categoryRange": "LU-RADS 1–6",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.carj.2014.03.004",
     "lastVerified": "2026-09-18",
-    "related": ["lung-rads"]
+    "related": [
+      "lung-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Lung Reporting and Data System",
+        "version": "Published 2014",
+        "officialUrl": "https://doi.org/10.1016/j.carj.2014.03.004"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "met-rads",
     "acronym": "MET-RADS",
-    "name": { "zh": "前列腺癌转移报告和数据系统", "en": "Metastasis Reporting and Data System" },
-    "summary": { "zh": "用于晚期前列腺癌全身 MRI 多器官受累评估和报告的实践指南。", "en": "A published guideline for whole-body MRI acquisition, interpretation and reporting of multiorgan involvement in advanced prostate cancer." },
+    "name": {
+      "zh": "前列腺癌转移报告和数据系统",
+      "en": "Metastasis Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于晚期前列腺癌全身 MRI 多器官受累评估和报告的实践指南。",
+      "en": "A published guideline for whole-body MRI acquisition, interpretation and reporting of multiorgan involvement in advanced prostate cancer."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "whole-body",
-    "domain": { "zh": "晚期前列腺癌全身 MRI 评估", "en": "Whole-body MRI assessment of advanced prostate cancer" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "晚期前列腺癌全身 MRI 评估",
+      "en": "Whole-body MRI assessment of advanced prostate cancer"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published 2017",
     "releaseDate": null,
     "categoryRange": "MET-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.eururo.2016.05.033",
     "lastVerified": "2026-09-18",
-    "related": ["pi-rads", "onco-rads"]
+    "related": [
+      "pi-rads",
+      "onco-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Metastasis Reporting and Data System",
+        "version": "Published 2017",
+        "officialUrl": "https://doi.org/10.1016/j.eururo.2016.05.033"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "mi-rads",
     "acronym": "MI-RADS",
-    "name": { "zh": "分子影像报告和数据系统", "en": "Molecular Imaging Reporting and Data Systems" },
-    "summary": { "zh": "面向靶向放射性示踪剂 PET 影像的通用报告框架。", "en": "A generalizable published reporting framework for targeted-radiotracer PET imaging." },
+    "name": {
+      "zh": "分子影像报告和数据系统",
+      "en": "Molecular Imaging Reporting and Data Systems"
+    },
+    "summary": {
+      "zh": "面向靶向放射性示踪剂 PET 影像的通用报告框架。",
+      "en": "A generalizable published reporting framework for targeted-radiotracer PET imaging."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "whole-body",
-    "domain": { "zh": "靶向放射性示踪剂 PET 影像", "en": "Targeted-radiotracer PET imaging" },
-    "modalities": ["PET"],
+    "domain": {
+      "zh": "靶向放射性示踪剂 PET 影像",
+      "en": "Targeted-radiotracer PET imaging"
+    },
+    "modalities": [
+      "PET"
+    ],
     "version": "Published 2018",
     "releaseDate": null,
     "categoryRange": "MI-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s12149-018-1291-7",
     "lastVerified": "2026-09-18",
-    "related": ["fap-rads", "psma-rads", "sstr-rads"]
+    "related": [
+      "fap-rads",
+      "psma-rads",
+      "sstr-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "PET"
+        ],
+        "title": "Molecular Imaging Reporting and Data Systems",
+        "version": "Published 2018",
+        "officialUrl": "https://doi.org/10.1007/s12149-018-1291-7"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "mski-rads",
     "acronym": "MSKI-RADS",
-    "name": { "zh": "肌肉骨骼感染影像报告和数据系统", "en": "Musculoskeletal Infection Reporting and Data System" },
-    "summary": { "zh": "用于四肢肌肉骨骼感染 MRI 诊断的报告和数据系统。", "en": "A published MRI-based reporting and data system for diagnosing extremity musculoskeletal infections." },
+    "name": {
+      "zh": "肌肉骨骼感染影像报告和数据系统",
+      "en": "Musculoskeletal Infection Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于四肢肌肉骨骼感染 MRI 诊断的报告和数据系统。",
+      "en": "A published MRI-based reporting and data system for diagnosing extremity musculoskeletal infections."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "extremity",
-    "domain": { "zh": "四肢肌肉骨骼感染 MRI 评估", "en": "MRI assessment of extremity musculoskeletal infection" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "四肢肌肉骨骼感染 MRI 评估",
+      "en": "MRI assessment of extremity musculoskeletal infection"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published 2024",
     "releaseDate": null,
     "categoryRange": "MSKI-RADS 0–6, NOS",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/radiol.232914",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Musculoskeletal Infection Reporting and Data System",
+        "version": "Published 2024",
+        "officialUrl": "https://doi.org/10.1148/radiol.232914"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "my-rads",
     "acronym": "MY-RADS",
-    "name": { "zh": "骨髓瘤反应评估和诊断系统", "en": "Myeloma Response Assessment and Diagnosis System" },
-    "summary": { "zh": "用于多发性骨髓瘤全身 MRI 的采集、解读和报告指南。", "en": "Published guidance for acquisition, interpretation and reporting of whole-body MRI in multiple myeloma." },
+    "name": {
+      "zh": "骨髓瘤反应评估和诊断系统",
+      "en": "Myeloma Response Assessment and Diagnosis System"
+    },
+    "summary": {
+      "zh": "用于多发性骨髓瘤全身 MRI 的采集、解读和报告指南。",
+      "en": "Published guidance for acquisition, interpretation and reporting of whole-body MRI in multiple myeloma."
+    },
     "organization": "MY-RADS working group",
     "status": "non-acr",
     "anatomy": "whole-body",
-    "domain": { "zh": "多发性骨髓瘤全身 MRI 评估", "en": "Whole-body MRI assessment of multiple myeloma" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "多发性骨髓瘤全身 MRI 评估",
+      "en": "Whole-body MRI assessment of multiple myeloma"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published 2019",
     "releaseDate": null,
     "categoryRange": "MY-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/radiol.2019181949",
     "lastVerified": "2026-09-18",
-    "related": ["onco-rads"]
+    "related": [
+      "onco-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Myeloma Response Assessment and Diagnosis System",
+        "version": "Published 2019",
+        "officialUrl": "https://doi.org/10.1148/radiol.2019181949"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "node-rads",
     "acronym": "Node-RADS",
-    "name": { "zh": "淋巴结报告和数据系统", "en": "Node Reporting and Data System" },
-    "summary": { "zh": "用于肿瘤患者淋巴结 CT、MRI 及超声评估的标准化报告概念；表 2 同时列出不同模态的 Node-RADS 研究。", "en": "A standardized reporting concept for CT, MRI and ultrasound lymph-node assessment in oncology; table 2 lists Node-RADS research across modalities." },
+    "name": {
+      "zh": "淋巴结报告和数据系统",
+      "en": "Node Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于肿瘤患者淋巴结 CT、MRI 及超声评估的标准化报告概念；表 2 同时列出不同模态的 Node-RADS 研究。",
+      "en": "A standardized reporting concept for CT, MRI and ultrasound lymph-node assessment in oncology; table 2 lists Node-RADS research across modalities."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lymph-node",
-    "domain": { "zh": "肿瘤患者淋巴结影像评估", "en": "Lymph-node imaging assessment in oncology" },
-    "modalities": ["CT", "MRI", "US"],
-    "version": "Published 2021",
+    "domain": {
+      "zh": "肿瘤患者淋巴结影像评估",
+      "en": "Lymph-node imaging assessment in oncology"
+    },
+    "modalities": [
+      "CT",
+      "MRI",
+      "US"
+    ],
+    "version": "CT/MRI 2021; US 2025",
     "releaseDate": null,
     "categoryRange": "Node-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00330-020-07572-4",
     "lastVerified": "2026-09-18",
-    "related": ["a-rads", "cln-rads", "ln-rads"]
+    "related": [
+      "a-rads",
+      "cln-rads",
+      "ln-rads"
+    ],
+    "sources": [
+      {
+        "id": "ct-mri-2021",
+        "modalities": [
+          "CT",
+          "MRI"
+        ],
+        "title": "Introducing the Node Reporting and Data System 1.0 (Node-RADS)",
+        "version": "Published 2021",
+        "officialUrl": "https://doi.org/10.1007/s00330-020-07572-4"
+      },
+      {
+        "id": "us-2025",
+        "modalities": [
+          "US"
+        ],
+        "title": "Ultrasound-based Node-RADS",
+        "version": "Published 2025",
+        "officialUrl": "https://doi.org/10.22038/ijorl.2025.85674.3883"
+      }
+    ],
+    "primarySourceId": "ct-mri-2021"
   },
   {
     "id": "ns-rads",
     "acronym": "NS-RADS",
-    "name": { "zh": "神经病变评分报告和数据系统", "en": "Neuropathy Score Reporting and Data System" },
-    "summary": { "zh": "用于周围神经病变 MRI 的报告指南。", "en": "A published MRI reporting guideline for peripheral neuropathy." },
+    "name": {
+      "zh": "神经病变评分报告和数据系统",
+      "en": "Neuropathy Score Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于周围神经病变 MRI 的报告指南。",
+      "en": "A published MRI reporting guideline for peripheral neuropathy."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "peripheral-nerve",
-    "domain": { "zh": "周围神经病变 MRI 评估", "en": "MRI assessment of peripheral neuropathy" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "周围神经病变 MRI 评估",
+      "en": "MRI assessment of peripheral neuropathy"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published 2022",
     "releaseDate": null,
     "categoryRange": "I1–I5, N1–N4, E1–E3, D1–D2, PI1–PI3",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00256-022-04061-1",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Neuropathy Score Reporting and Data System",
+        "version": "Published 2022",
+        "officialUrl": "https://doi.org/10.1007/s00256-022-04061-1"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "onco-rads",
     "acronym": "ONCO-RADS",
-    "name": { "zh": "肿瘤相关发现报告和数据系统", "en": "Oncologically Relevant Findings Reporting and Data System" },
-    "summary": { "zh": "用于肿瘤筛查全身 MRI 的采集、解读和报告指南。", "en": "Published guidance for acquisition, interpretation and reporting of whole-body MRI for cancer screening." },
+    "name": {
+      "zh": "肿瘤相关发现报告和数据系统",
+      "en": "Oncologically Relevant Findings Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于肿瘤筛查全身 MRI 的采集、解读和报告指南。",
+      "en": "Published guidance for acquisition, interpretation and reporting of whole-body MRI for cancer screening."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "whole-body",
-    "domain": { "zh": "肿瘤筛查全身 MRI", "en": "Whole-body MRI for cancer screening" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "肿瘤筛查全身 MRI",
+      "en": "Whole-body MRI for cancer screening"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published 2021",
     "releaseDate": null,
     "categoryRange": "ONCO-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/radiol.2021201740",
     "lastVerified": "2026-09-18",
-    "related": ["met-rads", "my-rads"]
+    "related": [
+      "met-rads",
+      "my-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Oncologically Relevant Findings Reporting and Data System",
+        "version": "Published 2021",
+        "officialUrl": "https://doi.org/10.1148/radiol.2021201740"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "or-rads",
     "acronym": "OR-RADS",
-    "name": { "zh": "肿瘤反应报告和数据系统", "en": "Oncologic Response Reporting and Data System" },
-    "summary": { "zh": "面向肿瘤治疗反应的标准化报告建议。", "en": "A published recommendation for standardized oncologic treatment-response reporting." },
+    "name": {
+      "zh": "肿瘤反应报告和数据系统",
+      "en": "Oncologic Response Reporting and Data System"
+    },
+    "summary": {
+      "zh": "面向肿瘤治疗反应的标准化报告建议。",
+      "en": "A published recommendation for standardized oncologic treatment-response reporting."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "whole-body",
-    "domain": { "zh": "肿瘤治疗反应影像报告", "en": "Oncologic treatment-response imaging reporting" },
-    "modalities": ["CT", "MRI", "PET"],
+    "domain": {
+      "zh": "肿瘤治疗反应影像报告",
+      "en": "Oncologic treatment-response imaging reporting"
+    },
+    "modalities": [
+      "CT",
+      "MRI",
+      "PET"
+    ],
     "version": "Published 2022",
     "releaseDate": null,
     "categoryRange": "OR-RADS 0–5, M, E",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/rycan.220042",
     "lastVerified": "2026-09-18",
-    "related": ["met-rads", "my-rads"]
+    "related": [
+      "met-rads",
+      "my-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT",
+          "MRI",
+          "PET"
+        ],
+        "title": "Oncologic Response Reporting and Data System",
+        "version": "Published 2022",
+        "officialUrl": "https://doi.org/10.1148/rycan.220042"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ot-rads",
     "acronym": "OT-RADS",
-    "name": { "zh": "骨性肿瘤报告和数据系统", "en": "Osseous Tumor Reporting and Data System" },
-    "summary": { "zh": "用于骨肿瘤 MRI 的多阅片者验证分级系统。", "en": "A published multireader-validated MRI classification system for osseous tumors." },
+    "name": {
+      "zh": "骨性肿瘤报告和数据系统",
+      "en": "Osseous Tumor Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于骨肿瘤 MRI 的多阅片者验证分级系统。",
+      "en": "A published multireader-validated MRI classification system for osseous tumors."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "bone",
-    "domain": { "zh": "骨肿瘤 MRI 评估", "en": "MRI assessment of osseous tumors" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "骨肿瘤 MRI 评估",
+      "en": "MRI assessment of osseous tumors"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published 2021",
     "releaseDate": null,
     "categoryRange": "OT-RADS 0–6",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1097/RCT.0000000000001184",
     "lastVerified": "2026-09-18",
-    "related": ["bone-rads", "bti-rads"]
+    "related": [
+      "bti-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Osseous Tumor Reporting and Data System",
+        "version": "Published 2021",
+        "officialUrl": "https://doi.org/10.1097/RCT.0000000000001184"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "plaque-rads",
     "acronym": "Plaque-RADS",
-    "name": { "zh": "颈动脉斑块报告和数据系统", "en": "Carotid Plaque Reporting and Data System" },
-    "summary": { "zh": "用于颈动脉斑块相关脑血管事件风险分类的发表系统。", "en": "A published classification system for carotid-plaque-related cerebrovascular-event risk." },
+    "name": {
+      "zh": "颈动脉斑块报告和数据系统",
+      "en": "Carotid Plaque Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于颈动脉斑块相关脑血管事件风险分类的发表系统。",
+      "en": "A published classification system for carotid-plaque-related cerebrovascular-event risk."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "carotid",
-    "domain": { "zh": "颈动脉疾病与脑血管事件风险评估", "en": "Carotid disease and cerebrovascular-event risk assessment" },
-    "modalities": ["US", "CT", "MRI"],
+    "domain": {
+      "zh": "颈动脉疾病与脑血管事件风险评估",
+      "en": "Carotid disease and cerebrovascular-event risk assessment"
+    },
+    "modalities": [
+      "US",
+      "CT",
+      "MRI"
+    ],
     "version": "Published 2024",
     "releaseDate": null,
     "categoryRange": "Plaque-RADS 1–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.jcmg.2023.09.005",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US",
+          "CT",
+          "MRI"
+        ],
+        "title": "Carotid Plaque Reporting and Data System",
+        "version": "Published 2024",
+        "officialUrl": "https://doi.org/10.1016/j.jcmg.2023.09.005"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "psma-rads",
     "acronym": "PSMA-RADS",
-    "name": { "zh": "前列腺特异膜抗原影像报告和数据系统", "en": "Prostate-Specific Membrane Antigen Reporting and Data System" },
-    "summary": { "zh": "用于 PSMA 靶向 PET 影像解读和临床决策框架的修订版本。", "en": "A revised published framework for PSMA-targeted PET interpretation and clinical decision-making." },
+    "name": {
+      "zh": "前列腺特异膜抗原影像报告和数据系统",
+      "en": "Prostate-Specific Membrane Antigen Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于 PSMA 靶向 PET 影像解读和临床决策框架的修订版本。",
+      "en": "A revised published framework for PSMA-targeted PET interpretation and clinical decision-making."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "prostate",
-    "domain": { "zh": "PSMA 靶向 PET 影像", "en": "PSMA-targeted PET imaging" },
-    "modalities": ["PET"],
+    "domain": {
+      "zh": "PSMA 靶向 PET 影像",
+      "en": "PSMA-targeted PET imaging"
+    },
+    "modalities": [
+      "PET"
+    ],
     "version": "Published 2025",
     "releaseDate": null,
     "categoryRange": "PSMA-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00261-025-05068-7",
     "lastVerified": "2026-09-18",
-    "related": ["mi-rads", "fap-rads", "sstr-rads"]
+    "related": [
+      "mi-rads",
+      "fap-rads",
+      "sstr-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "PET"
+        ],
+        "title": "Prostate-Specific Membrane Antigen Reporting and Data System",
+        "version": "Published 2025",
+        "officialUrl": "https://doi.org/10.1007/s00261-025-05068-7"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "sstr-rads",
     "acronym": "SSTR-RADS",
-    "name": { "zh": "生长抑素受体影像报告和数据系统", "en": "Somatostatin Receptor Reporting and Data System" },
-    "summary": { "zh": "用于生长抑素受体 PET 影像报告和潜在 PRRT 候选者选择的标准化框架。", "en": "A published standardized framework for SSTR PET reporting and selection of potential PRRT candidates." },
+    "name": {
+      "zh": "生长抑素受体影像报告和数据系统",
+      "en": "Somatostatin Receptor Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于生长抑素受体 PET 影像报告和潜在 PRRT 候选者选择的标准化框架。",
+      "en": "A published standardized framework for SSTR PET reporting and selection of potential PRRT candidates."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "whole-body",
-    "domain": { "zh": "生长抑素受体 PET 影像", "en": "Somatostatin-receptor PET imaging" },
-    "modalities": ["PET"],
+    "domain": {
+      "zh": "生长抑素受体 PET 影像",
+      "en": "Somatostatin-receptor PET imaging"
+    },
+    "modalities": [
+      "PET"
+    ],
     "version": "Published 2018",
     "releaseDate": null,
     "categoryRange": "SSTR-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.2967/jnumed.117.206631",
     "lastVerified": "2026-09-18",
-    "related": ["mi-rads", "fap-rads", "psma-rads"]
+    "related": [
+      "mi-rads",
+      "fap-rads",
+      "psma-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "PET"
+        ],
+        "title": "Somatostatin Receptor Reporting and Data System",
+        "version": "Published 2018",
+        "officialUrl": "https://doi.org/10.2967/jnumed.117.206631"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "su-rads",
     "acronym": "SU-RADS",
-    "name": { "zh": "胃超声报告和数据系统", "en": "Stomach Ultrasound Reporting and Data System" },
-    "summary": { "zh": "用于胃癌超声评估类别的初步意见。", "en": "A published preliminary framework for stomach-ultrasound assessment categories in gastric cancer." },
+    "name": {
+      "zh": "胃超声报告和数据系统",
+      "en": "Stomach Ultrasound Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于胃癌超声评估类别的初步意见。",
+      "en": "A published preliminary framework for stomach-ultrasound assessment categories in gastric cancer."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "stomach",
-    "domain": { "zh": "胃癌超声评估", "en": "Ultrasound assessment of gastric cancer" },
-    "modalities": ["US"],
+    "domain": {
+      "zh": "胃癌超声评估",
+      "en": "Ultrasound assessment of gastric cancer"
+    },
+    "modalities": [
+      "US"
+    ],
     "version": "Published 2018",
     "releaseDate": null,
     "categoryRange": "SU-RADS 0–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s10120-018-0798-x",
     "lastVerified": "2026-09-18",
-    "related": []
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "US"
+        ],
+        "title": "Stomach Ultrasound Reporting and Data System",
+        "version": "Published 2018",
+        "officialUrl": "https://doi.org/10.1007/s10120-018-0798-x"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ae-rads",
     "acronym": "AE-RADS",
-    "name": { "zh": "影像不良事件放射学评分系统", "en": "Adverse Events Radiological Scoring System" },
-    "summary": { "zh": "用于诊断放射学与远程放射学不良事件记录和严重程度评估的已发表评分框架。", "en": "A published scoring framework for recording and assessing adverse events in diagnostic radiology and teleradiology." },
+    "name": {
+      "zh": "影像不良事件放射学评分系统",
+      "en": "Adverse Events Radiological Scoring System"
+    },
+    "summary": {
+      "zh": "用于诊断放射学与远程放射学不良事件记录和严重程度评估的已发表评分框架。",
+      "en": "A published scoring framework for recording and assessing adverse events in diagnostic radiology and teleradiology."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "workflow-quality",
-    "domain": { "zh": "影像科不良事件质量评价", "en": "Quality assessment of radiology adverse events" },
-    "modalities": ["All modalities"],
+    "domain": {
+      "zh": "影像科不良事件质量评价",
+      "en": "Quality assessment of radiology adverse events"
+    },
+    "modalities": [
+      "All modalities"
+    ],
     "version": "Published 2025",
     "releaseDate": null,
     "categoryRange": "G1–G5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1186/s12880-025-01670-9",
     "lastVerified": "2026-09-18",
-    "related": ["info-rads", "ri-rads"]
+    "related": [
+      "info-rads",
+      "ri-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "All modalities"
+        ],
+        "title": "Adverse Events Radiological Scoring System",
+        "version": "Published 2025",
+        "officialUrl": "https://doi.org/10.1186/s12880-025-01670-9"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "bt-rads",
     "acronym": "BT-RADS",
-    "name": { "zh": "脑肿瘤影像报告和数据系统", "en": "Brain Tumor Reporting and Data System" },
-    "summary": { "zh": "用于治疗后胶质瘤 MRI 的结构化报告与反应评估框架；已有同行评议研究，但 ACR 当前仍将其列为开发中项目。", "en": "A structured reporting and response-assessment framework for post-treatment glioma MRI; it has peer-reviewed studies, while ACR currently lists the program as in development." },
+    "name": {
+      "zh": "脑肿瘤影像报告和数据系统",
+      "en": "Brain Tumor Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于治疗后胶质瘤 MRI 的结构化报告与反应评估框架；已有同行评议研究，但 ACR 当前仍将其列为开发中项目。",
+      "en": "A structured reporting and response-assessment framework for post-treatment glioma MRI; it has peer-reviewed studies, while ACR currently lists the program as in development."
+    },
     "organization": "BT-RADS program authors / American College of Radiology (ACR)",
     "status": "in-development",
     "anatomy": "head-neck",
-    "domain": { "zh": "治疗后胶质瘤 MRI 评估", "en": "Post-treatment glioma MRI assessment" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "治疗后胶质瘤 MRI 评估",
+      "en": "Post-treatment glioma MRI assessment"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published framework 2018; ACR in development",
     "releaseDate": null,
     "categoryRange": "BT-RADS 0–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://btrads.com/publications/",
     "lastVerified": "2026-09-18",
-    "related": ["tbi-rads"]
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Brain Tumor Reporting and Data System",
+        "version": "Published framework 2018; ACR in development",
+        "officialUrl": "https://btrads.com/publications/"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "c-lung-rads",
     "acronym": "C-Lung-RADS",
-    "name": { "zh": "中国肺结节报告和数据系统", "en": "Chinese Lung Nodules Reporting and Data System" },
-    "summary": { "zh": "基于中国人群胸部 CT 队列建立的肺结节恶性风险分层与精准管理框架。", "en": "A published framework for malignancy-risk stratification and precision management of pulmonary nodules in Chinese chest-CT cohorts." },
+    "name": {
+      "zh": "中国肺结节报告和数据系统",
+      "en": "Chinese Lung Nodules Reporting and Data System"
+    },
+    "summary": {
+      "zh": "基于中国人群胸部 CT 队列建立的肺结节恶性风险分层与精准管理框架。",
+      "en": "A published framework for malignancy-risk stratification and precision management of pulmonary nodules in Chinese chest-CT cohorts."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "中国人群肺结节 CT 风险分层", "en": "Chest-CT risk stratification of pulmonary nodules in Chinese cohorts" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "中国人群肺结节 CT 风险分层",
+      "en": "Chest-CT risk stratification of pulmonary nodules in Chinese cohorts"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2024",
     "releaseDate": null,
     "categoryRange": "Risk levels 1–4",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1038/s41591-024-03211-3",
     "lastVerified": "2026-09-18",
-    "related": ["lung-rads", "lu-rads"]
+    "related": [
+      "lung-rads",
+      "lu-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Chinese Lung Nodules Reporting and Data System",
+        "version": "Published 2024",
+        "officialUrl": "https://doi.org/10.1038/s41591-024-03211-3"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "c-ti-rads",
     "acronym": "C-TIRADS",
-    "name": { "zh": "中国甲状腺影像报告和数据系统", "en": "Chinese Thyroid Imaging Reporting and Data System" },
-    "summary": { "zh": "中华医学会超声医学分会发布的甲状腺结节超声恶性风险分层中国指南。", "en": "Chinese guidelines published by the Chinese Medical Association for ultrasound malignancy-risk stratification of thyroid nodules." },
+    "name": {
+      "zh": "中国甲状腺影像报告和数据系统",
+      "en": "Chinese Thyroid Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "中华医学会超声医学分会发布的甲状腺结节超声恶性风险分层中国指南。",
+      "en": "Chinese guidelines published by the Chinese Medical Association for ultrasound malignancy-risk stratification of thyroid nodules."
+    },
     "organization": "Chinese Medical Association",
     "status": "non-acr",
     "anatomy": "thyroid",
-    "domain": { "zh": "甲状腺结节超声恶性风险分层", "en": "Ultrasound malignancy-risk stratification of thyroid nodules" },
-    "modalities": ["US"],
-    "version": "Chinese guideline 2021",
+    "domain": {
+      "zh": "甲状腺结节超声恶性风险分层",
+      "en": "Ultrasound malignancy-risk stratification of thyroid nodules"
+    },
+    "modalities": [
+      "US"
+    ],
+    "version": "Chinese guideline 2020",
     "releaseDate": null,
     "categoryRange": "C-TIRADS 1–6 (4A–4C)",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.3760/cma.j.cn131148-20210205-00092",
     "lastVerified": "2026-09-18",
-    "related": ["ti-rads", "eu-ti-rads", "k-ti-rads", "kwak-ti-rads"]
+    "related": [
+      "ti-rads",
+      "eu-ti-rads",
+      "k-ti-rads"
+    ],
+    "sources": [
+      {
+        "id": "english-2020",
+        "modalities": [
+          "US"
+        ],
+        "title": "2020 Chinese guidelines for ultrasound malignancy risk stratification of thyroid nodules: the C-TIRADS",
+        "version": "Published 2020",
+        "officialUrl": "https://doi.org/10.1007/s12020-020-02441-y"
+      }
+    ],
+    "primarySourceId": "english-2020"
   },
   {
     "id": "info-rads",
     "acronym": "Info-RADS",
-    "name": { "zh": "患者信息提示报告系统", "en": "Information Reporting and Data System" },
-    "summary": { "zh": "用于在放射学报告中向患者传达值得关注信息的已发表沟通框架。", "en": "A published communication framework for adding patient-facing messages about pertinent information to radiology reports." },
+    "name": {
+      "zh": "患者信息提示报告系统",
+      "en": "Information Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于在放射学报告中向患者传达值得关注信息的已发表沟通框架。",
+      "en": "A published communication framework for adding patient-facing messages about pertinent information to radiology reports."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "workflow-quality",
-    "domain": { "zh": "放射学报告中的患者沟通", "en": "Patient communication in radiology reports" },
-    "modalities": ["All modalities"],
+    "domain": {
+      "zh": "放射学报告中的患者沟通",
+      "en": "Patient communication in radiology reports"
+    },
+    "modalities": [
+      "All modalities"
+    ],
     "version": "Published 2021",
     "releaseDate": null,
     "categoryRange": "Info-RADS 1–2",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.jacr.2020.09.049",
     "lastVerified": "2026-09-18",
-    "related": ["ae-rads", "ri-rads"]
+    "related": [
+      "ae-rads",
+      "ri-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "All modalities"
+        ],
+        "title": "Information Reporting and Data System",
+        "version": "Published 2021",
+        "officialUrl": "https://doi.org/10.1016/j.jacr.2020.09.049"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ki-rads",
     "acronym": "KI-RADS",
-    "name": { "zh": "肾脏影像报告和数据系统", "en": "Kidney Imaging Reporting and Data System" },
-    "summary": { "zh": "面向肾肿块影像分类的循证研发倡议；2025 年论文明确其为未来系统，ACR 当前列为开发中。", "en": "An evidence-based development initiative for renal-mass imaging classification; its 2025 article describes a future system and ACR currently lists it as in development." },
+    "name": {
+      "zh": "肾脏影像报告和数据系统",
+      "en": "Kidney Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "面向肾肿块影像分类的循证研发倡议；2025 年论文明确其为未来系统，ACR 当前列为开发中。",
+      "en": "An evidence-based development initiative for renal-mass imaging classification; its 2025 article describes a future system and ACR currently lists it as in development."
+    },
     "organization": "American College of Radiology (ACR)",
     "status": "in-development",
     "anatomy": "abdomen-pelvis",
-    "domain": { "zh": "肾肿块影像分类研发", "en": "Development of renal-mass imaging classification" },
-    "modalities": ["CT", "MRI"],
+    "domain": {
+      "zh": "肾肿块影像分类研发",
+      "en": "Development of renal-mass imaging classification"
+    },
+    "modalities": [
+      "CT",
+      "MRI"
+    ],
     "version": "Concept article 2025",
     "releaseDate": null,
     "categoryRange": "Not released",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1148/radiol.240308",
     "lastVerified": "2026-09-18",
-    "related": ["bone-rads"]
+    "related": [],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT",
+          "MRI"
+        ],
+        "title": "Kidney Imaging Reporting and Data System",
+        "version": "Concept article 2025",
+        "officialUrl": "https://doi.org/10.1148/radiol.240308"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "moi-rads",
     "acronym": "MOI-RADS",
-    "name": { "zh": "肌肉骨骼外院影像会诊报告系统", "en": "Musculoskeletal Outside Interpretation Reporting and Data System" },
-    "summary": { "zh": "用于前瞻性追踪肌肉骨骼影像第二意见解读差异的已发表质量保证工具。", "en": "A published quality-assurance tool for prospectively tracking discrepancies in second-opinion musculoskeletal image interpretations." },
+    "name": {
+      "zh": "肌肉骨骼外院影像会诊报告系统",
+      "en": "Musculoskeletal Outside Interpretation Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于前瞻性追踪肌肉骨骼影像第二意见解读差异的已发表质量保证工具。",
+      "en": "A published quality-assurance tool for prospectively tracking discrepancies in second-opinion musculoskeletal image interpretations."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "musculoskeletal-whole-body",
-    "domain": { "zh": "肌肉骨骼影像第二意见质量评价", "en": "Quality assessment of second-opinion musculoskeletal imaging" },
-    "modalities": ["Radiography", "CT", "MRI", "US"],
+    "domain": {
+      "zh": "肌肉骨骼影像第二意见质量评价",
+      "en": "Quality assessment of second-opinion musculoskeletal imaging"
+    },
+    "modalities": [
+      "Radiography",
+      "CT",
+      "MRI",
+      "US"
+    ],
     "version": "Published 2021",
     "releaseDate": null,
     "categoryRange": "MOI-RADS A–D, X",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00256-020-03601-x",
     "lastVerified": "2026-09-18",
-    "related": ["ae-rads", "ri-rads"]
-  },
-  {
-    "id": "pe-rads",
-    "acronym": "PE-RADS",
-    "name": { "zh": "肺栓塞报告和数据系统", "en": "Pulmonary Embolism Reporting and Data System" },
-    "summary": { "zh": "用于急性肺栓塞 CT 和 MR 血管成像诊断的标准术语与分层结构化报告系统。", "en": "A structured reporting system with a standard lexicon and hierarchical classification for acute pulmonary embolism on CT and MR angiography." },
-    "organization": "American College of Radiology (ACR)",
-    "status": "released",
-    "anatomy": "lung",
-    "domain": { "zh": "急性肺栓塞 CT/MR 血管成像评估", "en": "CT/MR angiography assessment of acute pulmonary embolism" },
-    "modalities": ["CT", "MRI"],
-    "version": "PE-RADS v2026",
-    "releaseDate": null,
-    "categoryRange": "Hierarchical classification",
-    "categories": [],
-    "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.chest.2026.06.006",
-    "lastVerified": "2026-09-18",
-    "related": ["lung-rads"]
+    "related": [
+      "ae-rads",
+      "ri-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "Radiography",
+          "CT",
+          "MRI",
+          "US"
+        ],
+        "title": "Musculoskeletal Outside Interpretation Reporting and Data System",
+        "version": "Published 2021",
+        "officialUrl": "https://doi.org/10.1007/s00256-020-03601-x"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "ri-rads",
     "acronym": "RI-RADS",
-    "name": { "zh": "检查指征影像报告和数据系统", "en": "Reason for Exam Imaging Reporting and Data System" },
-    "summary": { "zh": "用于标准化评估影像检查申请单中临床信息质量的已发表分级系统。", "en": "A published grading system for standardized assessment of clinical-information quality in imaging requisitions." },
+    "name": {
+      "zh": "检查指征影像报告和数据系统",
+      "en": "Reason for Exam Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于标准化评估影像检查申请单中临床信息质量的已发表分级系统。",
+      "en": "A published grading system for standardized assessment of clinical-information quality in imaging requisitions."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "workflow-quality",
-    "domain": { "zh": "影像检查申请单质量评价", "en": "Quality assessment of imaging requisitions" },
-    "modalities": ["All modalities"],
+    "domain": {
+      "zh": "影像检查申请单质量评价",
+      "en": "Quality assessment of imaging requisitions"
+    },
+    "modalities": [
+      "All modalities"
+    ],
     "version": "Published 2019",
     "releaseDate": null,
     "categoryRange": "RI-RADS A–D, X",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.ejrad.2019.108661",
     "lastVerified": "2026-09-18",
-    "related": ["ae-rads", "info-rads"]
+    "related": [
+      "ae-rads",
+      "info-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "All modalities"
+        ],
+        "title": "Reason for Exam Imaging Reporting and Data System",
+        "version": "Published 2019",
+        "officialUrl": "https://doi.org/10.1016/j.ejrad.2019.108661"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "st-rads",
     "acronym": "Soft Tissue-RADS",
-    "name": { "zh": "软组织影像报告和数据系统", "en": "Soft Tissue Reporting and Data System" },
-    "summary": { "zh": "用于软组织肿瘤及肿瘤样病变 MRI 的结构化报告框架；ACR 当前明确列为进行中项目。", "en": "A structured MRI reporting framework for soft-tissue tumors and tumor-like lesions; ACR currently explicitly lists it as a works-in-progress program." },
+    "name": {
+      "zh": "软组织影像报告和数据系统",
+      "en": "Soft Tissue Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于软组织肿瘤及肿瘤样病变 MRI 的结构化报告框架；ACR 当前明确列为进行中项目。",
+      "en": "A structured MRI reporting framework for soft-tissue tumors and tumor-like lesions; ACR currently explicitly lists it as a works-in-progress program."
+    },
     "organization": "American College of Radiology (ACR)",
     "status": "works-in-progress",
     "anatomy": "musculoskeletal-whole-body",
-    "domain": { "zh": "软组织肿块 MRI 风险评估", "en": "MRI risk assessment of soft-tissue masses" },
-    "modalities": ["MRI"],
-    "version": "Published framework 2026; ACR works in progress",
+    "domain": {
+      "zh": "软组织肿块 MRI 风险评估",
+      "en": "MRI risk assessment of soft-tissue masses"
+    },
+    "modalities": [
+      "MRI"
+    ],
+    "version": "Accepted manuscript 2025; ACR works in progress",
     "releaseDate": null,
     "categoryRange": "Work-in-progress scoring system",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1007/s00256-026-05134-1",
     "lastVerified": "2026-09-18",
-    "related": ["bone-rads", "ot-rads"]
-  },
-  {
-    "id": "tbi-rads",
-    "acronym": "TBI-RADS",
-    "name": { "zh": "创伤性脑损伤影像报告和数据系统", "en": "Traumatic Brain Injury Reporting and Data System" },
-    "summary": { "zh": "创伤性脑损伤影像结构化报告的研发框架；ACR 设有 TBI-RADS 委员会，但未见可供常规临床使用的正式类别发布。", "en": "A development-stage framework for structured traumatic-brain-injury imaging reports; ACR has a TBI-RADS committee, but no formal category release for routine clinical use was identified." },
-    "organization": "American College of Radiology (ACR) / original article authors",
-    "status": "in-development",
-    "anatomy": "head-neck",
-    "domain": { "zh": "创伤性脑损伤影像结构化报告", "en": "Structured reporting of traumatic brain injury imaging" },
-    "modalities": ["CT", "MRI"],
-    "version": "Development-stage framework",
-    "releaseDate": null,
-    "categoryRange": "Not released",
-    "categories": [],
-    "originalTerms": [],
-    "officialUrl": "https://doi.org/10.18885/CI.0000000841",
-    "lastVerified": "2026-09-18",
-    "related": ["bt-rads"]
+    "related": [
+      "ot-rads"
+    ],
+    "sources": [
+      {
+        "id": "ajr-2025",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Soft Tissue-RADS: An ACR Work-in-Progress Framework for Standardized Reporting of Soft-Tissue Lesions on MRI",
+        "version": "Accepted manuscript 2025",
+        "officialUrl": "https://doi.org/10.2214/AJR.25.34013"
+      }
+    ],
+    "primarySourceId": "ajr-2025"
   },
   {
     "id": "vi-rads",
     "acronym": "VI-RADS",
-    "name": { "zh": "膀胱影像报告和数据系统", "en": "Vesical Imaging Reporting and Data System" },
-    "summary": { "zh": "用于膀胱癌多参数 MRI 的标准化方案与肌层浸润可能性评分系统。", "en": "A standardized multiparametric-MRI protocol and scoring system for assessing the likelihood of muscle invasion in bladder cancer." },
+    "name": {
+      "zh": "膀胱影像报告和数据系统",
+      "en": "Vesical Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "用于膀胱癌多参数 MRI 的标准化方案与肌层浸润可能性评分系统。",
+      "en": "A standardized multiparametric-MRI protocol and scoring system for assessing the likelihood of muscle invasion in bladder cancer."
+    },
     "organization": "International expert group / American College of Radiology (ACR)",
     "status": "released",
     "anatomy": "abdomen-pelvis",
-    "domain": { "zh": "膀胱癌多参数 MRI 局部分期", "en": "Multiparametric-MRI local staging of bladder cancer" },
-    "modalities": ["MRI"],
+    "domain": {
+      "zh": "膀胱癌多参数 MRI 局部分期",
+      "en": "Multiparametric-MRI local staging of bladder cancer"
+    },
+    "modalities": [
+      "MRI"
+    ],
     "version": "Published 2018; ACR current release",
     "releaseDate": null,
     "categoryRange": "VI-RADS 1–5",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.1016/j.eururo.2018.04.029",
     "lastVerified": "2026-09-18",
-    "related": ["pi-rads", "o-rads"]
+    "related": [
+      "pi-rads",
+      "o-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "MRI"
+        ],
+        "title": "Vesical Imaging Reporting and Data System",
+        "version": "Published 2018; ACR current release",
+        "officialUrl": "https://doi.org/10.1016/j.eururo.2018.04.029"
+      }
+    ],
+    "primarySourceId": "primary"
   },
   {
     "id": "vp-rads",
     "acronym": "VP-RADS",
-    "name": { "zh": "病毒性肺炎影像报告和数据系统", "en": "Viral Pneumonia Imaging Reporting and Data System" },
-    "summary": { "zh": "基于 COVID-19 病例经验提出的胸部 CT 病毒性肺炎报告系统。", "en": "A published chest-CT viral-pneumonia reporting system based on COVID-19 experience." },
+    "name": {
+      "zh": "病毒性肺炎影像报告和数据系统",
+      "en": "Viral Pneumonia Imaging Reporting and Data System"
+    },
+    "summary": {
+      "zh": "基于 COVID-19 病例经验提出的胸部 CT 病毒性肺炎报告系统。",
+      "en": "A published chest-CT viral-pneumonia reporting system based on COVID-19 experience."
+    },
     "organization": "Original study authors",
     "status": "non-acr",
     "anatomy": "lung",
-    "domain": { "zh": "病毒性肺炎 CT 评估", "en": "CT assessment of viral pneumonia" },
-    "modalities": ["CT"],
+    "domain": {
+      "zh": "病毒性肺炎 CT 评估",
+      "en": "CT assessment of viral pneumonia"
+    },
+    "modalities": [
+      "CT"
+    ],
     "version": "Published 2020",
     "releaseDate": null,
     "categoryRange": "VP-RADS 1–4, F",
     "categories": [],
     "originalTerms": [],
-    "officialUrl": "https://doi.org/10.21037/qims-20-587",
     "lastVerified": "2026-09-18",
-    "related": ["co-x-rads", "co-rads", "covid-rads"]
+    "related": [
+      "co-x-rads",
+      "co-rads",
+      "covid-rads"
+    ],
+    "sources": [
+      {
+        "id": "primary",
+        "modalities": [
+          "CT"
+        ],
+        "title": "Viral Pneumonia Imaging Reporting and Data System",
+        "version": "Published 2020",
+        "officialUrl": "https://doi.org/10.21037/qims-20-587"
+      }
+    ],
+    "primarySourceId": "primary"
+  },
+  {
+    "id": "bone-tumor-rads",
+    "acronym": "Bone-RADS (Bone Tumor)",
+    "name": {
+      "zh": "Bone-RADS（骨肿瘤）",
+      "en": "Bone-RADS (Bone Tumor)"
+    },
+    "summary": {
+      "zh": "用于骨肿瘤风险分层的 ACR 骨病变评分框架。以下教学性类别仅适用于该骨肿瘤来源。",
+      "en": "An ACR bone-tumor risk-stratification framework. The teaching categories below apply only to this bone-tumor source."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "works-in-progress",
+    "anatomy": "bone",
+    "domain": {
+      "zh": "骨肿瘤风险评估",
+      "en": "Bone-tumor risk assessment"
+    },
+    "modalities": [
+      "Radiography"
+    ],
+    "version": "Published 2023",
+    "releaseDate": null,
+    "categoryRange": "Bone-RADS 0–4",
+    "categories": [
+      {
+        "code": "0",
+        "original": "Incompletely characterized",
+        "meaning": {
+          "zh": "现有资料不足以可靠预测风险，需进一步评估。",
+          "en": "Available information cannot reliably predict risk and requires further evaluation."
+        }
+      },
+      {
+        "code": "1",
+        "original": "Benign",
+        "meaning": {
+          "zh": "表现符合良性骨病变类别。",
+          "en": "Findings fall in the benign bone-lesion category."
+        }
+      },
+      {
+        "code": "2",
+        "original": "Likely benign",
+        "meaning": {
+          "zh": "表现倾向良性。",
+          "en": "Findings favor a benign lesion."
+        }
+      },
+      {
+        "code": "3",
+        "original": "Indeterminate",
+        "meaning": {
+          "zh": "风险未定，需要进一步表征或随访。",
+          "en": "Risk remains indeterminate and needs further characterization or follow-up."
+        }
+      },
+      {
+        "code": "4",
+        "original": "Suspicious",
+        "meaning": {
+          "zh": "存在提示恶性或需专科处理的可疑特征。",
+          "en": "Suspicious features may indicate malignancy or need specialist management."
+        }
+      }
+    ],
+    "originalTerms": [
+      {
+        "term": "Potentially neoplastic bone lesion",
+        "explanation": {
+          "zh": "可能为肿瘤性的骨病变；需结合病史、影像表现及必要的进一步检查判断。",
+          "en": "A bone lesion that may be neoplastic and requires assessment in clinical and imaging context."
+        }
+      },
+      {
+        "term": "Works in Progress",
+        "explanation": {
+          "zh": "ACR 对该项目的当前分类，表示尚不足以支持常规临床使用。",
+          "en": "ACR's current program classification, indicating insufficient evidence for routine clinical use."
+        }
+      }
+    ],
+    "lastVerified": "2026-09-18",
+    "related": [
+      "bone-incidental-rads"
+    ],
+    "sources": [
+      {
+        "id": "acr-2023",
+        "modalities": [
+          "Radiography"
+        ],
+        "title": "Bone Tumor Risk Stratification and Management System",
+        "version": "Published 2023",
+        "officialUrl": "https://doi.org/10.1016/j.jacr.2023.07.017"
+      }
+    ],
+    "primarySourceId": "acr-2023",
+    "detailSourceId": "acr-2023"
+  },
+  {
+    "id": "bone-incidental-rads",
+    "acronym": "Bone-RADS (Incidental Solitary Bone Lesion)",
+    "name": {
+      "zh": "Bone-RADS（孤立骨病变）",
+      "en": "Bone-RADS (Incidental Solitary Bone Lesion)"
+    },
+    "summary": {
+      "zh": "用于成人偶发孤立骨病变的 CT/MRI 管理算法；未转录原文算法前仅提供来源。",
+      "en": "A CT/MRI management algorithm for incidental solitary bone lesions in adults; source-only until the original algorithm is transcribed."
+    },
+    "organization": "American College of Radiology (ACR)",
+    "status": "non-acr",
+    "anatomy": "bone",
+    "domain": {
+      "zh": "偶发孤立骨病变 CT/MRI 管理",
+      "en": "CT/MRI management of incidental solitary bone lesions"
+    },
+    "modalities": [
+      "CT",
+      "MRI"
+    ],
+    "version": "Published 2022",
+    "releaseDate": null,
+    "categoryRange": "Bone-RADS 1–4",
+    "categories": [],
+    "originalTerms": [],
+    "lastVerified": "2026-09-18",
+    "related": [
+      "bone-tumor-rads"
+    ],
+    "sources": [
+      {
+        "id": "ssr-2022",
+        "modalities": [
+          "CT",
+          "MRI"
+        ],
+        "title": "Guidelines for the diagnostic management of incidental solitary bone lesions on CT and MRI in adults",
+        "version": "Published 2022",
+        "officialUrl": "https://doi.org/10.1007/s00256-022-04022-8"
+      }
+    ],
+    "primarySourceId": "ssr-2022"
   }
 ]
