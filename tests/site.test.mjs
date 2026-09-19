@@ -10,8 +10,8 @@ test("README documents preview, testing, source policy, and Pages deployment", a
   for (const heading of ["Local preview", "Tests", "Content maintenance", "Source and copyright policy", "GitHub Pages"]) {
     assert.match(readme, new RegExp(`^## ${escapeRegExp(heading)}$`, "m"));
   }
-  assert.match(readme, /contains 56 records/);
-  assert.match(readme, /3 ACR systems in development/);
+  assert.match(readme, /contains 53 records/);
+  assert.match(readme, /2 systems in development/);
 });
 
 test("index exposes every required application landmark", async () => {
@@ -72,8 +72,8 @@ test("regional anatomy filtering combines with search, modality, and status", as
   assert.match(app.renderCatalog(records, new URL("https://example.test/?lang=zh&status=non-acr")), /非 ACR/);
   assert.match(app.renderCatalog(records, new URL("https://example.test/?lang=en&status=non-acr")), /Non-ACR/);
   assert.deepEqual(app.filterCatalog(records, { anatomy: "abdomen-pelvis", modality: "MRI", query: "prostate", status: "released" }).map(r => r.id), ["pi-rads"]);
-  assert.deepEqual(app.filterCatalog(records, { anatomy: "musculoskeletal-whole-body", modality: "MRI", status: "non-acr" }).map(r => r.id), ["bti-rads", "met-rads", "mski-rads", "my-rads", "node-rads", "ns-rads", "onco-rads", "or-rads", "ot-rads"]);
-  assert.deepEqual(app.filterCatalog(records, { anatomy: "thyroid" }).map(r => r.id), ["ti-rads", "eu-ti-rads", "k-ti-rads", "kwak-ti-rads", "c-ti-rads"]);
+  assert.deepEqual(app.filterCatalog(records, { anatomy: "musculoskeletal-whole-body", modality: "MRI", status: "non-acr" }).map(r => r.id), ["bti-rads", "met-rads", "mski-rads", "my-rads", "node-rads", "ns-rads", "onco-rads", "or-rads", "ot-rads", "bone-incidental-rads"]);
+  assert.deepEqual(app.filterCatalog(records, { anatomy: "thyroid" }).map(r => r.id), ["ti-rads", "eu-ti-rads", "k-ti-rads", "c-ti-rads"]);
   assert.deepEqual(app.filterCatalog(records, { anatomy: "workflow-quality", status: "non-acr" }).map(r => r.id), ["ae-rads", "info-rads", "ri-rads"]);
 });
 
@@ -137,6 +137,30 @@ test("clinical detail preserves categories, terms, source metadata and filtered 
   assert.match(renderDetail(records, url), /Entry not found/);
 });
 
+test("frequent-RADS shortcuts do not link to catalog records removed for missing local PDFs", async () => {
+  const html = await readFile(new URL("index.html", root), "utf8");
+  for (const removed of ["BI-RADS", "Kwak-TI-RADS", "PE-RADS", "TBI-RADS"]) {
+    assert.doesNotMatch(html, new RegExp(`data-rads-query=["']${escapeRegExp(removed)}["']`));
+  }
+  assert.match(html, /data-rads-query=["']LI-RADS["']/);
+  assert.match(html, /data-rads-query=["']PI-RADS["']/);
+});
+
+test("detail identifies separate modality sources and labels the source behind teaching text", async () => {
+  const { renderDetail } = await import("../js/app.mjs");
+  const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
+  const node = renderDetail(records, new URL("https://example.test/?rads=node-rads"));
+  for (const sourceText of ["CT/MRI 2021", "US 2025", "10.1007/s00330-020-07572-4", "10.22038/ijorl.2025.85674.3883"]) {
+    assert.match(node, new RegExp(escapeRegExp(sourceText)));
+  }
+  const orads = renderDetail(records, new URL("https://example.test/?rads=o-rads"));
+  assert.match(orads, /US v2022/);
+  assert.match(orads, /MRI 2022/);
+  assert.match(orads, /评分分级与关键术语仅适用于：US — O-RADS US v2022 \(US v2022\)\./);
+  const en = renderDetail(records, new URL("https://example.test/?lang=en&rads=o-rads"));
+  assert.match(en, /Categories and key terms apply only to: US — O-RADS US v2022 \(US v2022\)\./);
+});
+
 test("published non-ACR entries point readers to the primary paper for untranscribed category definitions", async () => {
   const { renderDetail } = await import("../js/app.mjs");
   const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
@@ -197,8 +221,8 @@ test("record content is escaped instead of interpreted as markup", async () => {
   const { renderCatalog, renderDetail } = await import("../js/app.mjs");
   const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
   records[0].name.zh = '<img src=x onerror="alert(1)">';
-  records[0].officialUrl = 'javascript:alert(1)';
-  const url = new URL("https://example.test/?rads=bi-rads");
+  records[0].sources[0].officialUrl = 'javascript:alert(1)';
+  const url = new URL(`https://example.test/?rads=${records[0].id}`);
   assert.doesNotMatch(renderCatalog(records, url), /<img/);
   assert.match(renderDetail(records, url), /&lt;img/);
   assert.doesNotMatch(renderDetail(records, url), /href="javascript:/);

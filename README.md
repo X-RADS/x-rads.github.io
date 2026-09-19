@@ -15,13 +15,15 @@ official-source links only.
 
 ## Catalog scope
 
-The catalog currently contains 56 records:
+The catalog currently contains 53 records, each supported by a locally
+retained original PDF:
 
-- 10 released ACR RADS records.
-- 2 ACR works-in-progress records: Bone-RADS and Soft Tissue-RADS.
-- 3 ACR systems in development: BT-RADS, KI-RADS, and TBI-RADS.
-- 41 published non-ACR systems, including records selected from tables 2–4 of
-  the locally retained source article.
+- 8 released systems.
+- 2 works-in-progress systems, including Soft Tissue-RADS and the ACR
+  Bone-RADS bone-tumor framework.
+- 2 systems in development: BT-RADS and KI-RADS.
+- 41 published non-ACR systems, including the separate SSR Bone-RADS
+  incidental-solitary-bone-lesion framework.
 
 The status label describes release state or publisher/oversight context:
 
@@ -34,8 +36,9 @@ The status label describes release state or publisher/oversight context:
   endorsement.
 
 Each list card presents the acronym, bilingual name, application domain,
-modalities, status, and publication/version information. Detail pages preserve
-the source URL and verification date. If a published non-ACR record has not
+modalities, status, and publication/version information. Detail pages list
+each source by its applicable modality and version, then preserve the
+verification date. If a published non-ACR record has not
 been transcribed into category-level teaching text, the detail page directs the
 reader to the original publication rather than supplying inferred definitions.
 
@@ -66,9 +69,11 @@ metadata.
 
 Catalog records live in `data/rads.json`. Each record uses a stable `id`,
 acronym, localized `name`, `summary`, and `domain` fields, anatomy, modalities,
-status, version/release metadata, category and original-term arrays, official
-source URL, related record IDs, and a `lastVerified` date. Preserve the
-existing JSON schema and use valid JSON when adding or updating records.
+status, version/release metadata, category and original-term arrays, a
+`sources` list, `primarySourceId`, related record IDs, and a `lastVerified`
+date. Each source identifies its applicable modalities, title, version, and
+official URL; `detailSourceId` identifies the source supporting any rendered
+category or terminology explanation.
 
 For each change, confirm the official source, retain original English clinical
 terms where provided, update `lastVerified`, check related IDs, preview the
