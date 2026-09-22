@@ -450,6 +450,75 @@
         }
       }
     ],
+    "detailedGuide": {
+      "sourceId": "v2-1",
+      "sequences": [
+        {
+          "key": "t1w",
+          "label": "T1W",
+          "purpose": {
+            "zh": "所有前列腺 MRI 均应获取。主要识别前列腺及精囊出血、勾画腺体轮廓；也可辅助观察淋巴结和骨骼。它不是 PI-RADS 总体评分的主导序列。",
+            "en": "Obtain for every prostate MRI. It primarily identifies hemorrhage in the prostate and seminal vesicles and outlines the gland; it can also help assess lymph nodes and bone. It is not a dominant sequence for the overall PI-RADS score."
+          }
+        },
+        {
+          "key": "t2w",
+          "label": "T2W",
+          "purpose": {
+            "zh": "用于辨认前列腺分区、腺内异常、精囊受累、腺外侵犯和淋巴结。它是移行带（TZ）总体 PI-RADS 评分的主导序列。",
+            "en": "Used to identify zonal anatomy, intraprostatic abnormalities, seminal-vesicle involvement, extraprostatic extension, and lymph nodes. It is the dominant sequence for the overall PI-RADS score in the transition zone (TZ)."
+          }
+        },
+        {
+          "key": "dwi-adc",
+          "label": "DWI / ADC",
+          "purpose": {
+            "zh": "反映水分子扩散；应包含 ADC 图和高 b 值图像。用于评估局灶性受限扩散，是外周带（PZ）总体 PI-RADS 评分的主导序列。",
+            "en": "Reflects water diffusion and should include an ADC map and high b-value images. It assesses focal restricted diffusion and is the dominant sequence for the overall PI-RADS score in the peripheral zone (PZ)."
+          }
+        },
+        {
+          "key": "dce",
+          "label": "DCE",
+          "purpose": {
+            "zh": "观察局灶、早于或与邻近正常前列腺组织同期、且与 T2W 或 DWI 异常对应的强化。若 T2W 和 DWI 质量合格，它通常只在外周带 DWI 评分为 3 时影响总体类别。",
+            "en": "Assesses focal enhancement that is earlier than or contemporaneous with adjacent normal prostate tissue and corresponds to a T2W or DWI abnormality. When T2W and DWI are diagnostic, it usually affects the overall category only for a peripheral-zone lesion with a DWI score of 3."
+          }
+        }
+      ],
+      "scoringRules": {
+        "pzDominantSequence": "dwi-adc",
+        "tzDominantSequence": "t2w",
+        "steps": [
+          {
+            "zh": "先确定病灶位于外周带还是移行带；分区决定主导序列。",
+            "en": "First determine whether the lesion is in the peripheral or transition zone; the zone determines the dominant sequence."
+          },
+          {
+            "zh": "外周带：以 DWI 评分决定总体 PI-RADS。DWI 为 1、2、4 或 5 时总体类别相同；DWI 为 3 时，若该病灶 DCE 阳性则为 PI-RADS 4，否则为 PI-RADS 3。",
+            "en": "Peripheral zone: use the DWI score to determine the overall PI-RADS assessment. DWI scores of 1, 2, 4, or 5 give the same overall category; with DWI of 3, positive DCE for that lesion gives PI-RADS 4, otherwise PI-RADS 3."
+          },
+          {
+            "zh": "移行带：以 T2W 评分决定总体 PI-RADS。T2W 为 1、4 或 5 时总体类别分别为 PI-RADS 1、4 或 5；T2W 为 2 时，DWI ≤3 为 PI-RADS 2、DWI ≥4 为 PI-RADS 3；T2W 为 3 时，DWI ≤4 为 PI-RADS 3，T2W 为 3 且 DWI 为 5 时，总体类别为 PI-RADS 4。DCE 不改变总体类别。",
+            "en": "Transition zone: use the T2W score to determine the overall PI-RADS assessment. T2W scores of 1, 4, or 5 give PI-RADS 1, 4, or 5; with T2W of 2, DWI ≤3 is PI-RADS 2 and DWI ≥4 is PI-RADS 3; with T2W of 3, DWI ≤4 is PI-RADS 3, while a T2W score of 3 with DWI of 5 is PI-RADS 4. DCE does not alter the overall category."
+          },
+          {
+            "zh": "总体类别仅基于 mpMRI 所见；PI-RADS v2.1 本身不提供活检或治疗决策规则。",
+            "en": "The overall category is based only on mpMRI findings; PI-RADS v2.1 itself does not provide biopsy or treatment decision rules."
+          }
+        ]
+      },
+      "cautions": [
+        {
+          "zh": "若 T2W、DWI 或 DCE 技术不合格或缺失，应在相应序列标为 X；缺失 DWI 是重要限制，通常应在可补救时重做。",
+          "en": "If T2W, DWI, or DCE is technically inadequate or absent, mark that sequence as X. Missing DWI is a substantial limitation and should usually be repeated when remediable."
+        },
+        {
+          "zh": "炎症、出血和良性前列腺增生可产生相似信号或强化表现；本页不能替代对完整 v2.1 原文、临床信息和当地规范的审阅。",
+          "en": "Inflammation, hemorrhage, and benign prostatic hyperplasia can create similar signal or enhancement patterns. This page does not replace review of the complete v2.1 source, clinical information, and local standards."
+        }
+      ]
+    },
     "lastVerified": "2026-09-16",
     "related": [
       "li-rads",

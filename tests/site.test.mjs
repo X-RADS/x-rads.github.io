@@ -137,6 +137,19 @@ test("clinical detail preserves categories, terms, source metadata and filtered 
   assert.match(renderDetail(records, url), /Entry not found/);
 });
 
+test("PI-RADS detail renders its v2.1 source-bound sequence roles and zonal scoring path", async () => {
+  const { renderDetail } = await import("../js/app.mjs");
+  const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
+  const zh = renderDetail(records, new URL("https://example.test/?rads=pi-rads"));
+  for (const text of ["检查与评分要点", "序列职责", "T1W", "DWI / ADC", "评分路径", "外周带：以 DWI 评分决定总体 PI-RADS", "T2W 为 3 且 DWI 为 5 时，总体类别为 PI-RADS 4", "技术限制与审校提示", "本节仅适用于：MRI — PI-RADS v2.1 (v2.1)。"])
+    assert.ok(zh.includes(text), `PI-RADS guide missing ${text}`);
+  assert.doesNotMatch(renderDetail(records, new URL("https://example.test/?rads=li-rads")), /检查与评分要点/);
+
+  const en = renderDetail(records, new URL("https://example.test/?lang=en&rads=pi-rads"));
+  for (const text of ["Imaging and scoring guide", "Sequence roles", "Scoring path", "Peripheral zone: use the DWI score", "a T2W score of 3 with DWI of 5 is PI-RADS 4", "Technical limitations and review notes", "This section applies only to: MRI — PI-RADS v2.1 (v2.1)."])
+    assert.ok(en.includes(text), `PI-RADS guide missing ${text}`);
+});
+
 test("frequent-RADS shortcuts do not link to catalog records removed for missing local PDFs", async () => {
   const html = await readFile(new URL("index.html", root), "utf8");
   for (const removed of ["BI-RADS", "Kwak-TI-RADS", "PE-RADS", "TBI-RADS"]) {

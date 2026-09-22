@@ -43,6 +43,14 @@ test("multi-modality records keep distinct source identities", () => {
   assert.equal(oRads.detailSourceId, "us-2022");
 });
 
+test("PI-RADS has a v2.1-source-bound guide for sequences and zonal scoring", () => {
+  const piRads = records.find(({ id }) => id === "pi-rads");
+  assert.equal(piRads.detailedGuide.sourceId, "v2-1");
+  assert.deepEqual(piRads.detailedGuide.sequences.map(({ key }) => key), ["t1w", "t2w", "dwi-adc", "dce"]);
+  assert.equal(piRads.detailedGuide.scoringRules.pzDominantSequence, "dwi-adc");
+  assert.equal(piRads.detailedGuide.scoringRules.tzDominantSequence, "t2w");
+});
+
 test("related RADS identifiers resolve", () => {
   const ids = new Set(records.map(({ id }) => id));
   for (const record of records) for (const id of record.related) assert.ok(ids.has(id), `${record.id} -> ${id}`);
