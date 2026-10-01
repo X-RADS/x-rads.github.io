@@ -50,7 +50,7 @@ test("site shell presents Jingyu Zhong in a team section before the footer", asy
   assert.match(html, /<section id="team" class="team" aria-labelledby="team-heading">/);
   assert.match(html, /<h2 id="team-heading"[^>]*data-i18n="teamTitle"/);
   assert.match(html, /assets\/team\/jingyu-zhong\.jpg/);
-  assert.match(html, /<h3 data-i18n="teamMemberName">钟京渝，医学博士<\/h3>/);
+  assert.match(html, /<h3 data-i18n="teamMemberName">钟京谕，医学博士<\/h3>/);
   assert.match(html, /<p class="team-affiliation" data-i18n="teamMemberAffiliation">上海交通大学医学院附属同仁医院<\/p>/);
   assert.match(html, /class="team-contact" href="mailto:wal_zjy@163\.com"[^>]*data-i18n-aria-label="teamEmailLabel"/);
   assert.match(html, /<svg[^>]*aria-hidden="true"/);
