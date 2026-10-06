@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
@@ -28,7 +29,14 @@ test("index exposes every required application landmark", async () => {
   ]) {
     assert.match(html, new RegExp(`id=["']${id}["']`));
   }
-  assert.match(html, /<script[^>]+type=["']module["'][^>]+src=["']\.\/js\/app\.mjs["']/);
+  assert.match(html, /<script[^>]+type=["']module["'][^>]+src=["']\.\/js\/app\.mjs\?v=[a-f0-9]{12}["']/);
+});
+
+test("the page requests the current application version to avoid stale translations", async () => {
+  const html = await readFile(new URL("index.html", root), "utf8");
+  const app = (await readFile(new URL("js/app.mjs", root), "utf8")).replace(/\r\n/g, "\n");
+  const version = createHash("sha256").update(app).digest("hex").slice(0, 12);
+  assert.match(html, new RegExp(`src="\\./js/app\\.mjs\\?v=${version}"`));
 });
 
 test("GitHub Pages publishes without Jekyll processing", async () => {

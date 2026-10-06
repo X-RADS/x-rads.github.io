@@ -91,6 +91,11 @@ and detail views in Chinese and English. The `workflow-quality` navigator
 group is used for workflow and quality systems such as AE-RADS, Info-RADS, and
 RI-RADS.
 
+When changing `js/app.mjs`, update the `?v=` token on its script URL in
+`index.html` to the first 12 characters of the file's SHA-256 hash after
+normalizing CRLF to LF. This prevents an updated page from using cached
+application code and outdated translations. The tests check this token.
+
 ## Source and copyright policy
 
 Only commit concise, independently maintained catalog metadata and content
