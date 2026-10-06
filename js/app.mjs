@@ -102,6 +102,31 @@ function renderDetailedGuide(record, state, sources) {
   return `<section class="detailed-guide" aria-labelledby="guide-heading"><div class="guide-heading"><p class="eyebrow">${escapeHtml(record.acronym)}</p><h3 id="guide-heading">${escapeHtml(text(state.lang, "guideTitle"))}</h3></div><p class="detail-source-scope">${escapeHtml(text(state.lang, "guideSourceScope"))}${escapeHtml(sourceScope)}</p><section><h4>${escapeHtml(text(state.lang, "sequenceRoles"))}</h4><div class="guide-grid">${sequences}</div></section><section><h4>${escapeHtml(text(state.lang, "scoringPath"))}</h4><ol class="guide-list">${steps}</ol></section>${cautions ? `<section><h4>${escapeHtml(text(state.lang, "reviewNotes"))}</h4><ul class="guide-list">${cautions}</ul></section>` : ""}</section>`;
 }
 
+function renderScoringGuides(record, state, sources) {
+  const labels = state.lang === "zh"
+    ? { scope: "适用范围", exams: "检查与测量要求", path: "判定流程", management: "原文处理建议", notes: "限制与注意事项", pages: "原文定位（PDF 页序）", supplement: "补充核对来源" }
+    : { scope: "Scope", exams: "Examination and measurement", path: "Assessment workflow", management: "Management in the source", notes: "Limitations and cautions", pages: "Source locator (PDF page order)", supplement: "Supplementary reference" };
+  const localized = value => escapeHtml(withFallback(state.lang, value?.[state.lang]));
+  return (record.detailedGuides || []).map((guide, index) => {
+    const source = sources.find(entry => entry.id === guide.sourceId);
+    if (!source) return "";
+    const headingId = `scoring-guide-${index}`;
+    const list = values => `<ul class="guide-list">${(values || []).map(value => `<li>${localized(value)}</li>`).join("")}</ul>`;
+    const tables = (guide.tables || []).map(table => {
+      const columns = table.columns?.[state.lang] || [];
+      const rows = table.rows.map(row => `<tr>${(row[state.lang] || []).map((cell, i) => i === 0 ? `<th scope="row">${escapeHtml(cell)}</th>` : `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("");
+      return `<div class="guide-table-scroll" role="region" aria-label="${localized(table.title)}" tabindex="0"><table class="category-table guide-table"><caption>${localized(table.title)}</caption><thead><tr>${columns.map(column => `<th scope="col">${escapeHtml(column)}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table></div>`;
+    }).join("");
+    const exams = (guide.examinations || []).map(exam => `<article class="guide-card"><h5>${escapeHtml(exam.label)}</h5><p>${localized(exam.purpose)}</p></article>`).join("");
+    const steps = (guide.scoringRules?.steps || []).map(step => `<li>${localized(step)}</li>`).join("");
+    const supplement = (guide.supplementaryReferences || []).map(ref => {
+      const href = safeHttpUrl(ref.url);
+      return `<p>${escapeHtml(labels.supplement)}：${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${localized(ref.title)}</a>` : localized(ref.title)}</p>`;
+    }).join("");
+    return `<section class="detailed-guide scoring-guide" aria-labelledby="${headingId}"><h3 id="${headingId}">${localized(guide.title)}</h3><p class="detail-source-scope">${escapeHtml(text(state.lang, "guideSourceScope"))}${escapeHtml((source.modalities || []).join(", "))} — ${escapeHtml(source.title)} (${escapeHtml(source.version)})</p><p class="guide-source-pages"><strong>${escapeHtml(labels.pages)}：</strong>${localized(guide.sourcePages)}</p>${supplement}<section><h4>${escapeHtml(labels.scope)}</h4><p>${localized(guide.scope)}</p></section><section><h4>${escapeHtml(labels.exams)}</h4><div class="guide-grid">${exams}</div></section>${tables}<section><h4>${escapeHtml(labels.path)}</h4><ol class="guide-list">${steps}</ol></section><section><h4>${escapeHtml(labels.management)}</h4>${list(guide.management)}</section><section><h4>${escapeHtml(labels.notes)}</h4>${list(guide.cautions)}</section></section>`;
+  }).join("");
+}
+
 export function renderDetail(records, url) {
   const state = readState(url); const back = escapeHtml(relativeUrl(writeState(url, { rads: "" }))); const record = getRecordById(records, state.rads);
   if (!record) return `<a class="detail-back" href="${back}" data-back-detail>${escapeHtml(text(state.lang, "back"))}</a><p class="empty-state">${escapeHtml(text(state.lang, "notFound"))}</p>`;
@@ -115,7 +140,7 @@ export function renderDetail(records, url) {
   const sourceLink = sources.length ? `<ul class="source-list">${sources.map((entry) => { const href = safeHttpUrl(entry.officialUrl); return `<li><strong>${escapeHtml((entry.modalities || []).join(", "))}</strong> — ${escapeHtml(entry.title)} (${escapeHtml(entry.version)})${href ? ` <a class="source-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text(state.lang, "openSource"))}</a>` : ""}</li>`; }).join("")}</ul>` : `<p>${escapeHtml(text(state.lang, "noSource"))}</p>`;
   const detailSource = sources.find((entry) => entry.id === record.detailSourceId);
   const detailSourceScope = detailSource ? `<p class="detail-source-scope">${escapeHtml(text(state.lang, "detailSource"))}${escapeHtml((detailSource.modalities || []).join(", "))} — ${escapeHtml(detailSource.title)} (${escapeHtml(detailSource.version)}).</p>` : "";
-  const detailedGuide = renderDetailedGuide(record, state, sources);
+  const detailedGuide = renderDetailedGuide(record, state, sources) + renderScoringGuides(record, state, sources);
   const releaseDate = withFallback(state.lang, record.releaseDate);
   return `<a class="detail-back" href="${back}" data-back-detail>${escapeHtml(text(state.lang, "back"))}</a><div class="detail-title-row"><div><p class="eyebrow">${escapeHtml(withFallback(state.lang, record.anatomy))} › ${escapeHtml(withFallback(state.lang, record.acronym))}</p><h2 id="detail-heading" tabindex="-1">${escapeHtml(withFallback(state.lang, item.displayName))}</h2><p class="detail-subtitle">${escapeHtml(withFallback(state.lang, item.englishName))} · <strong>${escapeHtml(withFallback(state.lang, record.acronym))}</strong></p></div></div><div class="metadata-grid">${primaryMeta}</div><div class="detail-layout"><div class="detail-main"><section><h3>${escapeHtml(text(state.lang, "overview"))}</h3><p>${escapeHtml(withFallback(state.lang, item.displaySummary))}</p></section>${detailedGuide}${detailSourceScope}<section><h3>${escapeHtml(text(state.lang, "categories"))}</h3><table class="category-table"><thead><tr><th>${escapeHtml(text(state.lang, "code"))}</th><th>${escapeHtml(text(state.lang, "originalTerm"))}</th><th>${escapeHtml(text(state.lang, "meaning"))}</th></tr></thead><tbody>${rows}</tbody></table></section><section><h3>${escapeHtml(text(state.lang, "keyTerms"))}</h3><ul class="term-list">${terms}</ul></section></div><aside class="detail-sidebar"><section><h3>${escapeHtml(text(state.lang, "version"))}</h3><p>${escapeHtml(withFallback(state.lang, record.version))}</p><p><strong>${escapeHtml(text(state.lang, "releaseDate"))}</strong> ${escapeHtml(releaseDate)}</p></section><section><h3>${escapeHtml(text(state.lang, "officialSource"))}</h3>${sourceLink}</section><section><h3>${escapeHtml(text(state.lang, "lastVerified"))}</h3><p>${escapeHtml(withFallback(state.lang, record.lastVerified))}</p></section></aside></div><section class="detail-related"><h3>${escapeHtml(text(state.lang, "related"))}</h3><div class="related-links">${related}</div></section><p class="notice">${escapeHtml(text(state.lang, "professionalNotice"))}</p>`;
 }

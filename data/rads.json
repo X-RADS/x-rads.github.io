@@ -106,7 +106,7 @@
         }
       }
     ],
-    "lastVerified": "2026-09-16",
+    "lastVerified": "2026-10-06",
     "related": [
       "lung-rads",
       "pi-rads"
@@ -124,7 +124,296 @@
       }
     ],
     "primarySourceId": "ct-mri-v2018",
-    "detailSourceId": "ct-mri-v2018"
+    "detailSourceId": "ct-mri-v2018",
+    "detailedGuides": [
+      {
+        "sourceId": "ct-mri-v2018",
+        "title": {
+          "zh": "LI-RADS：CT/MRI v2018 详细评分",
+          "en": "LI-RADS: detailed CT/MRI v2018 assessment"
+        },
+        "scope": {
+          "zh": "用于成人肝细胞癌高危人群的未治疗、无病理证实病灶：肝硬化、慢性乙肝或当前／既往 HCC，包括符合条件的移植候选者和受者。不用于无上述危险因素、未满18岁、先天性肝纤维化或血管性疾病所致肝硬化。本节不展开超声监测、CEUS 或治疗反应算法。",
+          "en": "Use for untreated observations without pathologic proof in adults at high risk for HCC: cirrhosis, chronic hepatitis B, or current/prior HCC, including eligible transplant candidates and recipients. Exclude patients without these risks, children under 18, congenital hepatic fibrosis, and cirrhosis from vascular disorders. US surveillance, CEUS and treatment-response algorithms are outside this section."
+        },
+        "sourcePages": {
+          "zh": "第9、11–13、17、21、23–28页（原文第6、8–10、14、18、20–25页）",
+          "en": "Pages 9, 11–13, 17, 21 and 23–28 (printed pages 6, 8–10, 14, 18 and 20–25)"
+        },
+        "examinations": [
+          {
+            "label": "CT / MRI",
+            "purpose": {
+              "zh": "使用合格的多期增强CT或MRI。MRI可用细胞外或肝胆特异性对比剂；充分的动脉期、门静脉期及相应延迟期是判断强化模式的基础。",
+              "en": "Use diagnostic multiphase contrast-enhanced CT or MRI. Extracellular or hepatobiliary MRI agents are supported; adequate arterial, portal venous and appropriate delayed acquisitions underpin enhancement assessment."
+            }
+          },
+          {
+            "label": "Size / growth",
+            "purpose": {
+              "zh": "在边界最清楚的期相、序列和平面测最大外缘到外缘径，包膜计入。其他期相能清楚显示时避免用动脉期或DWI测量。增长与足够质量的既往CT/MRI比较，尽量采用相同期相、序列和平面。",
+              "en": "Measure the largest outer-edge-to-outer-edge diameter, including the capsule, on the phase/sequence/plane with the clearest border. Avoid arterial-phase or DWI measurements when another phase shows the margin well. Compare growth with adequate prior CT/MRI using matching technique where possible."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "主要征象的定义",
+              "en": "Definitions of major features"
+            },
+            "columns": {
+              "zh": [
+                "征象",
+                "判定标准"
+              ],
+              "en": [
+                "Feature",
+                "Criteria"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "非环状动脉期高强化",
+                  "动脉期病灶全部或部分明确高于肝实质，且不是仅周边环状强化。"
+                ],
+                "en": [
+                  "Nonrim APHE",
+                  "Unequivocal arterial hyperenhancement relative to liver in all or part of the observation, excluding rim-only enhancement."
+                ]
+              },
+              {
+                "zh": [
+                  "非周边洗脱",
+                  "由早期到晚期相对肝实质强化降低，并在细胞外期低强化。细胞外对比剂或钆贝葡胺可用门静脉／延迟期；钆塞酸（gadoxetate）仅用门静脉期。"
+                ],
+                "en": [
+                  "Nonperipheral washout",
+                  "Temporal loss of enhancement relative to liver with extracellular-phase hypoenhancement. Use portal venous/delayed phases with extracellular agents or gadobenate; with gadoxetate use the portal venous phase only."
+                ]
+              },
+              {
+                "zh": [
+                  "强化包膜",
+                  "门静脉、延迟或过渡期见光滑、均匀、清楚的强化边缘，环绕大部分或全部病灶，较背景结节周围纤维组织更厚或更明显。"
+                ],
+                "en": [
+                  "Enhancing capsule",
+                  "A smooth, uniform, sharp enhancing border around most/all of the observation in portal venous, delayed or transitional phase, thicker or more conspicuous than fibrosis around background nodules."
+                ]
+              },
+              {
+                "zh": [
+                  "阈值增长",
+                  "≤6个月内肿块直径增加≥50%；不能以灌注假病灶或与既往超声比较代替。"
+                ],
+                "en": [
+                  "Threshold growth",
+                  "A mass increases in diameter by ≥50% within ≤6 months; do not apply to a possible perfusion pseudolesion or use prior US to establish this feature."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "诊断组合表：附加主要征象为包膜、洗脱和阈值增长",
+              "en": "Diagnostic matrix: additional major features are capsule, washout and threshold growth"
+            },
+            "columns": {
+              "zh": [
+                "动脉期／大小",
+                "无附加征象",
+                "1项附加征象",
+                "≥2项附加征象"
+              ],
+              "en": [
+                "APHE / size",
+                "No additional feature",
+                "One additional feature",
+                "At least two additional features"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "无非环状APHE，<20 mm",
+                  "LR-3",
+                  "LR-3",
+                  "LR-4"
+                ],
+                "en": [
+                  "No nonrim APHE, <20 mm",
+                  "LR-3",
+                  "LR-3",
+                  "LR-4"
+                ]
+              },
+              {
+                "zh": [
+                  "无非环状APHE，≥20 mm",
+                  "LR-3",
+                  "LR-4",
+                  "LR-4"
+                ],
+                "en": [
+                  "No nonrim APHE, ≥20 mm",
+                  "LR-3",
+                  "LR-4",
+                  "LR-4"
+                ]
+              },
+              {
+                "zh": [
+                  "非环状APHE，<10 mm",
+                  "LR-3",
+                  "LR-4",
+                  "LR-4"
+                ],
+                "en": [
+                  "Nonrim APHE, <10 mm",
+                  "LR-3",
+                  "LR-4",
+                  "LR-4"
+                ]
+              },
+              {
+                "zh": [
+                  "非环状APHE，10–19 mm",
+                  "LR-3",
+                  "仅强化包膜：LR-4；非周边洗脱或阈值增长：LR-5",
+                  "LR-5"
+                ],
+                "en": [
+                  "Nonrim APHE, 10–19 mm",
+                  "LR-3",
+                  "Capsule alone: LR-4; nonperipheral washout or threshold growth: LR-5",
+                  "LR-5"
+                ]
+              },
+              {
+                "zh": [
+                  "非环状APHE，≥20 mm",
+                  "LR-4",
+                  "LR-5",
+                  "LR-5"
+                ],
+                "en": [
+                  "Nonrim APHE, ≥20 mm",
+                  "LR-4",
+                  "LR-5",
+                  "LR-5"
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "优先识别的类别与辅助征象",
+              "en": "Priority categories and ancillary features"
+            },
+            "columns": {
+              "zh": [
+                "类别／规则",
+                "详细说明"
+              ],
+              "en": [
+                "Category / rule",
+                "Detail"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "LR-NC",
+                  "因图像缺失或质量下降不能可靠分类；不是普通“不确定病灶”的替代类别。"
+                ],
+                "en": [
+                  "LR-NC",
+                  "Image omission or degradation prevents reliable categorization; it is not a substitute for an otherwise indeterminate observation."
+                ]
+              },
+              {
+                "zh": [
+                  "LR-TIV",
+                  "静脉内明确强化软组织，无论能否显示肝实质肿块；单纯血栓或疑似静脉侵犯不够。"
+                ],
+                "en": [
+                  "LR-TIV",
+                  "Unequivocal enhancing soft tissue in a vein, whether or not a parenchymal mass is visible; bland thrombus or uncertain invasion is insufficient."
+                ]
+              },
+              {
+                "zh": [
+                  "LR-1／LR-2",
+                  "明确／倾向良性的病灶，先于诊断组合表处理。"
+                ],
+                "en": [
+                  "LR-1 / LR-2",
+                  "Definitely/probably benign observations are identified before using the diagnostic matrix."
+                ]
+              },
+              {
+                "zh": [
+                  "LR-M",
+                  "恶性但不具有HCC特异性：如环状APHE、周边洗脱、延迟中央强化或靶样弥散／肝胆期表现；非靶样病灶可由浸润生长、显著受限扩散、坏死／严重缺血等提示。"
+                ],
+                "en": [
+                  "LR-M",
+                  "Probably/definitely malignant but not HCC-specific: rim APHE, peripheral washout, delayed central enhancement or targetoid diffusion/hepatobiliary appearances; non-targetoid lesions may show infiltrative growth, marked diffusion restriction or necrosis/severe ischemia."
+                ]
+              },
+              {
+                "zh": [
+                  "辅助征象调整",
+                  "≥1项支持恶性征象可升级一级，最高LR-4；支持良性可降一级；良恶性辅助征象同时存在不调整。缺少辅助征象不反向推断。"
+                ],
+                "en": [
+                  "Ancillary adjustment",
+                  "At least one malignancy-favoring feature permits a one-category upgrade, at most LR-4; benignity-favoring features permit a one-category downgrade. Opposing features cancel adjustment. Absence of a feature is not evidence for the opposite."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "先核对人群和图像质量，再识别LR-NC、LR-TIV、LR-1、LR-2、LR-M。其余病灶按APHE、大小与附加主要征象进入诊断表。",
+              "en": "Check eligibility and image adequacy, then identify LR-NC, LR-TIV, LR-1, LR-2 or LR-M. Use APHE, size and additional major features for remaining observations."
+            },
+            {
+              "zh": "辅助征象可包括受限扩散、轻中度T2高信号、亚阈值增长、肝胆期低信号、结中结／马赛克等；良性征象包括稳定超过2年、缩小、明显T2高信号或与血池同步等。可选择应用，但不能靠辅助征象升至LR-5。",
+              "en": "Examples of ancillary malignancy features include diffusion restriction, mild/moderate T2 hyperintensity, subthreshold growth, hepatobiliary hypointensity and nodule-in-nodule/mosaic architecture. Benignity features include stability over two years, reduction, marked T2 hyperintensity and enhancement paralleling blood pool. Use is optional and cannot produce LR-5."
+            },
+            {
+              "zh": "主要或辅助征象不确定时按缺如处理；两个类别难分时选诊断确定性较低者。疑似TIV但不确定时不分LR-TIV，最后复核类别是否合理。",
+              "en": "Treat uncertain major/ancillary features as absent. If two categories remain possible, choose the one with lower diagnostic certainty. Do not assign LR-TIV when TIV is uncertain; perform a final reasonableness check."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "原文第14页建议：LR-1／LR-2通常继续6个月监测，LR-2也可考虑≤6个月重复诊断影像；LR-3考虑3–6个月重复或替代诊断影像；LR-4多学科讨论制定个体化检查，可包括活检；LR-M及LR-TIV需多学科制定诊断与处理；LR-5进入HCC分期和治疗规划。",
+            "en": "Printed page 14 suggests six-month surveillance for LR-1/2, with diagnostic imaging within six months also an option for LR-2; repeat/alternative diagnostic imaging in 3–6 months for LR-3; tailored multidisciplinary workup, possibly biopsy, for LR-4; multidisciplinary planning for LR-M/TIV; and HCC staging/treatment planning for LR-5."
+          },
+          {
+            "zh": "LR-NC考虑3个月内补充或替代检查。活检及治疗由临床团队综合决定；本节描述的是2018版原文建议。",
+            "en": "For LR-NC consider repeat/alternative diagnostic imaging within three months. Biopsy and treatment decisions require clinical-team assessment; the suggestions here describe the 2018 source."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "肝胆期或过渡期低信号不能直接当作钆塞酸MRI的主要洗脱征象；环状APHE不能代替非环状APHE。",
+            "en": "Hepatobiliary/transitional hypointensity is not major washout on gadoxetate MRI; rim APHE is not interchangeable with nonrim APHE."
+          },
+          {
+            "zh": "LR-M也可能是HCC；LR-TIV也不等于一定由HCC引起。已治疗病灶需使用相应治疗反应算法。",
+            "en": "LR-M can still represent HCC, and LR-TIV is not necessarily due to HCC. Treated observations need the appropriate treatment-response algorithm."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "lung-rads",
@@ -232,7 +521,7 @@
         }
       }
     ],
-    "lastVerified": "2026-09-16",
+    "lastVerified": "2026-10-06",
     "related": [
       "li-rads"
     ],
@@ -248,7 +537,269 @@
       }
     ],
     "primarySourceId": "primary",
-    "detailSourceId": "primary"
+    "detailSourceId": "primary",
+    "detailedGuides": [
+      {
+        "sourceId": "primary",
+        "title": {
+          "zh": "Lung-RADS：v2022 详细评分",
+          "en": "Lung-RADS: detailed v2022 assessment"
+        },
+        "scope": {
+          "zh": "用于肺癌筛查CT，以最可疑病灶决定本次检查类别。先区分基线、新发及既有病灶增长，再按实性、部分实性、非实性、气道或非典型囊肿分支判定；不是偶发肺结节的通用规则。",
+          "en": "For lung cancer screening CT. Assign the examination category from its most suspicious finding after distinguishing baseline, new and growing lesions and identifying solid, part-solid, ground-glass, airway and atypical-cyst pathways. This is not a general incidental-nodule algorithm."
+        },
+        "sourcePages": {
+          "zh": "本地论文第3–4、6–7、9–14页：表1–4及增长、阶梯随访章节；大小阈值另核对论文所引ACR v2022官方分类表第1–2页",
+          "en": "Local article pages 3–4, 6–7 and 9–14: Tables 1–4, growth and stepped management; size thresholds additionally checked against pages 1–2 of the ACR v2022 category table cited by the article"
+        },
+        "examinations": [
+          {
+            "label": "LDCT",
+            "purpose": {
+              "zh": "薄层CT评估结节类型、平均径和实性成分；对照最早及最近可用的胸部CT，不只对照前一次。明确随访间隔和扫描技术变化。",
+              "en": "Evaluate nodule type, mean diameter and solid component on thin-section CT. Compare both the oldest and most recent available chest CT, documenting intervals and technique changes."
+            }
+          },
+          {
+            "label": "Growth",
+            "purpose": {
+              "zh": "≤12个月内平均径增加>1.5 mm符合增长。连续多次检查缓慢增长的实性／部分实性结节仍可进入4B；PET不摄取不能排除这类结节的恶性。",
+              "en": "Growth is a >1.5 mm mean-diameter increase within ≤12 months. Solid/part-solid nodules growing slowly over multiple examinations may still merit 4B; absent PET avidity does not exclude malignancy."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "结节大小速查（mm；补充来源：ACR v2022分类表）",
+              "en": "Nodule size quick reference (mm; supplement: ACR v2022 category table)"
+            },
+            "columns": {
+              "zh": [
+                "类型",
+                "2",
+                "3",
+                "4A",
+                "4B"
+              ],
+              "en": [
+                "Type",
+                "2",
+                "3",
+                "4A",
+                "4B"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "实性：基线",
+                  "<6",
+                  "≥6且<8",
+                  "≥8且<15",
+                  "≥15"
+                ],
+                "en": [
+                  "Solid, baseline",
+                  "<6",
+                  "≥6, <8",
+                  "≥8, <15",
+                  "≥15"
+                ]
+              },
+              {
+                "zh": [
+                  "实性：新发",
+                  "<4",
+                  "≥4且<6",
+                  "≥6且<8",
+                  "≥8"
+                ],
+                "en": [
+                  "Solid, new",
+                  "<4",
+                  "≥4, <6",
+                  "≥6, <8",
+                  "≥8"
+                ]
+              },
+              {
+                "zh": [
+                  "实性：增长",
+                  "按当前大小及行为重评",
+                  "—",
+                  "<8",
+                  "≥8"
+                ],
+                "en": [
+                  "Solid, growing",
+                  "Reassess size/behavior",
+                  "—",
+                  "<8",
+                  "≥8"
+                ]
+              },
+              {
+                "zh": [
+                  "部分实性：基线",
+                  "总径<6",
+                  "总径≥6，实性<6",
+                  "总径≥6，实性≥6且<8",
+                  "实性≥8"
+                ],
+                "en": [
+                  "Part-solid, baseline",
+                  "Total <6",
+                  "Total ≥6; solid <6",
+                  "Total ≥6; solid ≥6, <8",
+                  "Solid ≥8"
+                ]
+              },
+              {
+                "zh": [
+                  "部分实性：新发／增长",
+                  "—",
+                  "新发总径<6",
+                  "新发／增长实性<4",
+                  "新发／增长实性≥4"
+                ],
+                "en": [
+                  "Part-solid, new/growing",
+                  "—",
+                  "New total <6",
+                  "New/growing solid <4",
+                  "New/growing solid ≥4"
+                ]
+              },
+              {
+                "zh": [
+                  "纯磨玻璃",
+                  "<30；或≥30且稳定／缓慢增长",
+                  "基线／新发≥30",
+                  "出现实性成分后按部分实性重评",
+                  "按新类型及可疑征象重评"
+                ],
+                "en": [
+                  "Pure GGN",
+                  "<30; or ≥30 stable/slow",
+                  "Baseline/new ≥30",
+                  "If solid develops, reclassify",
+                  "Reassess new type/features"
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "v2022 特殊分支",
+              "en": "Special v2022 pathways"
+            },
+            "columns": {
+              "zh": [
+                "病灶",
+                "规则"
+              ],
+              "en": [
+                "Finding",
+                "Rule"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "胸膜旁结节",
+                  "基线或新发<10 mm、实性、边缘光滑且呈卵圆／透镜／三角形可归2；圆形、不规则或达阈值者按常规结节重评。"
+                ],
+                "en": [
+                  "Juxtapleural nodule",
+                  "Baseline/new <10 mm, solid, smooth and oval/lentiform/triangular qualifies for 2. Round, irregular or larger nodules follow the usual nodule criteria."
+                ]
+              },
+              {
+                "zh": [
+                  "气道结节",
+                  "亚段支气管基线／新发／稳定通常2；段支气管及更近端基线／新发4A，3个月仍持续或增长升4B。提示分泌物的气泡／管状多发灶应结合形态。"
+                ],
+                "en": [
+                  "Airway nodule",
+                  "Subsegmental baseline/new/stable nodules generally qualify for 2. Segmental/proximal baseline/new nodules merit 4A, escalating to 4B if persistent/growing at three months. Air-containing or multiple tubular opacities may favor secretions."
+                ]
+              },
+              {
+                "zh": [
+                  "肺囊肿",
+                  "单房壁<2 mm不按囊肿算法分级；厚壁≥2 mm、多房基线或转为多房：4A；厚壁囊肿囊腔增长：3；壁厚／结节增长、多房囊肿增长或新发／增加房隔及阴影：4B。"
+                ],
+                "en": [
+                  "Pulmonary cyst",
+                  "Unilocular wall <2 mm is outside the atypical-cyst pathway. Wall ≥2 mm, baseline multiloculation or newly multilocular appearance: 4A. Growing cystic component of a thick-walled cyst: 3. Growing wall/nodularity, multilocular growth or increasing loculation/opacity: 4B."
+                ]
+              },
+              {
+                "zh": [
+                  "0／1／4X／S",
+                  "0用于不完整检查或疑感染／炎症；1为无结节或明确良性钙化／脂肪；4X为3／4类附加可疑征象；S标记与肺癌无关的重要发现。"
+                ],
+                "en": [
+                  "0 / 1 / 4X / S",
+                  "0: incomplete or suspected infection/inflammation; 1: no nodules or unequivocal benign calcification/fat; 4X: category 3/4 plus suspicious features; S: significant non-lung-cancer finding."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "先判断检查是否完整及有无感染／炎症，再识别结节成分；按基线、新发或增长的对应列判定。总径与实性成分径不能互换。",
+              "en": "First check completeness and infection/inflammation, then nodule composition. Apply the baseline/new/growing pathway; total and solid-component diameters are not interchangeable."
+            },
+            {
+              "zh": "跨入新的大小类别即使未满足>1.5 mm增长定义，也按新的大小类别重评。纯磨玻璃缓慢增长可保留2，直到出现其他类别标准；实性／部分实性持续缓慢增长可为4B。",
+              "en": "Crossing a category size threshold warrants reassessment even without meeting the >1.5 mm growth definition. Slow-growing pure GGN can remain 2 until another criterion develops, whereas persistent slow solid/part-solid growth can merit 4B."
+            },
+            {
+              "zh": "用最可疑病灶确定检查类别；气道结节的持续存在应走气道分支，不能机械套用稳定4A的普通降级规则。",
+              "en": "Use the most suspicious finding for the examination category. Persistent airway nodules retain their airway pathway rather than the generic stable-4A downgrade."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "通常1／2：12个月筛查；3：6个月LDCT；4A：3个月LDCT。实性结节或实性成分≥8 mm时可考虑PET/CT。4B／4X转入诊断性胸部CT、组织取样或专科评估，按具体风险及患者情况决定。",
+            "en": "Usual intervals are 12 months for 1/2, six months for 3 and three months for 4A. Consider PET/CT for a solid nodule/component ≥8 mm. 4B/4X prompt diagnostic CT, sampling or specialist assessment tailored to risk and patient circumstances."
+          },
+          {
+            "zh": "阶梯随访：普通4A在3个月稳定／缩小→3，从当前检查起6个月复查；3在6个月稳定／缩小→2，从当前检查起12个月筛查。完全消退或4B经诊断证明良性，可归1／2，视剩余所见而定。",
+            "en": "Stepped follow-up: a non-airway 4A lesion stable/decreased at three months becomes 3 with six-month LDCT from the current study; a 3 lesion stable/decreased at six months becomes 2 with 12-month screening from the current study. Resolution or proven benign 4B permits 1/2 depending on remaining findings."
+          },
+          {
+            "zh": "疑感染／炎症可归0并在1–3个月LDCT重评；后续间隔通常从当前判读检查日计算。例外：当前为PET/CT且其CT不符合筛查吸气／薄层要求时，应从最近一次LDCT日计时。",
+            "en": "Suspected infection/inflammation may merit 0 with LDCT in 1–3 months. Subsequent intervals usually start at the interpreted study. Exception: if current PET/CT does not meet screening inspiration/thin-section requirements, use the date of the most recent LDCT."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "v2022中的人群类别比例不是单个患者的恶性概率；不要直接沿用v1.1的百分比或“稳定3个月即降2”规则。",
+            "en": "Category population prevalence in v2022 is not an individual malignancy probability. Do not import v1.1 percentages or the old automatic downgrade to 2 after three-month stability."
+          },
+          {
+            "zh": "伴结节的囊肿按最可疑部分判定；单纯薄壁囊肿和弥漫囊性肺病不直接纳入这一算法。",
+            "en": "For a cyst with an associated nodule, manage the most suspicious component. Simple thin-walled cysts and diffuse cystic lung disease are outside this pathway."
+          }
+        ],
+        "supplementaryReferences": [
+          {
+            "title": {
+              "zh": "ACR Lung-RADS v2022 官方分类表（大小阈值）",
+              "en": "ACR Lung-RADS v2022 category table (size thresholds)"
+            },
+            "url": "https://www.acr.org/-/media/ACR/Files/RADS/Lung-RADS/Lung-RADS-2022.pdf"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "o-rads",
@@ -341,7 +892,7 @@
         }
       }
     ],
-    "lastVerified": "2026-09-16",
+    "lastVerified": "2026-10-06",
     "related": [
       "ti-rads"
     ],
@@ -366,7 +917,453 @@
       }
     ],
     "primarySourceId": "us-2022",
-    "detailSourceId": "us-2022"
+    "detailSourceId": "us-2022",
+    "detailedGuides": [
+      {
+        "sourceId": "us-2022",
+        "title": {
+          "zh": "O-RADS US：v2022 详细评分",
+          "en": "O-RADS US: detailed v2022 assessment"
+        },
+        "scope": {
+          "zh": "用于卵巢／附件病灶的超声形态风险分层。先确认病灶起源，区分生理性所见、典型良性病变、无实性成分囊肿、含实性成分囊肿和实性病灶。风险描述可用于不同临床背景，但常规处理建议主要针对无急性症状、平均风险患者。",
+          "en": "Ultrasound morphologic risk stratification of ovarian/adnexal lesions. Establish lesion origin, then distinguish physiology, classic benign lesions, cysts without solid components, cysts with solid components and solid lesions. Risk descriptors may be used in different clinical settings; routine management primarily concerns average-risk patients without acute symptoms."
+        },
+        "sourcePages": {
+          "zh": "第3–5页图1，第7–8页术语及血流，第12–19页分级与处理",
+          "en": "Pages 3–5, Figure 1; pages 7–8, lexicon/color score; pages 12–19, categories and management"
+        },
+        "examinations": [
+          {
+            "label": "US / Doppler",
+            "purpose": {
+              "zh": "使用灰阶和优化后的彩色多普勒，记录最大径、单／双／多房、内壁和间隔、实性成分／乳头状突起数、声影及腹水／腹膜结节。",
+              "en": "Use gray-scale and optimized color Doppler. Record maximum size, locules, wall/septal contour, solid components/papillary count, acoustic shadowing and ascites/peritoneal nodules."
+            }
+          },
+          {
+            "label": "Lexicon / CS",
+            "purpose": {
+              "zh": "双房=2房，多房≥3房；实性成分为壁／间隔向腔内突出≥3 mm，乳头状突起三面被液体包围。实性病灶实性组织占≥80%。CS 1无、2少、3中等、4很丰富血流；声影须为弥漫或较宽声影而非折射伪影。",
+              "en": "Bilocular means two locules; multilocular means at least three. A solid component protrudes ≥3 mm from wall/septum; a papillary projection is surrounded by fluid on three sides. A solid lesion is ≥80% solid. CS 1/2/3/4 indicates absent/minimal/moderate/very strong flow. Shadowing must be diffuse/broad, not refractive artifact."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "US风险类别与形态分支",
+              "en": "US risk categories and morphologic pathways"
+            },
+            "columns": {
+              "zh": [
+                "类别／风险",
+                "形态标准"
+              ],
+              "en": [
+                "Category / risk",
+                "Morphology"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "0／未完成",
+                  "技术因素使风险所需征象不能准确判定；复查US或MRI。"
+                ],
+                "en": [
+                  "0 / incomplete",
+                  "Technical limitations prevent assessment of risk features; repeat US or MRI."
+                ]
+              },
+              {
+                "zh": [
+                  "1／正常",
+                  "无卵巢病灶；绝经前卵泡≤3 cm或黄体通常≤3 cm属于生理所见。"
+                ],
+                "en": [
+                  "1 / normal",
+                  "No ovarian lesion; a premenopausal follicle ≤3 cm or corpus luteum typically ≤3 cm is physiologic."
+                ]
+              },
+              {
+                "zh": [
+                  "2／<1%",
+                  "单纯囊肿<10 cm；光滑单房非单纯囊肿<10 cm；光滑双房囊肿<10 cm；典型良性卵巢病变<10 cm；典型良性卵巢外病变不限大小。"
+                ],
+                "en": [
+                  "2 / <1%",
+                  "Simple cyst <10 cm; smooth unilocular nonsimple cyst <10 cm; smooth bilocular cyst <10 cm; classic benign ovarian lesion <10 cm; classic benign extraovarian lesion of any size."
+                ]
+              },
+              {
+                "zh": [
+                  "3／1%至<10%：囊性",
+                  "典型良性卵巢病变≥10 cm；光滑单／双房囊肿≥10 cm；无实性成分的单房内壁不规则囊肿（<3 mm不规则）；光滑多房<10 cm且CS<4。"
+                ],
+                "en": [
+                  "3 / 1% to <10%: cystic",
+                  "Classic benign ovarian lesion ≥10 cm; smooth uni/bilocular cyst ≥10 cm; unilocular cyst with irregular wall <3 mm but no solid component; smooth multilocular cyst <10 cm with CS <4."
+                ]
+              },
+              {
+                "zh": [
+                  "3／实性",
+                  "光滑实性病灶CS 1（有无声影）；或光滑、有声影实性病灶CS 2–3；不限大小。"
+                ],
+                "en": [
+                  "3 / solid",
+                  "Smooth solid lesion with CS 1 regardless of shadowing, or smooth shadowing solid lesion with CS 2–3; any size."
+                ]
+              },
+              {
+                "zh": [
+                  "4／10%至<50%：无实性成分",
+                  "双房囊肿内壁／间隔不规则；光滑多房≥10 cm且CS<4；光滑多房任何大小且CS 4；不规则多房任何大小和CS。"
+                ],
+                "en": [
+                  "4 / 10% to <50%: no solid component",
+                  "Irregular bilocular cyst; smooth multilocular cyst ≥10 cm with CS <4; smooth multilocular cyst of any size with CS 4; irregular multilocular cyst of any size/CS."
+                ]
+              },
+              {
+                "zh": [
+                  "4／含实性成分或实性",
+                  "单房含实性成分且乳头状突起<4个，或不是乳头状突起的实性成分；双／多房含实性成分且CS 1–2；光滑无声影实性病灶CS 2–3。"
+                ],
+                "en": [
+                  "4 / solid component or solid",
+                  "Unilocular cyst with a solid component and fewer than four papillary projections, or a solid component not considered papillary; bi/multilocular cyst with solid component and CS 1–2; smooth nonshadowing solid lesion with CS 2–3."
+                ]
+              },
+              {
+                "zh": [
+                  "5／≥50%",
+                  "单房囊肿≥4个乳头状突起；双／多房含实性成分且CS 3–4；光滑实性病灶CS 4（有无声影）；轮廓不规则实性病灶；不能以其他原因解释的腹水／腹膜结节。"
+                ],
+                "en": [
+                  "5 / ≥50%",
+                  "Unilocular cyst with ≥4 papillary projections; bi/multilocular cyst with solid component and CS 3–4; smooth solid lesion with CS 4 regardless of shadowing; irregular solid lesion; ascites/peritoneal nodules not explained by another cause."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "典型良性病变：满足典型征象后使用该分支",
+              "en": "Classic benign lesions: use only when characteristic findings are present"
+            },
+            "columns": {
+              "zh": [
+                "病变",
+                "典型征象及处理要点"
+              ],
+              "en": [
+                "Lesion",
+                "Characteristic findings and management"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "出血性囊肿",
+                  "单房、内部无血流，细网状纤维条或回缩血凝块（凹面／棱角边）；绝经前≤5 cm无需影像随访，>5且<10 cm复查2–3个月；早期绝经后<10 cm可2–3个月复查、专家US或MRI；晚期绝经后应改按一般形态重评。"
+                ],
+                "en": [
+                  "Hemorrhagic cyst",
+                  "Unilocular, no internal flow, reticular fibrin or retractile clot with concave/angular edges. Premenopausal ≤5 cm: no imaging follow-up; >5 and <10 cm: 2–3 months. Early postmenopausal <10 cm: short follow-up, specialist US or MRI. Late postmenopausal: reassess using general morphology."
+                ]
+              },
+              {
+                "zh": [
+                  "皮样囊肿",
+                  "≤3房、内部无血流，强回声伴声影、强回声线点或漂浮球状结构；≤3 cm可考虑12个月US，>3且<10 cm未切除者12个月US。"
+                ],
+                "en": [
+                  "Dermoid",
+                  "At most three locules, no internal flow, echogenic shadowing components, lines/dots or floating spheres. ≤3 cm: optional 12-month US; >3 and <10 cm: 12-month US if not excised."
+                ]
+              },
+              {
+                "zh": [
+                  "子宫内膜异位囊肿",
+                  "≤3房、内部无血流、均匀低水平／磨玻璃回声且内壁／间隔光滑，可见周边壁点状强回声。绝经前<10 cm未切除者12个月US；绝经后初诊可先2–3个月复查、专家US或MRI确认。"
+                ],
+                "en": [
+                  "Endometrioma",
+                  "At most three locules, no internal flow, homogeneous low-level/ground-glass echoes and smooth wall/septa, sometimes peripheral punctate wall foci. Premenopausal <10 cm: 12-month US if not excised. Postmenopausal initial assessment: short follow-up, specialist US or MRI to confirm."
+                ]
+              },
+              {
+                "zh": [
+                  "卵巢旁囊肿",
+                  "与卵巢分离的单纯囊肿；典型者不需影像随访。"
+                ],
+                "en": [
+                  "Paraovarian cyst",
+                  "Simple cyst separate from ovary; no imaging follow-up when typical."
+                ]
+              },
+              {
+                "zh": [
+                  "腹膜包裹性囊肿",
+                  "积液包绕／悬吊卵巢并顺应邻近盆腔器官，可有粘连形成的间隔；典型者不需影像随访。"
+                ],
+                "en": [
+                  "Peritoneal inclusion cyst",
+                  "Fluid surrounds/suspends the ovary and conforms to pelvic organs, sometimes with adhesion-related septa; no imaging follow-up when typical."
+                ]
+              },
+              {
+                "zh": [
+                  "输卵管积水",
+                  "无回声管状结构、不完整间隔／内输卵管皱襞；典型者不需影像随访，症状由妇科处理。"
+                ],
+                "en": [
+                  "Hydrosalpinx",
+                  "Anechoic tubular structure with incomplete septa/endosalpingeal folds; no imaging follow-up when typical, with clinical gynecologic care as needed."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "先排除子宫或其他非附件起源病灶；技术不充分为0，正常／生理为1。识别典型良性病变后，再进入其大小和绝经状态分支。",
+              "en": "Exclude uterine or other nonadnexal origin. Inadequate imaging is 0 and normal/physiologic findings are 1. Identify classic benign lesions before applying size/menopausal pathways."
+            },
+            {
+              "zh": "非典型病变按房数→内壁／间隔→实性成分→乳头状突起数／CS／声影逐步判定。典型皮样或内膜异位囊肿出现非典型征象时，不继续套用典型良性分支。",
+              "en": "For other lesions assess locules, walls/septa, solid components, papillary count, CS and shadowing in sequence. A dermoid or endometrioma with atypical features leaves the classic-benign pathway."
+            },
+            {
+              "zh": "双侧或多病灶分别描述，各自评分；整体处理依据最高风险病灶。腹水需要排除肝硬化等其他原因，尤其在本来1／2类时。",
+              "en": "Describe and score bilateral/multiple lesions separately; management follows the highest-risk lesion. Consider alternative causes of ascites, particularly with otherwise category 1/2 findings."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "2类单纯囊肿：绝经后≤3 cm无需随访，>3且<10 cm于12个月US；绝经前>3至5 cm无需随访，>5且<10 cm于12个月US。光滑非单纯单房或光滑双房≤3 cm绝经前无需随访、绝经后12个月US；>3且<10 cm者6个月US。",
+            "en": "For category 2 simple cysts: postmenopausal ≤3 cm needs no follow-up, >3 and <10 cm gets 12-month US; premenopausal >3 to 5 cm needs none, >5 and <10 cm gets 12-month US. Smooth nonsimple unilocular or smooth bilocular ≤3 cm needs no premenopausal follow-up and 12-month postmenopausal US; >3 and <10 cm gets six-month US."
+          },
+          {
+            "zh": "3类未手术者考虑6个月内US；实性病灶可专家US或MRI提高特异性。4类由妇科联合妇科肿瘤专科或妇科肿瘤专科评估，可专家US／MRI；5类由妇科肿瘤专科按方案处理。",
+            "en": "Unexcised category 3 lesions may undergo US within six months; solid lesions benefit from specialist US/MRI. Category 4 warrants gynecologic care with gynecologic-oncology consultation or direct oncology care, with specialist US/MRI as appropriate. Category 5 proceeds under gynecologic oncology."
+          },
+          {
+            "zh": "随访用平均线性径（长+宽+高）/3比较，约10%–15%变化帮助评估增长；稳定者可在初诊12和／或24个月复查，形态变化则重新评分，不只延长随访。",
+            "en": "Compare average linear dimension (length + width + height)/3; approximately 10%–15% change informs growth assessment. Stable findings may be checked at 12 and/or 24 months from initial assessment; altered morphology requires rescoring."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "急腹症、高遗传风险、妊娠及生育治疗等可能改变处理；不能把常规随访表直接用于这些情境。",
+            "en": "Acute symptoms, genetic risk, pregnancy or fertility treatment can change management; routine intervals are not automatically transferable."
+          },
+          {
+            "zh": "O-RADS US与MRI的风险阈值不同；US的双房不能当作≥3房的多房。未显示卵巢在一般绝经后检查中不自动等于0，应结合检查目的。",
+            "en": "US and MRI risk thresholds differ. Bilocular is not equivalent to multilocular. Nonvisualization of an ovary, especially after menopause, is not automatically 0; consider examination intent."
+          }
+        ]
+      },
+      {
+        "sourceId": "mri-2022",
+        "title": {
+          "zh": "O-RADS MRI：2022 详细评分",
+          "en": "O-RADS MRI: detailed 2022 assessment"
+        },
+        "scope": {
+          "zh": "用于无急性症状、平均风险患者的卵巢／附件病灶MRI风险分层，常用于超声不能确定的病灶。先确认附件来源；非附件病灶不套用此评分。MRI类别的恶性阳性预测值与US风险区间不能互换。",
+          "en": "MRI risk assessment of ovarian/adnexal lesions in average-risk patients without acute symptoms, often to characterize indeterminate US findings. Confirm adnexal origin; exclude nonadnexal masses. MRI category PPVs are not interchangeable with US risk ranges."
+        },
+        "sourcePages": {
+          "zh": "第3页图1，第4–5页术语／表2／强化曲线，第7–11页各评分解释",
+          "en": "Page 3, Figure 1; pages 4–5, lexicon/Table 2/curves; pages 7–11, category explanations"
+        },
+        "examinations": [
+          {
+            "label": "T1W / T2W / DWI",
+            "purpose": {
+              "zh": "T1同反相位及脂肪抑制区分脂肪与血性／蛋白液体；T2评估房数、壁和组织；高b值DWI通常≥1000 s/mm²。图像须覆盖全部病灶。",
+              "en": "Use in/opposed-phase and fat-suppressed T1 imaging to separate fat from blood/proteinaceous fluid, T2 imaging for locules/walls/tissue, and high-b DWI generally ≥1000 s/mm². Cover the entire lesion."
+            }
+          },
+          {
+            "label": "DCE / solid tissue",
+            "purpose": {
+              "zh": "首选DCE（时间分辨率≤15秒，约4分钟），在最早强化的实性组织和外层子宫肌层放ROI。实性组织必须强化并有乳头状突起、壁结节、不规则壁／间隔或较大实性部分；光滑壁／间隔、血凝块和不强化碎屑不是该定义的实性组织。",
+              "en": "Prefer DCE with ≤15-second temporal resolution for about four minutes, comparing early-enhancing tissue with outer myometrium. Solid tissue must enhance and have papillary projections, mural nodules, irregular wall/septa or a larger solid portion. Smooth walls/septa, clot and nonenhancing debris do not meet this definition."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "MRI评分类别",
+              "en": "MRI risk categories"
+            },
+            "columns": {
+              "zh": [
+                "类别／约PPV",
+                "判定标准"
+              ],
+              "en": [
+                "Score / approximate PPV",
+                "Criteria"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "0／未完成",
+                  "技术不足或病灶未完整覆盖，不能完成风险评估。"
+                ],
+                "en": [
+                  "0 / incomplete",
+                  "Technically inadequate or incompletely imaged lesion prevents risk assessment."
+                ]
+              },
+              {
+                "zh": [
+                  "1／正常",
+                  "正常卵巢；绝经前≤3 cm生理卵泡、出血性囊肿或黄体。"
+                ],
+                "en": [
+                  "1 / normal",
+                  "Normal ovaries; premenopausal physiologic follicles, hemorrhagic cysts or corpus luteum ≤3 cm."
+                ]
+              },
+              {
+                "zh": [
+                  "2／<0.5%",
+                  "无壁强化且无实性组织的单房囊肿（各种液体）；或单房单纯／内膜异位液体、光滑强化壁而无实性组织。典型含脂肪病灶（少量Rokitansky结节可强化）；均匀T2 dark/DWI dark实性组织；单纯液体输卵管积水及无实性组织卵巢旁囊肿。"
+                ],
+                "en": [
+                  "2 / <0.5%",
+                  "Unilocular cyst with no enhancing wall/solid tissue, irrespective of fluid; or simple/endometriotic unilocular fluid with a smooth enhancing wall but no solid tissue. Typical fatty lesion with possible minimal Rokitansky enhancement; homogeneous T2 dark/DWI dark solid tissue; simple-fluid hydrosalpinx and paraovarian cyst without solid tissue."
+                ]
+              },
+              {
+                "zh": [
+                  "3／约5%",
+                  "血性／蛋白性／黏液性单房囊肿，光滑壁强化但无实性组织；非脂肪多房囊肿，光滑强化壁／间隔且无实性组织；非T2 dark/DWI dark实性组织低风险曲线；含非单纯液体或厚而光滑强化壁／皱襞的扩张输卵管。"
+                ],
+                "en": [
+                  "3 / about 5%",
+                  "Hemorrhagic/proteinaceous/mucinous unilocular cyst with smooth enhancing wall but no solid tissue; nonfatty multilocular cyst with smooth enhancing wall/septa and no solid tissue; non-dark solid tissue with low-risk curve; dilated tube with nonsimple fluid or thick smooth enhancing wall/folds."
+                ]
+              },
+              {
+                "zh": [
+                  "4／约50%",
+                  "非T2 dark/DWI dark实性组织中风险曲线；含脂肪病灶有大量强化实性组织（尤其不规则）。不能DCE时，30–40秒实性组织强化≤子宫肌层归4。"
+                ],
+                "en": [
+                  "4 / about 50%",
+                  "Non-dark solid tissue with intermediate-risk curve; fatty lesion with a large enhancing solid volume, especially irregular. Without DCE, non-dark solid tissue enhancing ≤myometrium at 30–40 seconds is assigned 4."
+                ]
+              },
+              {
+                "zh": [
+                  "5／约90%",
+                  "非T2 dark/DWI dark实性组织高风险曲线；或腹膜／肠系膜／网膜结节或不规则增厚，有无腹水均可。不能DCE时30–40秒实性组织强化>子宫肌层归5。"
+                ],
+                "en": [
+                  "5 / about 90%",
+                  "Non-dark solid tissue with high-risk curve; or peritoneal/mesenteric/omental nodularity or irregular thickening, with or without ascites. Without DCE, non-dark solid tissue enhancing >myometrium at 30–40 seconds is assigned 5."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "实性组织强化曲线（参照外层子宫肌层）",
+              "en": "Solid-tissue enhancement curves (outer myometrium reference)"
+            },
+            "columns": {
+              "zh": [
+                "曲线",
+                "形态与评分"
+              ],
+              "en": [
+                "Curve",
+                "Pattern and score"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "低风险",
+                  "逐渐缓慢上升，无明确肩部／平台→3（先排除均匀T2 dark/DWI dark的2类）。"
+                ],
+                "en": [
+                  "Low risk",
+                  "Slow progressive rise without a defined shoulder/plateau →3, after excluding homogeneous T2 dark/DWI dark score 2."
+                ]
+              },
+              {
+                "zh": [
+                  "中风险",
+                  "初始斜率≤肌层，有肩部和平台→4。"
+                ],
+                "en": [
+                  "Intermediate risk",
+                  "Initial slope ≤myometrium, with shoulder and plateau →4."
+                ]
+              },
+              {
+                "zh": [
+                  "高风险",
+                  "初始斜率>肌层，有肩部和平台→5。"
+                ],
+                "en": [
+                  "High risk",
+                  "Initial slope >myometrium, with shoulder and plateau →5."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "确认来源与技术充分性，再识别生理所见和脂肪／液体类型。先查有无真正强化实性组织，不以“看上去实性”或DWI亮信号单独判断。",
+              "en": "Confirm origin and technical adequacy, then physiology and fat/fluid type. Identify true enhancing solid tissue rather than relying on a solid appearance or bright DWI alone."
+            },
+            {
+              "zh": "均匀T2和高b值DWI均低信号的纤维性组织优先归2，不随强化曲线升级；其他实性组织按DCE曲线判3／4／5。",
+              "en": "Homogeneous low signal on both T2 and high-b DWI prioritizes score 2 regardless of enhancement curve; assess other solid tissue by DCE to assign 3/4/5."
+            },
+            {
+              "zh": "DCE不可行时用注射结束后30–40秒单期增强参照肌层，可分4／5，不能可靠区分3／4。子宫缺如时仍可识别低风险曲线，但中／高风险难可靠区分。",
+              "en": "If DCE is unavailable, enhancement at 30–40 seconds after injection can separate 4/5 relative to myometrium, but cannot reliably separate 3/4. After hysterectomy low-risk curves remain recognizable, while intermediate/high-risk distinction is limited."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "0类需补足技术或重新检查；1类为正常／生理所见。2／3类支持低风险评估，4／5类提示需及时专科评估；原文未给出可替代US管理表的统一MRI随访间隔或自动手术阈值。",
+            "en": "Complete inadequate imaging for score 0; score 1 represents physiology. Scores 2/3 support low-risk assessment and 4/5 prompt timely specialist evaluation. The source does not provide a universal MRI follow-up interval or automatic surgical threshold replacing the US management chart."
+          },
+          {
+            "zh": "可同时报告具有典型影像特征的具体诊断，结合症状、临床风险与生育需求制定处理。PPV包括交界性与侵袭性恶性肿瘤，不能当作单个征象的独立风险。",
+            "en": "Report a specific diagnosis when classic features support it and tailor management to symptoms, clinical risk and fertility considerations. PPVs include borderline and invasive malignancies and describe categories, not individual features."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "输卵管皱襞不能误当乳头状突起；急性症状伴脓性输卵管病变不应套用该算法。",
+            "en": "Do not mistake tubal folds for papillary projections; acute symptomatic pyosalpinx is outside the algorithm."
+          },
+          {
+            "zh": "2022论文图5说明中关于小出血性囊肿存在与主算法不一致之处；本页按图1与评分1正文：绝经前≤3 cm生理出血性囊肿为1。",
+            "en": "A small-hemorrhagic-cyst note in the Figure 5 caption conflicts with the main algorithm. This page follows Figure 1 and the score-1 text: premenopausal physiologic hemorrhagic cysts ≤3 cm are score 1."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pi-rads",
@@ -620,7 +1617,7 @@
         }
       }
     ],
-    "lastVerified": "2026-09-16",
+    "lastVerified": "2026-10-06",
     "related": [
       "o-rads"
     ],
@@ -636,7 +1633,242 @@
       }
     ],
     "primarySourceId": "primary",
-    "detailSourceId": "primary"
+    "detailSourceId": "primary",
+    "detailedGuides": [
+      {
+        "sourceId": "primary",
+        "title": {
+          "zh": "ACR TI-RADS：2017 详细计分",
+          "en": "ACR TI-RADS: detailed 2017 point scoring"
+        },
+        "scope": {
+          "zh": "用于甲状腺结节超声风险分层，采用五类征象累加计分。结节最大径用于穿刺／随访决策，但不参与风险分数；本节不混入其他TI-RADS体系。",
+          "en": "Ultrasound risk stratification of thyroid nodules by summing five feature groups. Maximum diameter guides FNA/follow-up but does not contribute to the risk score. Other TI-RADS systems are not incorporated."
+        },
+        "sourcePages": {
+          "zh": "第2–3页概述及图1，第4–6页征象／测量／增长和随访，第7页多结节选择",
+          "en": "Pages 2–3, overview/Figure 1; pages 4–6, features/measurement/growth/follow-up; page 7, multinodular selection"
+        },
+        "examinations": [
+          {
+            "label": "US measurements",
+            "purpose": {
+              "zh": "记录三个正交径和部位，含晕环；用最大径对照处理阈值。纵横比在横断面按与声束平行的高度和垂直声束的宽度判断。囊实性结节的回声按实性成分评估。",
+              "en": "Record three orthogonal dimensions and location, including any halo. Use maximum size for management thresholds. Assess taller-than-wide on the axial plane with height parallel and width perpendicular to the beam. Assess echogenicity of the solid component in mixed nodules."
+            }
+          },
+          {
+            "label": "Feature selection",
+            "purpose": {
+              "zh": "成分、回声、形状、边缘各选一项；强回声灶选所有适用项并累加。纯囊性或海绵样直接0分，不再加其他征象。",
+              "en": "Select one feature each for composition, echogenicity, shape and margin; add all applicable echogenic foci. Cystic/almost completely cystic and spongiform nodules receive zero without further scoring."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "五类超声征象计分表",
+              "en": "Five ultrasound feature groups"
+            },
+            "columns": {
+              "zh": [
+                "项目",
+                "征象与分值"
+              ],
+              "en": [
+                "Group",
+                "Features and points"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "成分（选1）",
+                  "纯／近乎纯囊性0；海绵样0；囊实性1；实性／近乎实性2。"
+                ],
+                "en": [
+                  "Composition (one)",
+                  "Cystic/almost cystic 0; spongiform 0; mixed cystic-solid 1; solid/almost solid 2."
+                ]
+              },
+              {
+                "zh": [
+                  "回声（选1）",
+                  "无回声0；高／等回声1；低回声2；极低回声（低于颈前带状肌）3。"
+                ],
+                "en": [
+                  "Echogenicity (one)",
+                  "Anechoic 0; hyperechoic/isoechoic 1; hypoechoic 2; very hypoechoic relative to strap muscle 3."
+                ]
+              },
+              {
+                "zh": [
+                  "形状（选1）",
+                  "宽于高0；高于宽3。"
+                ],
+                "en": [
+                  "Shape (one)",
+                  "Wider-than-tall 0; taller-than-wide 3."
+                ]
+              },
+              {
+                "zh": [
+                  "边缘（选1）",
+                  "光滑0；边界不清0；分叶／不规则2；甲状腺外侵犯3。"
+                ],
+                "en": [
+                  "Margin (one)",
+                  "Smooth 0; ill-defined 0; lobulated/irregular 2; extrathyroidal extension 3."
+                ]
+              },
+              {
+                "zh": [
+                  "强回声灶（多选累加）",
+                  "无或大彗星尾伪影0；粗大钙化1；周边环状钙化2；点状强回声灶3。"
+                ],
+                "en": [
+                  "Echogenic foci (sum applicable)",
+                  "None/large comet-tail 0; macrocalcification 1; peripheral/rim calcification 2; punctate echogenic foci 3."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "总分、等级及2017版处理阈值",
+              "en": "Total points, categories and 2017 management thresholds"
+            },
+            "columns": {
+              "zh": [
+                "总分／等级",
+                "风险描述",
+                "FNA阈值",
+                "US随访阈值／时间"
+              ],
+              "en": [
+                "Total / category",
+                "Risk descriptor",
+                "FNA threshold",
+                "US threshold / timing"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "0／TR1",
+                  "良性",
+                  "不建议",
+                  "不建议常规随访"
+                ],
+                "en": [
+                  "0 / TR1",
+                  "Benign",
+                  "Not recommended",
+                  "No routine follow-up"
+                ]
+              },
+              {
+                "zh": [
+                  "2／TR2",
+                  "不具可疑性",
+                  "不建议",
+                  "不建议常规随访"
+                ],
+                "en": [
+                  "2 / TR2",
+                  "Not suspicious",
+                  "Not recommended",
+                  "No routine follow-up"
+                ]
+              },
+              {
+                "zh": [
+                  "3／TR3",
+                  "轻度可疑",
+                  "≥2.5 cm",
+                  "≥1.5 cm：第1、3、5年"
+                ],
+                "en": [
+                  "3 / TR3",
+                  "Mildly suspicious",
+                  "≥2.5 cm",
+                  "≥1.5 cm: years 1, 3, 5"
+                ]
+              },
+              {
+                "zh": [
+                  "4–6／TR4",
+                  "中度可疑",
+                  "≥1.5 cm",
+                  "≥1.0 cm：第1、2、3、5年"
+                ],
+                "en": [
+                  "4–6 / TR4",
+                  "Moderately suspicious",
+                  "≥1.5 cm",
+                  "≥1.0 cm: years 1, 2, 3, 5"
+                ]
+              },
+              {
+                "zh": [
+                  "≥7／TR5",
+                  "高度可疑",
+                  "≥1.0 cm",
+                  "≥0.5 cm：每年，最长5年"
+                ],
+                "en": [
+                  "≥7 / TR5",
+                  "Highly suspicious",
+                  "≥1.0 cm",
+                  "≥0.5 cm: annually, up to five years"
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "先判断纯囊性／海绵样；其余按五类征象加分。海绵样需>50%由小囊腔组成，不是有几个散在囊腔即可。",
+              "en": "First identify cystic/spongiform nodules; otherwise sum the five groups. Spongiform requires >50% small cystic spaces, not merely a few scattered cystic areas."
+            },
+            {
+              "zh": "钙化声影遮挡成分时成分记2分；回声无法判定记1分；边缘无法判定记0分。小彗星尾出现在实性成分内可按点状强回声灶，不能与囊腔内大彗星尾混淆。",
+              "en": "If calcific shadowing obscures composition assign 2; if echogenicity is indeterminate assign 1; if margin is indeterminate assign 0. Small comet tails in solid tissue can qualify as punctate foci, unlike large comet tails in cystic components."
+            },
+            {
+              "zh": "总分确定TR级别，再用最大径决定是否达到FNA或随访阈值。普通可计分结节至少2分，因此没有单独的1分等级或TR0。",
+              "en": "Determine TR level from total points, then apply maximum-size management thresholds. Non-zero scored nodules have at least two points; there is no separate one-point category or TR0."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "未达FNA而达到随访阈值者按表随访；5年大小不变可停止。显著增长为至少两个径线增加≥20%且至少增加2 mm，或体积增加≥50%；重评大小阈值。",
+            "en": "Follow nodules above surveillance but below FNA thresholds according to the table. Five-year size stability can end surveillance. Significant growth is ≥20% in at least two dimensions with at least a 2 mm increase, or ≥50% volume increase; reassess size thresholds."
+          },
+          {
+            "zh": "随访中TR级别增加，下次US在1年。多个结节优先随访最高分且符合条件者，最多4个；FNA优先最高分且达到阈值者，最多2个，不只选择最大结节。",
+            "en": "If TR level rises, the next US is in one year. Follow up to four qualifying highest-scoring nodules; biopsy up to two qualifying highest-scoring nodules rather than choosing only the largest."
+          },
+          {
+            "zh": "已穿刺结节的再次穿刺由既往细胞学等决定；原文不专门规定其随访。TR5的5–9 mm结节在部分临床情境可共同决策考虑穿刺，不能把常规阈值理解为绝对禁止。",
+            "en": "Repeat biopsy of previously sampled nodules depends on cytology and clinical context; the source does not prescribe their surveillance. Selected 5–9 mm TR5 nodules may merit shared-decision biopsy rather than an absolute prohibition."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "血流与弹性成像不计入2017 ACR分数；接触腺体边界不能自动视为明确腺外侵犯。",
+            "en": "Vascularity and elastography are not scored in the 2017 ACR system. Border abutment alone does not establish definite extrathyroidal invasion."
+          },
+          {
+            "zh": "合并可疑淋巴结、临床高危因素或有限预期寿命时需个体化；评分风险不等于病理诊断。",
+            "en": "Suspicious nodes, clinical risk and limited life expectancy require individualized assessment; a risk category is not a histologic diagnosis."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "c-rads",
@@ -752,7 +1984,7 @@
         }
       }
     ],
-    "lastVerified": "2026-09-18",
+    "lastVerified": "2026-10-06",
     "related": [
       "li-rads",
       "lung-rads"
@@ -769,7 +2001,238 @@
       }
     ],
     "primarySourceId": "primary",
-    "detailSourceId": "primary"
+    "detailSourceId": "primary",
+    "detailedGuides": [
+      {
+        "sourceId": "primary",
+        "title": {
+          "zh": "C-RADS：v2023 详细分类",
+          "en": "C-RADS: detailed v2023 classification"
+        },
+        "scope": {
+          "zh": "用于CT结肠成像（CTC），结肠内C分类与结肠外E分类分别报告。结合检查质量、病变大小、数量、形态及既往变化，不采用累加分数。2023版新增C2b并合并E1/E2。",
+          "en": "For CT colonography (CTC), report separate colonic C and extracolonic E categories. Use examination adequacy, lesion size/count/morphology and interval change rather than a point sum. Version 2023 adds C2b and merges E1/E2."
+        },
+        "sourcePages": {
+          "zh": "第2页表1，第4页测量，第6–7页表2，第8–10页表3–4及结肠外解释",
+          "en": "Page 2, Table 1; page 4, measurement; pages 6–7, Table 2; pages 8–10, Tables 3–4 and extracolonic discussion"
+        },
+        "examinations": [
+          {
+            "label": "CTC quality",
+            "purpose": {
+              "zh": "记录清洁、标记和充气是否充分，对照双体位。大便内气体／标记剂提示残渣；脂肪密度提示脂肪瘤或内翻憩室。注明六个标准结肠段位置和形态。",
+              "en": "Document cleansing, tagging and distention, comparing both positions. Internal gas/tagging favors stool; macroscopic fat favors lipoma/inverted diverticulum. Report morphology and location in the six standard colonic segments."
+            }
+          },
+          {
+            "label": "Size / count",
+            "purpose": {
+              "zh": "测病变最大径；带蒂息肉不把蒂计入头部大小。用合适息肉窗和2D／3D排除贴附造影剂及测量伪差。≤5 mm微小病变通常不报告；≥6 mm开始影响分类。",
+              "en": "Measure greatest lesion size; exclude the stalk from polyp-head measurement. Use suitable polyp windows and 2D/3D assessment to avoid adherent contrast/measurement artifacts. Diminutive ≤5 mm findings are usually not reported; ≥6 mm affects categorization."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "结肠内分类及原文处理",
+              "en": "Colonic categories and source management"
+            },
+            "columns": {
+              "zh": [
+                "类别",
+                "标准",
+                "原文建议"
+              ],
+              "en": [
+                "Category",
+                "Criteria",
+                "Source recommendation"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "C0",
+                  "准备不佳不能排除≥10 mm病灶；双体位均有节段塌陷（疑似憩室肌增厚除外）；或等待必要既往对照。",
+                  "补充既往报告附录；技术不足则重做CTC或改其他筛查。"
+                ],
+                "en": [
+                  "C0",
+                  "Inadequate prep prevents exclusion of ≥10 mm lesions; segment collapse on both views except suspected diverticular myochosis; or necessary prior comparisons pending.",
+                  "Amend after comparison; repeat CTC or use an alternative screening test if inadequate."
+                ]
+              },
+              {
+                "zh": [
+                  "C1",
+                  "无异常或良性所见，无≥6 mm息肉；可有≤5 mm病变、脂肪瘤、内翻憩室等。",
+                  "常规筛查每5–10年，按当地方案及具体情况。"
+                ],
+                "en": [
+                  "C1",
+                  "No abnormality or benign findings and no polyp ≥6 mm; may include ≤5 mm lesions, lipoma or inverted diverticulum.",
+                  "Routine screening every 5–10 years, tailored to local practice/context."
+                ]
+              },
+              {
+                "zh": [
+                  "C2a",
+                  "6–9 mm息肉少于3个（1–2个）或不确定所见。",
+                  "3年CTC或结肠镜切除；需结合患者情况及判读信心。"
+                ],
+                "en": [
+                  "C2a",
+                  "One/two 6–9 mm polyps or an indeterminate finding.",
+                  "Three-year CTC or colonoscopy/polypectomy, considering circumstances and confidence."
+                ]
+              },
+              {
+                "zh": [
+                  "C2b",
+                  "倾向良性憩室相关肿块样肌增厚、肥厚或狭窄。",
+                  "倾向良性5年CTC；良性信心不足≤3年CTC。"
+                ],
+                "en": [
+                  "C2b",
+                  "Likely benign diverticular mass-like myochosis, muscular hypertrophy or stricture.",
+                  "Five-year CTC if likely benign; ≤3 years if benignity uncertain."
+                ]
+              },
+              {
+                "zh": [
+                  "C3",
+                  "≥10 mm息肉／黏膜下病变；或≥3个6–9 mm息肉；或既往C2a息肉随访增大。",
+                  "建议结肠镜评估／切除。"
+                ],
+                "en": [
+                  "C3",
+                  "Polyp/subepithelial lesion ≥10 mm; ≥3 polyps each 6–9 mm; or an enlarging previously C2a polyp.",
+                  "Colonoscopy evaluation/polypectomy."
+                ]
+              },
+              {
+                "zh": [
+                  "C4",
+                  "≥30 mm息肉样肿块或恶性形态肿块，累及肠腔或有结肠外侵犯。",
+                  "结肠镜、外科和／或肿瘤专科会诊。"
+                ],
+                "en": [
+                  "C4",
+                  "Polypoid mass ≥30 mm or malignant-appearing mass compromising the lumen or with extracolonic invasion.",
+                  "Colonoscopy, surgical and/or oncologic consultation."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "结肠外分类：与C分类独立",
+              "en": "Extracolonic categories: independent of C score"
+            },
+            "columns": {
+              "zh": [
+                "类别",
+                "定义／举例",
+                "处理"
+              ],
+              "en": [
+                "Category",
+                "Definition / examples",
+                "Management"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "E0（可选）",
+                  "2023版仍可表达检查对结肠外软组织评价严重受限的情形，使用为可选。",
+                  "注明不能评估的限制。"
+                ],
+                "en": [
+                  "E0 (optional)",
+                  "Version 2023 retains optional documentation of severely limited extracolonic assessment.",
+                  "Document the assessment limitation."
+                ]
+              },
+              {
+                "zh": [
+                  "E1/E2",
+                  "无重要结肠外所见或已知稳定且不需进一步处理者，例如明确良性肝／肾囊肿。",
+                  "无需额外检查。"
+                ],
+                "en": [
+                  "E1/E2",
+                  "No clinically important finding, or a stable known finding needing no workup, such as clearly benign liver/renal cysts.",
+                  "No additional workup."
+                ]
+              },
+              {
+                "zh": [
+                  "E3",
+                  "可能不重要但尚未充分确定，例如无可疑征象的不确定绝经后附件囊性病变。",
+                  "可需进一步检查，结合当地规范及患者意愿。"
+                ],
+                "en": [
+                  "E3",
+                  "Likely unimportant but incompletely characterized, such as an indeterminate postmenopausal cystic adnexal finding without suspicious features.",
+                  "Further workup may be appropriate, considering local practice/preference."
+                ]
+              },
+              {
+                "zh": [
+                  "E4",
+                  "可能重要，例如明显／高度疑似恶性肿块、腹膜结节或有梗阻的尿路结石。",
+                  "需要进一步评估并向转诊医生沟通。"
+                ],
+                "en": [
+                  "E4",
+                  "Likely important, such as an overt/highly suspicious mass, peritoneal nodularity or obstructing urinary calculus.",
+                  "Further workup and communication with the referring clinician."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "先评估技术充分性，再排除残渣和明确良性所见；结合最大病灶大小、6–9 mm病灶数量及随访增长，确定最高相关C类别。",
+              "en": "Check adequacy, exclude stool and clearly benign findings, then use greatest lesion size, number of 6–9 mm lesions and interval growth to assign the highest relevant C category."
+            },
+            {
+              "zh": "憩室病所致对称壁增厚／狭窄、保留结肠袋结构且倾向良性时考虑C2b，不能把所有肿块样狭窄都降为C2b。",
+              "en": "Consider C2b for likely benign diverticular symmetric thickening/stricture with preserved haustral architecture; not every mass-like stricture qualifies."
+            },
+            {
+              "zh": "独立检查结肠外器官并给E分类。低剂量无增强CT不能对所有发现定性，利用既往检查可避免把已知稳定病变升级。",
+              "en": "Assess extracolonic organs independently and assign E category. Low-dose noncontrast CT cannot characterize every finding; prior studies can prevent escalation of known stable findings."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "分类表列出的随访或转诊是2023版原文建议；症状、既往癌症、判读信心及本地筛查方案会影响具体间隔。C3／C4重要阳性发现需及时沟通。",
+            "en": "Follow-up/referral in the table reflects the 2023 source. Symptoms, prior cancer, confidence and local screening programs affect intervals; communicate important C3/C4 findings promptly."
+          },
+          {
+            "zh": "结肠外E3是否检查与E4需检查应明确区分；已知稳定发现可根据既往结果判断是否仍需后续检查。",
+            "en": "Distinguish possible workup for E3 from needed workup for E4; use prior results to establish whether a stable known finding still warrants assessment."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "C2b与C0有边界：明确疑似憩室肌增厚可以C2b，普通充气不足仍可C0。大小达阈值、数量达3个或随访增长均可能改变分类。",
+            "en": "Differentiate C2b from C0: suspected diverticular myochosis may qualify for C2b, while simple inadequate distention may remain C0. Size thresholds, three-polyps count and interval growth can each change category."
+          },
+          {
+            "zh": "2023版E1/E2合并不能拆回旧版两类；E0是可选项。本分类不能替代病理学。",
+            "en": "Do not split the merged 2023 E1/E2 into the old categories. E0 is optional; classification is not histology."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ni-rads",
@@ -791,9 +2254,10 @@
     },
     "modalities": [
       "MRI",
+      "CT",
       "PET/CT"
     ],
-    "version": "MRI 2025; PET/CT 2018",
+    "version": "MRI 2025; CT/PET-CT 2018",
     "releaseDate": null,
     "categoryRange": "NI-RADS 0–4",
     "categories": [
@@ -854,7 +2318,7 @@
         }
       }
     ],
-    "lastVerified": "2026-09-18",
+    "lastVerified": "2026-10-06",
     "related": [
       "ti-rads"
     ],
@@ -871,15 +2335,468 @@
       {
         "id": "pet-ct-2018",
         "modalities": [
+          "CT",
           "PET/CT"
         ],
         "title": "ACR Neck Imaging Reporting and Data Systems (NI-RADS)",
-        "version": "PET/CT 2018",
+        "version": "CT/PET-CT 2018",
         "officialUrl": "https://doi.org/10.1016/j.jacr.2018.05.006"
       }
     ],
     "primarySourceId": "mri-2025",
-    "detailSourceId": "mri-2025"
+    "detailSourceId": "mri-2025",
+    "detailedGuides": [
+      {
+        "sourceId": "mri-2025",
+        "title": {
+          "zh": "NI-RADS MRI：2025 详细分类",
+          "en": "NI-RADS MRI: detailed 2025 assessment"
+        },
+        "scope": {
+          "zh": "用于头颈癌根治性／治愈目的治疗完成后的MRI监测，不用于治疗进行中。原发部位与颈部淋巴结分别分类；原发部位低可疑分2a（黏膜）和2b（深部），淋巴结低可疑为2，不照搬2a／2b。治疗前、首次治疗后基线及后续检查需分别比较。",
+          "en": "For MRI surveillance after definitive/curative head/neck cancer treatment, not during treatment. Assign separate primary-site and neck-node categories. Primary low-suspicion findings split into mucosal 2a and deep 2b; neck low suspicion is 2 without a/b subdivision. Distinguish pretreatment, first posttreatment baseline and subsequent comparisons."
+        },
+        "sourcePages": {
+          "zh": "第2–5页表1与脚注，第6–10页NI-RADS 1–4解释和病例",
+          "en": "Pages 2–5, Table 1/footnotes; pages 6–10, NI-RADS 1–4 explanations and cases"
+        },
+        "examinations": [
+          {
+            "label": "MRI / DWI",
+            "purpose": {
+              "zh": "比较T1、T2、DWI及增强特征与原始肿瘤；记录是否呈结节／肿块样、是否增长及是否累及颅底孔道／神经周围。熟悉重建皮瓣及放疗改变。",
+              "en": "Compare T1, T2, DWI and enhancement with the original tumor. Document nodular/mass-like appearance, growth and skull-base foraminal/perineural involvement; recognize flap and radiation changes."
+            }
+          },
+          {
+            "label": "Comparisons / PET",
+            "purpose": {
+              "zh": "残余淋巴结组织与监测中新发／增大的结节区别处理；可用PET时结合FDG。PET与MRI不一致的低可疑规则仅适用于原始肿瘤曾FDG摄取者。",
+              "en": "Distinguish residual treated nodal tissue from new/enlarging nodes arising during surveillance. Incorporate FDG PET when available. The low-suspicion PET/MRI discordance rule applies only if the original tumor was FDG-avid."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "原发部位：MRI判定与处理",
+              "en": "Primary site: MRI criteria and management"
+            },
+            "columns": {
+              "zh": [
+                "类别",
+                "MRI标准",
+                "原文建议"
+              ],
+              "en": [
+                "Category",
+                "MRI criteria",
+                "Source recommendation"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "P-unknown primary／P-x／N-x",
+                  "原发肿瘤未知：P-unknown primary；原发部位因牙科伪影、运动、技术或覆盖不足不能评估：P-x；颈部未覆盖或不能评估：N-x。",
+                  "注明无法评估的部位及原因，不用0代替这些标记。"
+                ],
+                "en": [
+                  "P-unknown primary / P-x / N-x",
+                  "Unknown primary: P-unknown primary. Unassessable primary from dental/motion/technical/coverage limitation: P-x. Neck not covered or otherwise unassessable: N-x.",
+                  "Document the region/limitation; these markers are not category 0."
+                ]
+              },
+              {
+                "zh": [
+                  "0",
+                  "新基线缺乏对照，且知道既往图像存在并会取得。",
+                  "取得对照后附录评分。"
+                ],
+                "en": [
+                  "0",
+                  "New baseline without comparison, knowing prior images exist and will become available.",
+                  "Add a category after comparison."
+                ]
+              },
+              {
+                "zh": [
+                  "1",
+                  "预期治疗后改变、弥漫薄线样黏膜强化／黏膜下水肿、低T1/T2瘢痕或非肿块样T2高信号；首次基线肿瘤消退／神经周围所见减少；后续无新结节且神经周围稳定／减少。",
+                  "常规监测。"
+                ],
+                "en": [
+                  "1",
+                  "Expected posttreatment changes, thin linear enhancement/edema, low-T1/T2 fibrosis or non-mass-like T2-bright change. First baseline: tumor resolution/reduced perineural findings; later: no new nodule and stable/reduced perineural findings.",
+                  "Routine surveillance."
+                ]
+              },
+              {
+                "zh": [
+                  "2a",
+                  "局灶非肿块样黏膜强化或局灶受限扩散，尤其首次治疗后检查。",
+                  "直接视诊／内镜观察。"
+                ],
+                "en": [
+                  "2a",
+                  "Focal non-mass-like mucosal enhancement or focal reduced diffusion, especially on the first posttreatment study.",
+                  "Direct visual/endoscopic inspection."
+                ]
+              },
+              {
+                "zh": [
+                  "2b",
+                  "深部边界不清、非结节样组织；MRI特征不同于原肿瘤；中等T2信号和中等强化；首次基线肿瘤部分消退、神经周围同原肿瘤表现但未变，或放射野内新薄而光滑神经强化。",
+                  "短期MRI或PET；颅底神经周围所见优先MRI。"
+                ],
+                "en": [
+                  "2b",
+                  "Deep ill-defined non-nodular tissue; features unlike the original tumor; intermediate T2/enhancement; first baseline partial resolution, unchanged tumor-like perineural tissue, or new thin smooth nerve enhancement in the radiation field.",
+                  "Short-interval MRI or PET; prefer MRI for skull-base perineural findings."
+                ]
+              },
+              {
+                "zh": [
+                  "3",
+                  "明确结节／肿块，尤其新发／增大且信号强化类似原肿瘤；或局灶强FDG；神经／颅底孔道软组织、脂肪间隙消失或结节样强化增加。持续增大的明确肿块即使信号不匹配也归3。",
+                  "临床适宜时影像引导或临床活检。"
+                ],
+                "en": [
+                  "3",
+                  "Discrete nodule/mass, especially new/enlarging and matching the original tumor; focal intense FDG; increasing foraminal/perineural tissue, fat effacement or nodular enhancement. Persistent growth of a discrete mass merits 3 even if signal differs.",
+                  "Image-guided or clinical biopsy if clinically indicated."
+                ]
+              },
+              {
+                "zh": [
+                  "4",
+                  "病理证实复发，或明确影像和临床进展。",
+                  "临床处理。"
+                ],
+                "en": [
+                  "4",
+                  "Pathologically proven recurrence or definite radiologic and clinical progression.",
+                  "Clinical management."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "颈部淋巴结：MRI单独分类",
+              "en": "Neck nodes: separate MRI categories"
+            },
+            "columns": {
+              "zh": [
+                "类别",
+                "淋巴结标准"
+              ],
+              "en": [
+                "Category",
+                "Nodal criteria"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "0／1",
+                  "0同上；1为原异常结节处残余组织低强化，若有PET则无FDG摄取。治疗后变小／稳定结节的不规则边缘不能按“新发不规则结节”升级。"
+                ],
+                "en": [
+                  "0 / 1",
+                  "0 as above. 1 includes hypoenhancing residual tissue at a previously abnormal node, without FDG uptake if PET is available. Irregular borders in treated stable/decreasing nodes are not equivalent to newly abnormal nodes."
+                ]
+              },
+              {
+                "zh": [
+                  "2",
+                  "残余组织有异质强化或轻中度FDG；新发／增大结节但无明确异常形态；或符合适用条件的PET/MRI不一致（discordance）。"
+                ],
+                "en": [
+                  "2",
+                  "Residual heterogeneous enhancement or mild/moderate FDG; new/enlarging node without definitive abnormal morphology; eligible PET/MRI discordance."
+                ]
+              },
+              {
+                "zh": [
+                  "3",
+                  "残余组织有强FDG或明确增大／强化增加；新发／增大结节伴坏死、囊变、不规则边缘或强局灶FDG。新明显结外侵犯亦异常。"
+                ],
+                "en": [
+                  "3",
+                  "Residual tissue with intense FDG or definite enlargement/increased enhancement; new/enlarging node with necrosis, cystic change, irregular borders or intense focal FDG. New gross extranodal invasion is also abnormal."
+                ]
+              },
+              {
+                "zh": [
+                  "4",
+                  "病理证实或明确影像和临床进展。"
+                ],
+                "en": [
+                  "4",
+                  "Pathologic proof or definite radiologic and clinical progression."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "先找治疗前肿瘤及首次治疗后基线，按原发部位与淋巴结分别分类，不合并成一个总分。",
+              "en": "Review the pretreatment tumor and first posttreatment baseline, and classify primary site and nodes separately rather than summing a single score."
+            },
+            {
+              "zh": "局灶黏膜异常先区分非肿块样2a与新发／增大的肿块样3；深部异常比较T2／DWI／强化及神经周围变化，区分1、2b、3。",
+              "en": "For mucosal change distinguish non-mass-like 2a from new/enlarging mass-like 3; for deep findings compare T2/DWI/enhancement and perineural change to separate 1, 2b and 3."
+            },
+            {
+              "zh": "随访既往2类异常时，应依据新检查尽量明确消退／稳定的治疗后改变或进展可疑，避免没有重新判断而连续重复2。",
+              "en": "On follow-up of a category 2 finding, reassess whether it represents resolving/stable treatment change or suspicious progression rather than repeatedly carrying 2 forward without reevaluation."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "原发2a直接视诊；原发2b或颈部2短期MRI／PET。2025版表1未给所有2类统一固定月数，本页不把2018版3个月机械移植。",
+            "en": "Inspect primary 2a directly; use short-interval MRI/PET for primary 2b or neck 2. The 2025 table does not prescribe one fixed interval for all category 2 findings, so the 2018 three-month interval is not automatically transferred."
+          },
+          {
+            "zh": "3类在适宜且可取样时活检；颅底神经周围病变不易取样，需多学科考虑复查、其他影像或处理。4类按确证复发临床管理。",
+            "en": "Biopsy category 3 when indicated and accessible. Perineural skull-base lesions may require multidisciplinary consideration of further imaging or management when sampling is difficult. Manage category 4 as definitive recurrence."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "不新增未经原文规定的ADC数字阈值；DWI必须与形态、T2和强化综合判断。炎症／治疗改变可有强化及扩散异常。",
+            "en": "Do not introduce an ADC cutoff absent from the source; integrate DWI with morphology, T2 and enhancement. Inflammation/treatment effects can enhance and alter diffusion."
+          },
+          {
+            "zh": "原始肿瘤FDG不摄取时不能套用PET阴性降级逻辑；单凭残余大小或治疗后边缘不规则不能诊断复发。",
+            "en": "A non-FDG-avid original tumor precludes using PET negativity as reassuring discordance. Residual size or posttreatment irregular borders alone does not establish recurrence."
+          }
+        ]
+      },
+      {
+        "sourceId": "pet-ct-2018",
+        "title": {
+          "zh": "NI-RADS CT／PET-CT：2018 详细分类",
+          "en": "NI-RADS CT/PET-CT: detailed 2018 assessment"
+        },
+        "scope": {
+          "zh": "用于头颈癌治疗后CT与FDG PET/CT监测。原发部位和颈部淋巴结分别报告；2018版的CT密度、差异强化和FDG标准与2025版MRI信号标准分开使用。",
+          "en": "For CT and FDG PET/CT surveillance after head/neck cancer treatment. Report primary site and neck nodes separately; keep the 2018 CT-density/differential-enhancement/FDG criteria distinct from 2025 MRI signal criteria."
+        },
+        "sourcePages": {
+          "zh": "第2–4页类别、表1–2与图1，第5–9页原发灶／淋巴结实例和处理",
+          "en": "Pages 2–4, categories/Tables 1–2/Figure 1; pages 5–9, primary-site/nodal examples and management"
+        },
+        "examinations": [
+          {
+            "label": "CT / FDG PET",
+            "purpose": {
+              "zh": "与治疗前和治疗后基线对照，评估软组织是弥漫治疗后扭曲还是独立结节／肿块，是否有差异强化及局灶FDG；了解原始肿瘤摄取及重建解剖。",
+              "en": "Compare pretreatment and posttreatment baseline studies, separating diffuse treated distortion from a discrete nodule/mass and assessing differential enhancement/focal FDG. Know original avidity and reconstructed anatomy."
+            }
+          },
+          {
+            "label": "Primary / neck",
+            "purpose": {
+              "zh": "记录原发床、黏膜和深部异常；结节评估新发／增长、坏死及明显结外侵犯。可疑程度不是只按大小决定。",
+              "en": "Document mucosal/deep primary-bed changes; assess nodes for new appearance/growth, necrosis and gross extranodal invasion. Suspicion is not determined by size alone."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "2018版原发部位分类",
+              "en": "2018 primary-site categories"
+            },
+            "columns": {
+              "zh": [
+                "类别",
+                "CT／PET标准",
+                "处理"
+              ],
+              "en": [
+                "Category",
+                "CT/PET criteria",
+                "Management"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "0",
+                  "新基线无既往图像，已知既往图像存在且将可取得。",
+                  "对照取得后附录分类。"
+                ],
+                "en": [
+                  "0",
+                  "New baseline with prior images known to exist but not yet available.",
+                  "Assign category in an addendum after comparison."
+                ]
+              },
+              {
+                "zh": [
+                  "1",
+                  "预期治疗后改变；非肿块样软组织扭曲、低密度黏液性水肿、放疗后弥漫线样黏膜强化；无异常FDG。",
+                  "常规监测。"
+                ],
+                "en": [
+                  "1",
+                  "Expected changes: non-mass-like distortion, low-density mucoid edema or diffuse linear postradiation enhancement; no abnormal FDG.",
+                  "Routine surveillance."
+                ]
+              },
+              {
+                "zh": [
+                  "2a",
+                  "局灶黏膜强化但非肿块样，或局灶轻中度黏膜FDG。",
+                  "直接视诊。"
+                ],
+                "en": [
+                  "2a",
+                  "Focal non-mass-like mucosal enhancement or mild/moderate focal mucosal FDG.",
+                  "Direct visual inspection."
+                ]
+              },
+              {
+                "zh": [
+                  "2b",
+                  "深部边界不清、非独立肿块软组织；很少／无差异强化或轻中度FDG。",
+                  "短期复查（约3个月）或重复PET。"
+                ],
+                "en": [
+                  "2b",
+                  "Deep ill-defined nondiscrete tissue, little/no differential enhancement or mild/moderate FDG.",
+                  "Short-interval follow-up, about three months, or repeat PET."
+                ]
+              },
+              {
+                "zh": [
+                  "3",
+                  "新发／增大原发肿块；独立结节／肿块伴差异强化；或强局灶FDG。",
+                  "影像引导或临床活检。"
+                ],
+                "en": [
+                  "3",
+                  "New/enlarging primary mass, discrete differentially enhancing nodule/mass, or intense focal FDG.",
+                  "Image-guided or clinical biopsy."
+                ]
+              },
+              {
+                "zh": [
+                  "4",
+                  "病理证实或明确影像与临床进展。",
+                  "临床处理。"
+                ],
+                "en": [
+                  "4",
+                  "Pathologic proof or definite imaging and clinical progression.",
+                  "Clinical management."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "颈部淋巴结分类要点",
+              "en": "Neck-node assessment"
+            },
+            "columns": {
+              "zh": [
+                "类别",
+                "标准"
+              ],
+              "en": [
+                "Category",
+                "Criteria"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "1",
+                  "预期治疗后残余改变，无高度可疑形态／代谢。"
+                ],
+                "en": [
+                  "1",
+                  "Expected residual treated change without highly suspicious morphology/metabolism."
+                ]
+              },
+              {
+                "zh": [
+                  "2",
+                  "低可疑形态或轻中度FDG，例如未完全恢复但缺乏明确复发征象的结节；短期复查，淋巴结不分2a／2b。"
+                ],
+                "en": [
+                  "2",
+                  "Low-suspicion morphology or mild/moderate FDG, such as incompletely resolved nodes without definite recurrence features. Short follow-up; no nodal 2a/b subdivision."
+                ]
+              },
+              {
+                "zh": [
+                  "3",
+                  "新发／增大结节或强局灶FDG，尤其新坏死、明显结外侵犯等高度可疑形态。"
+                ],
+                "en": [
+                  "3",
+                  "New/enlarging node or intense focal FDG, especially new necrosis/gross extranodal invasion."
+                ]
+              },
+              {
+                "zh": [
+                  "4",
+                  "病理证实或明确影像与临床进展。"
+                ],
+                "en": [
+                  "4",
+                  "Pathologic proof or definite imaging and clinical progression."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "确认是否已有可用对照；0不是所有缺少对照的检查通用类别，需满足预计会取得既往图像的条件。",
+              "en": "Check comparison availability; 0 is not a universal label for any absent prior study and requires known prior images expected to become available."
+            },
+            {
+              "zh": "黏膜低可疑用2a并与直接观察相关；深部低可疑用2b并影像复查；明确独立肿块、强局灶摄取或进展转3／4。",
+              "en": "Use primary 2a for low-suspicion mucosal findings linked to inspection and 2b for deep low-suspicion changes linked to imaging follow-up. Discrete suspicious masses, intense focal uptake or definitive progression merit 3/4."
+            },
+            {
+              "zh": "结节单独给颈部类别。比较PET与增强CT，综合既往治疗和原肿瘤特征，不使用未经原文规定的统一SUV分界。",
+              "en": "Assign a separate neck category. Integrate PET and contrast CT with treatment history/original tumor, without inventing a universal SUV threshold."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "1继续常规监测；原发2a直接观察；原发2b／颈部2短期约3个月复查或PET；3考虑组织确认；4临床处理。具体策略应与头颈外科、肿瘤科讨论。",
+            "en": "Continue routine surveillance for 1; inspect primary 2a; use short follow-up around three months or PET for primary 2b/neck 2; obtain tissue confirmation for 3; manage definitive recurrence for 4 with the clinical team."
+          },
+          {
+            "zh": "活检困难或影像与临床不一致时需个体化，不能把所有2类当作复发，也不能把无摄取当作绝对排除。",
+            "en": "Individualize inaccessible lesions or discordant clinical/imaging findings; not all category 2 findings are recurrent tumor and absent uptake is not an absolute exclusion."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "治疗后炎症和重建组织可增强或摄取FDG，单独一个指标不足以判断。淋巴结坏死是否新发要与基线比较。",
+            "en": "Inflammation/reconstruction can enhance or take up FDG; one metric alone is insufficient. Compare baseline to determine whether nodal necrosis is new."
+          },
+          {
+            "zh": "本节的3个月建议属于2018版；2025 MRI分支需按其单独规则使用。",
+            "en": "The three-month recommendation belongs to the 2018 framework; use the separate MRI 2025 guidance for that pathway."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "a-rads",
@@ -2895,7 +4812,7 @@
         }
       }
     ],
-    "lastVerified": "2026-09-18",
+    "lastVerified": "2026-10-06",
     "related": [
       "bone-incidental-rads"
     ],
@@ -2911,7 +4828,236 @@
       }
     ],
     "primarySourceId": "acr-2023",
-    "detailSourceId": "acr-2023"
+    "detailSourceId": "acr-2023",
+    "detailedGuides": [
+      {
+        "sourceId": "acr-2023",
+        "title": {
+          "zh": "Bone-RADS：ACR骨肿瘤2023详细计分",
+          "en": "Bone-RADS: detailed ACR bone-tumor 2023 scoring"
+        },
+        "scope": {
+          "zh": "用于X线发现的潜在肿瘤性骨病变，以影像危险征象和原发癌病史的分值之和分层。此处是ACR骨肿瘤体系，不是SSR 2022偶发孤立骨病灶CT/MRI的Bone-RADS 1–4处理算法。",
+          "en": "For potentially neoplastic bone lesions identified on radiographs, summing risk features and primary-cancer history. This is the ACR bone-tumor system, distinct from the SSR 2022 incidental solitary CT/MRI bone-lesion Bone-RADS 1–4 management algorithm."
+        },
+        "sourcePages": {
+          "zh": "第2–7页风险评估、表1–2及征象定义，第9–10页表3与处理，第11–13页实例",
+          "en": "Pages 2–7, risk assessment/Tables 1–2/definitions; pages 9–10, Table 3/management; pages 11–13, examples"
+        },
+        "examinations": [
+          {
+            "label": "Radiographs",
+            "purpose": {
+              "zh": "用正交X线评估边缘、骨破坏方式、骨膜反应、皮质侵蚀、骨折和骨外肿块；另记录位置、数量、大小、密度和基质，并结合年龄及原发癌病史。",
+              "en": "Use orthogonal radiographs to assess margin/destruction, periosteal response, endosteal erosion, fracture and extraosseous mass. Also record location/count/size/density/matrix and review age/primary-cancer history."
+            }
+          },
+          {
+            "label": "Margin / erosion",
+            "purpose": {
+              "zh": "边缘用修订Lodwick-Madewell分型；多种边缘取最高危险表现。侵蚀深度相对皮质厚度：轻度<1/3、中度1/3至2/3、深度>2/3。不能充分定性则0类，不把缺失观察当作0分。",
+              "en": "Use modified Lodwick-Madewell margin grading, prioritizing the highest-risk pattern. Grade erosion relative to cortex: mild <1/3, moderate 1/3–2/3, deep >2/3. Inadequate characterization is category 0, not a zero score for unassessed features."
+            }
+          }
+        ],
+        "tables": [
+          {
+            "title": {
+              "zh": "六项计分：每项选对应值后累加",
+              "en": "Six scoring inputs: select applicable points then sum"
+            },
+            "columns": {
+              "zh": [
+                "项目",
+                "征象及分值"
+              ],
+              "en": [
+                "Input",
+                "Features and points"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "边缘",
+                  "IA：地图样、边界清、硬化缘=1；IB：地图样、边界清、无硬化缘=3；II：地图样、边界不清=5；IIIA–C：变化的边缘、虫蚀／渗透样或其他影像显示的X线隐匿病变=7。"
+                ],
+                "en": [
+                  "Margin",
+                  "IA: geographic, well defined, sclerotic rim=1; IB: geographic, well defined without sclerosis=3; II: geographic ill-defined=5; IIIA–C: changing margin, moth-eaten/permeative or radiographically occult lesion shown on other imaging=7."
+                ]
+              },
+              {
+                "zh": [
+                  "骨膜反应",
+                  "无=0；非侵袭性（连续、实性等）=2；侵袭性（断续、针状、Codman三角等）=4。"
+                ],
+                "en": [
+                  "Periosteal reaction",
+                  "None=0; nonaggressive, such as solid uninterrupted response=2; aggressive, such as interrupted/spiculated/Codman reaction=4."
+                ]
+              },
+              {
+                "zh": [
+                  "骨内膜侵蚀",
+                  "轻度<1/3皮质=0；中度1/3–2/3=1；深度>2/3=2。"
+                ],
+                "en": [
+                  "Endosteal erosion",
+                  "Mild <1/3 cortex=0; moderate 1/3–2/3=1; deep >2/3=2."
+                ]
+              },
+              {
+                "zh": [
+                  "病理性骨折",
+                  "无=0；有=2。"
+                ],
+                "en": [
+                  "Pathological fracture",
+                  "Absent=0; present=2."
+                ]
+              },
+              {
+                "zh": [
+                  "骨外软组织肿块",
+                  "无=0；有=4。"
+                ],
+                "en": [
+                  "Extraosseous soft-tissue mass",
+                  "Absent=0; present=4."
+                ]
+              },
+              {
+                "zh": [
+                  "原发癌病史",
+                  "无=0；有=2。"
+                ],
+                "en": [
+                  "Primary cancer history",
+                  "Absent=0; present=2."
+                ]
+              }
+            ]
+          },
+          {
+            "title": {
+              "zh": "总分→Bone-RADS类别→原文处理",
+              "en": "Point total → Bone-RADS category → source management"
+            },
+            "columns": {
+              "zh": [
+                "总分／类别",
+                "风险",
+                "原文建议"
+              ],
+              "en": [
+                "Points / category",
+                "Risk",
+                "Source recommendation"
+              ]
+            },
+            "rows": [
+              {
+                "zh": [
+                  "不适用／0",
+                  "不能充分定性",
+                  "追加X线体位或断层影像；尚不能可靠估计风险。"
+                ],
+                "en": [
+                  "Not applicable / 0",
+                  "Incompletely characterized",
+                  "Additional views or cross-sectional imaging; risk cannot yet be reliably assigned."
+                ]
+              },
+              {
+                "zh": [
+                  "1–2／1",
+                  "极低风险，很可能良性",
+                  "无症状可完成评估或年度随访；有症状／症状改变考虑进一步影像与骨肿瘤专科。"
+                ],
+                "en": [
+                  "1–2 / 1",
+                  "Very low, very likely benign",
+                  "If asymptomatic, complete workup or annual surveillance; symptoms/change may warrant advanced imaging and orthopedic oncology."
+                ]
+              },
+              {
+                "zh": [
+                  "3–4／2",
+                  "低风险，倾向良性",
+                  "3–6个月复查稳定性；可进一步影像、必要时确认良性的活检或骨肿瘤专科。"
+                ],
+                "en": [
+                  "3–4 / 2",
+                  "Low, probably benign",
+                  "Surveillance in 3–6 months; consider advanced imaging, biopsy to confirm benignity when needed or orthopedic oncology."
+                ]
+              },
+              {
+                "zh": [
+                  "5–6／3",
+                  "中等风险，可能恶性",
+                  "骨肿瘤专科评估，通常考虑活检及治疗规划，CT／MRI／骨扫描进一步定性。"
+                ],
+                "en": [
+                  "5–6 / 3",
+                  "Intermediate, potentially malignant",
+                  "Orthopedic oncology for probable biopsy/planning; further CT/MRI/bone scan characterization."
+                ]
+              },
+              {
+                "zh": [
+                  "≥7／4",
+                  "高风险，高度疑似恶性",
+                  "骨肿瘤专科、建议活检及治疗规划；进一步影像分期和寻找其他病灶。"
+                ],
+                "en": [
+                  "≥7 / 4",
+                  "High, highly suspicious",
+                  "Orthopedic oncology, recommended biopsy/planning and advanced imaging for staging/additional disease."
+                ]
+              }
+            ]
+          }
+        ],
+        "scoringRules": {
+          "steps": [
+            {
+              "zh": "判断是否能充分表征；不能则0并补充影像。能表征时按六项选值：边缘、骨膜反应、侵蚀、骨折、骨外肿块和癌病史。",
+              "en": "Establish adequate characterization first; otherwise assign 0 and obtain further imaging. For characterized lesions select points for all six inputs."
+            },
+            {
+              "zh": "总分相加后按1–2、3–4、5–6、≥7转换为1–4类。部位、大小、基质及肿瘤具体鉴别诊断用于解释，不另加未经原文规定的分数。",
+              "en": "Sum points and map 1–2, 3–4, 5–6 and ≥7 to categories 1–4. Site, size, matrix and histologic differential inform interpretation but receive no extra points outside the source."
+            },
+            {
+              "zh": "例如IB边缘3分+中度侵蚀1分+其余0分=4分→2类；IA边缘1分+侵袭性骨膜反应4分=5分→3类。报告同时给危险征象、总分和类别。",
+              "en": "Example: IB margin 3 plus moderate erosion 1 and all other inputs 0 yields four points/category 2. IA margin 1 plus aggressive periosteal response 4 yields five points/category 3. Report features, total and category together."
+            }
+          ]
+        },
+        "management": [
+          {
+            "zh": "按表结合症状与骨折风险处理，活检路径和后续治疗由骨肿瘤团队规划；典型良性但症状明显的病变也可能需要治疗。",
+            "en": "Use the table together with symptoms/fracture risk; the orthopedic tumor team plans biopsy and treatment. A typical benign lesion with significant symptoms may still require care."
+          },
+          {
+            "zh": "3／4类风险增加不等于已经病理确诊；原文建议进一步影像和专科转诊以安排诊断与分期。",
+            "en": "Categories 3/4 increase concern but are not pathologic proof; the source recommends further imaging and referral for diagnosis/staging."
+          }
+        ],
+        "cautions": [
+          {
+            "zh": "侵袭性骨膜反应也可见于骨髓炎等良性病因，计分描述危险性而非直接判定组织学。",
+            "en": "Aggressive periosteal reaction can occur in benign processes such as osteomyelitis; scoring expresses risk rather than histology."
+          },
+          {
+            "zh": "原文分值由专家共识制定，仍需进一步验证；不要把ACR分数与SSR同名类别的管理建议交叉套用。",
+            "en": "Point weights are expert consensus and need further validation. Do not cross-apply ACR scoring and management from identically named SSR categories."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "bone-incidental-rads",

@@ -122,6 +122,15 @@ h1 { max-width: 15ch; margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); }
 .category-table { width: 100%; border-collapse: collapse; background: var(--surface); }.category-table th, .category-table td { padding: .7rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }.category-table th { background: var(--accent); }.term-list { margin: 0; padding-left: 1.25rem; }.term-list li + li { margin-top: .75rem; }.detail-source-scope { margin: .8rem 0; padding: .7rem .85rem; border-left: 3px solid var(--brand); background: var(--surface-soft); }.source-list { margin: 0; padding-left: 1.25rem; }.source-list li + li { margin-top: .75rem; }.detail-related { margin: 1rem 0; padding: .9rem; border: 1px solid var(--line); background: var(--surface); }.detail-related h3 { margin-top: 0; }.related-links { display: flex; flex-wrap: wrap; gap: .5rem; }.related-links a { padding: .35rem .5rem; border: 1px solid var(--line); background: var(--surface-soft); }.notice { padding: 1rem; border-left: 4px solid var(--brand); background: var(--accent); }.source-link { font-weight: 700; }
 .detailed-guide { margin: 1.5rem 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--surface-soft); }.guide-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }.guide-heading h3, .detailed-guide h4 { margin-top: 0; }.guide-heading h3 { margin-bottom: .75rem; }.guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }.guide-card { padding: .9rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--surface); }.guide-card h4 { margin-bottom: .35rem; color: var(--brand-dark); }.guide-card p { margin: 0; }.guide-list { margin: 0; padding-left: 1.25rem; }.guide-list li + li { margin-top: .7rem; }
 
+.guide-table-scroll { max-width: 100%; overflow-x: auto; margin: 1.25rem 0; }
+.guide-table { min-width: 36rem; font-size: .95rem; line-height: 1.65; }
+.guide-table caption { text-align: left; font-weight: 700; color: var(--brand-dark); padding: .5rem 0; }
+.guide-table tbody th { background: var(--surface); min-width: 6rem; }
+.scoring-guide .guide-card h5 { margin: 0 0 .35rem; font-size: 1rem; color: var(--brand-dark); }
+.guide-source-pages { color: var(--muted); font-size: .9rem; }
+.scoring-guide h4 { margin: 1.25rem 0 .65rem; }
+.detail-main { min-width: 0; }
+
 @media (min-width: 640px) and (max-width: 899px) {
   .filters { grid-template-columns: repeat(2, 1fr); }
   .frequent-rads { grid-column: span 2; }

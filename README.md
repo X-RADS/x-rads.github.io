@@ -42,6 +42,14 @@ verification date. If a published non-ACR record has not
 been transcribed into category-level teaching text, the detail page directs the
 reader to the original publication rather than supplying inferred definitions.
 
+Detailed bilingual scoring guides cover LI-RADS CT/MRI v2018, Lung-RADS
+v2022, O-RADS US v2022 and MRI 2022, ACR TI-RADS 2017, C-RADS v2023,
+NI-RADS MRI 2025 and CT/PET-CT 2018, and ACR Bone-RADS bone tumors 2023.
+PI-RADS retains its existing v2.1 sequence and zonal-scoring guide. Each new
+guide separates scope, examination requirements, scoring tables, assessment
+workflow, source management suggestions and limitations. Source versions and
+PDF page-order locators are visible; no original PDF or figure is published.
+
 ## Local preview
 
 From the repository root, start a static server:
@@ -74,6 +82,14 @@ status, version/release metadata, category and original-term arrays, a
 date. Each source identifies its applicable modalities, title, version, and
 official URL; `detailSourceId` identifies the source supporting any rendered
 category or terminology explanation.
+
+`detailedGuides` contains independently source-bound guides for a record,
+including separate modality-specific sections. Each guide uses `sourceId`,
+bilingual `title`, `scope`, `sourcePages`, `examinations`, `tables`,
+`scoringRules.steps`, `management`, and `cautions`. Optional supplementary
+references identify an additional public source explicitly. The existing
+PI-RADS `detailedGuide` schema remains supported. Keep the guides separate
+from the category summary table, whose scope is still `detailSourceId`.
 
 For each change, confirm the official source, retain original English clinical
 terms where provided, update `lastVerified`, check related IDs, preview the
