@@ -31,7 +31,7 @@ test("seven requested systems have nine separately source-bound bilingual scorin
       }
     }
   }
-  assert.equal(records.filter(r => r.detailedGuides).length, 7);
+  assert.equal(records.filter(r => r.detailedGuides).length, 52);
   assert.equal(records.find(r => r.id === "pi-rads").detailedGuide.sourceId, "v2-1");
 });
 

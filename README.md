@@ -38,17 +38,32 @@ The status label describes release state or publisher/oversight context:
 Each list card presents the acronym, bilingual name, application domain,
 modalities, status, and publication/version information. Detail pages list
 each source by its applicable modality and version, then preserve the
-verification date. If a published non-ACR record has not
-been transcribed into category-level teaching text, the detail page directs the
-reader to the original publication rather than supplying inferred definitions.
+verification date. Every catalog record now includes source-bound bilingual
+teaching content. Conceptual and workflow-quality systems explain their actual
+frameworks rather than inventing lesion scores or clinical management thresholds.
+If a future record has no transcribed guide, the page directs readers to the
+original publication.
 
 Detailed bilingual scoring guides cover LI-RADS CT/MRI v2018, Lung-RADS
 v2022, O-RADS US v2022 and MRI 2022, ACR TI-RADS 2017, C-RADS v2023,
 NI-RADS MRI 2025 and CT/PET-CT 2018, and ACR Bone-RADS bone tumors 2023.
-PI-RADS retains its existing v2.1 sequence and zonal-scoring guide. Each new
-guide separates scope, examination requirements, scoring tables, assessment
+PI-RADS retains its existing v2.1 sequence and zonal-scoring guide. The remaining
+45 records have 46 additional source-bound guides, including separate Node-RADS
+CT/MRI 2021 and US 2025 guides. There are 55 detailed guides across 52 records,
+plus the legacy PI-RADS guide: 56 source-specific guides across all 53 records.
+The 46 additional guides contain 94 tables covering criteria, examination,
+workflow, management or terminology, not necessarily numerical scoring.
+Each guide separates scope, examination requirements, assessment tables,
 workflow, source management suggestions and limitations. Source versions and
 PDF page-order locators are visible; no original PDF or figure is published.
+
+The source-specific distinctions include BTI-RADS 2.0 model-derived scores,
+2018 MI-RADS versus the PSMA-RADS 2.0 review, SSR incidental-lesion Bone-RADS
+versus ACR bone-tumor scoring, and hypothetical KI-RADS versus validated clinical
+algorithms. Source conflicts, equality gaps, missing supplements and ambiguous
+units are stated within the affected guides. The retained source version is
+not a claim that it is the newest version. A source that does not prescribe
+management is identified explicitly; numerical thresholds are not invented.
 
 ## Local preview
 

@@ -185,6 +185,8 @@ test("detail identifies separate modality sources and labels the source behind t
 test("published non-ACR entries point readers to the primary paper for untranscribed category definitions", async () => {
   const { renderDetail } = await import("../js/app.mjs");
   const records = JSON.parse(await readFile(new URL("data/rads.json", root), "utf8"));
+  // Retain coverage of publication-only fallback when a record has no transcribed guide.
+  delete records.find(({ id }) => id === "co-rads").detailedGuides;
   const zh = renderDetail(records, new URL("https://example.test/?rads=co-rads"));
   assert.match(zh, /分类定义请查阅原始发表文献。/);
   assert.match(zh, /https:\/\/doi\.org\/10\.1148\/radiol\.2020201473/);
